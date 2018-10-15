@@ -1,0 +1,36 @@
+{
+    "compilerOptions": {
+        "declaration": true,
+        "module": "commonjs",
+        "noImplicitAny": true,
+        "noImplicitThis": true,
+        "strictNullChecks": true,
+        "noFallthroughCasesInSwitch": true,
+        "moduleResolution": "node",
+        "allowSyntheticDefaultImports": true,
+        "alwaysStrict": true,
+        "noEmitOnError": true,
+        "noUnusedParameters": true,
+        "noUnusedLocals": true,
+        "noImplicitReturns": true,
+        "forceConsistentCasingInFileNames": true,
+        "jsx": "react-native",
+        "target": "es2017",
+        "rootDir": "./src",
+        "outDir": "dist",
+        "lib": [
+            "dom",
+            "dom.iterable",
+            "es2017",
+            "scripthost",
+            "es2017.object"
+        ]
+    },
+    "exclude": [
+        "./node_modules",
+        "./src/tests/"
+    ],
+    "include": [
+        "./src/"
+    ]
+}

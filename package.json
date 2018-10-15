@@ -1,0 +1,50 @@
+{
+  "name": "frontend-backend-payload-types",
+  "version": "0.0.1",
+  "description": "Drops payload types between frontent and backend",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "rm -rf dist && tsc",
+    "test": "jest"
+  },
+  "repository": "https://github.com/languagedrops/frontend-backend-payload-types.git",
+  "private": true,
+  "devDependencies": {
+    "@types/jest": "^23.0.0",
+    "babel-jest": "^23.0.1",
+    "jest": "^23.1.0",
+    "ts-jest": "^22.4.6",
+    "tslint": "5.9.1",
+    "tslint-eslint-rules": "^4.1.1",
+    "tslint-no-circular-imports": "^0.2.0",
+    "tslint-react": "^3.2.0",
+    "typescript": "2.8.1"
+  },
+  "jest": {
+    "bail": true,
+    "modulePaths": [
+      "<rootDir>"
+    ],
+    "transform": {
+      "^.+\\.js$": "<rootDir>/node_modules/babel-jest",
+      "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/(tests|e2e)/.*\\.(test|spec))\\.(jsx?|tsx?)$",
+    "testPathIgnorePatterns": [
+      "<rootDir>/dist/",
+      "<rootDir>/node_modules/"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json"
+    ],
+    "globals": {
+      "ts-jest": {
+        "useBabelrc": false
+      }
+    }
+  }
+}
