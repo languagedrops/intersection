@@ -1,6 +1,6 @@
 {
   "name": "frontend-backend-payload-types",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Drops payload types between frontent and backend",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -19,7 +19,7 @@
     "tslint-eslint-rules": "^4.1.1",
     "tslint-no-circular-imports": "^0.2.0",
     "tslint-react": "^3.2.0",
-    "typescript": "2.8.1"
+    "typescript": "3.0.3"
   },
   "jest": {
     "bail": true,

@@ -1,3 +1,45 @@
+export enum IAPIdentifier {
+  iapForever10Mins = 'iapForever10Mins',
+  iapForever10MinsDiscounted = 'iapForever10MinsDiscounted',
+  iapForever10MinsDiscounted40 = 'iapForever10MinsDiscounted40',
+  iapForever10MinsDiscounted45 = 'iapForever10MinsDiscounted45',
+  iapForever10MinsDiscounted50 = 'iapForever10MinsDiscounted50',
+  iapForever10MinsDiscounted80 = 'iapForever10MinsDiscounted80',
+
+  iapForever99Mins = 'iapForever99Mins',
+  iapForever99MinsDiscounted = 'iapForever99MinsDiscounted',
+  iapForever99MinsDiscounted40 = 'iapForever99MinsDiscounted40',
+  iapForever99MinsDiscounted45 = 'iapForever99MinsDiscounted45',
+  iapForever99MinsDiscounted50 = 'iapForever99MinsDiscounted50',
+  iapForever99MinsDiscounted80 = 'iapForever99MinsDiscounted80',
+
+  iapForeverAllLanguages = 'iapForeverAllLanguages',
+  iapForeverAllLanguagesDiscounted = 'iapForeverAllLanguagesDiscounted',
+  iapForeverAllLanguagesDiscounted40 = 'iapForeverAllLanguagesDiscounted40',
+  iapForeverAllLanguagesDiscounted45 = 'iapForeverAllLanguagesDiscounted45',
+  iapForeverAllLanguagesDiscounted50 = 'iapForeverAllLanguagesDiscounted50',
+  iapForeverAllLanguagesDiscounted80 = 'iapForeverAllLanguagesDiscounted80',
+
+  iap10MinsMonthly = 'iap10MinsMonthly',
+  iap10MinsYearly = 'iap10MinsYearly',
+
+  iapUnlimitedMonthly = 'iapUnlimitedMonthly',
+  iapUnlimitedYearly = 'iapUnlimitedYearly',
+
+  iapAllLanguagesMonthly = 'iapAllLanguagesMonthly',
+  iapAllLanguagesMonthlyFreeTrial = 'iapAllLanguagesMonthlyFreeTrial',
+  iapAllLanguagesYearly = 'iapAllLanguagesYearly',
+
+  iapUnlimitedMonthlyFreeTrial = 'iapUnlimitedMonthlyFreeTrial',
+
+  iapPremiumMonthly10 = 'iapPremiumMonthly10',
+  iapPremiumMonthly15 = 'iapPremiumMonthly15',
+  iapPremiumYearly70 = 'iapPremiumYearly70',
+  iapPremiumYearly70FreeTrial = 'iapPremiumYearly70FreeTrial',
+  iapPremiumYearly40 = 'iapPremiumYearly40',
+  iapPremiumLifetime160 = 'iapPremiumLifetime160',
+}
+
 export interface AndroidReceipt {
   readonly data: string
   readonly signature: string
@@ -19,22 +61,22 @@ export enum PurchaseProvider {
   Paddle = 'paddle',
 }
 
-export interface ValidateAppleRequest {
+export interface ValidateSaveAppleRequest {
   readonly provider: PurchaseProvider.Apple
   readonly receipt: string
 }
 
-export interface ValidateGoogleRequest {
+export interface ValidateSaveGoogleRequest {
   readonly provider: PurchaseProvider.Google
   readonly receipts: AndroidReceipt[]
 }
 
-export interface ValidatePaddleRequest {
+export interface ValidateSavePaddleRequest {
   readonly provider: PurchaseProvider.Paddle
   readonly receipts: PaddleReceipt[]
 }
 
-export type ValidatePurchasesRequest = ValidateAppleRequest | ValidateGoogleRequest | ValidatePaddleRequest
+export type ValidateSavePurchasesRequest = ValidateSaveAppleRequest | ValidateSaveGoogleRequest | ValidateSavePaddleRequest
 
 export enum PurchaseStatus {
   Valid = 'valid',
@@ -45,17 +87,19 @@ export enum PurchaseStatus {
 }
 
 export interface PurchaseMetadata {
-  readonly productId: string
+  readonly purchaseId: IAPIdentifier
   readonly status: PurchaseStatus.Valid | PurchaseStatus.Expired | PurchaseStatus.Refunded | PurchaseStatus.Invalid
   readonly purchaseDate: number
   readonly expirationDate?: number
 }
 
-export interface PurchaseMetadataError {
+export interface PurchaseError {
   readonly status: PurchaseStatus.Error
   readonly errorCode: string
 }
 
-export interface ValidatePurchasesResponse {
-  readonly purchases: Array<PurchaseMetadata | PurchaseMetadataError>
+export type PurchaseData = PurchaseMetadata | PurchaseError
+
+export interface ValidateSavePurchasesResponse {
+  readonly purchases: PurchaseData[]
 }
