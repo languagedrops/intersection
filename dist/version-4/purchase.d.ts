@@ -1,4 +1,4 @@
-export declare enum IAPIdentifier {
+export declare enum PayloadIAPIdentifierV4 {
     iapForever10Mins = "iapForever10Mins",
     iapForever10MinsDiscounted = "iapForever10MinsDiscounted",
     iapForever10MinsDiscounted40 = "iapForever10MinsDiscounted40",
@@ -32,11 +32,11 @@ export declare enum IAPIdentifier {
     iapPremiumYearly40 = "iapPremiumYearly40",
     iapPremiumLifetime160 = "iapPremiumLifetime160"
 }
-export interface AndroidReceipt {
+export interface PayloadAndroidReceiptV4 {
     readonly data: string;
     readonly signature: string;
 }
-export interface PaddleReceipt {
+export interface PayloadPaddleReceiptV4 {
     readonly productId: string;
     readonly orderId: string;
     readonly checkoutId: string;
@@ -45,42 +45,42 @@ export interface PaddleReceipt {
     readonly paddleUserId: string;
     readonly email?: string;
 }
-export declare enum PurchaseProvider {
+export declare enum PayloadPurchaseProviderV4 {
     Google = "google",
     Apple = "apple",
     Paddle = "paddle"
 }
-export interface ValidateSaveAppleRequest {
-    readonly provider: PurchaseProvider.Apple;
+export interface PayloadValidateSaveAppleRequestV4 {
+    readonly provider: PayloadPurchaseProviderV4.Apple;
     readonly receipt: string;
 }
-export interface ValidateSaveGoogleRequest {
-    readonly provider: PurchaseProvider.Google;
-    readonly receipts: AndroidReceipt[];
+export interface PayloadValidateSaveGoogleRequestV4 {
+    readonly provider: PayloadPurchaseProviderV4.Google;
+    readonly receipts: PayloadAndroidReceiptV4[];
 }
-export interface ValidateSavePaddleRequest {
-    readonly provider: PurchaseProvider.Paddle;
-    readonly receipts: PaddleReceipt[];
+export interface PayloadValidateSavePaddleRequestV4 {
+    readonly provider: PayloadPurchaseProviderV4.Paddle;
+    readonly receipts: PayloadPaddleReceiptV4[];
 }
-export declare type ValidateSavePurchasesRequest = ValidateSaveAppleRequest | ValidateSaveGoogleRequest | ValidateSavePaddleRequest;
-export declare enum PurchaseStatus {
+export declare type ValidateSavePurchasesRequestV4 = PayloadValidateSaveAppleRequestV4 | PayloadValidateSaveGoogleRequestV4 | PayloadValidateSavePaddleRequestV4;
+export declare enum PayloadPurchaseStatusV4 {
     Valid = "valid",
     Expired = "expired",
     Refunded = "refunded",
     Invalid = "invalid",
     Error = "Error"
 }
-export interface PurchaseMetadata {
-    readonly purchaseId: IAPIdentifier;
-    readonly status: PurchaseStatus.Valid | PurchaseStatus.Expired | PurchaseStatus.Refunded | PurchaseStatus.Invalid;
+export interface PayloadPurchaseMetadataV4 {
+    readonly purchaseId: PayloadIAPIdentifierV4;
+    readonly status: PayloadPurchaseStatusV4.Valid | PayloadPurchaseStatusV4.Expired | PayloadPurchaseStatusV4.Refunded | PayloadPurchaseStatusV4.Invalid;
     readonly purchaseDate: number;
     readonly expirationDate?: number;
 }
-export interface PurchaseError {
-    readonly status: PurchaseStatus.Error;
+export interface PayloadPurchaseErrorV4 {
+    readonly status: PayloadPurchaseStatusV4.Error;
     readonly errorCode: string;
 }
-export declare type PurchaseData = PurchaseMetadata | PurchaseError;
-export interface ValidateSavePurchasesResponse {
-    readonly purchases: PurchaseData[];
+export declare type PayloadPurchaseDataV4 = PayloadPurchaseMetadataV4 | PayloadPurchaseErrorV4;
+export interface PayloadValidateSavePurchasesResponseV4 {
+    readonly purchases: PayloadPurchaseDataV4[];
 }
