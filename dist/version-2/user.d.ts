@@ -13,7 +13,6 @@ export declare enum PayloadLoginTypeV2 {
 export declare type PayloadUserV2 = PayloadFacebookUserDetailsV2 | PayloadGoogleUserDetailsV2 | PayloadEmailUserDetailsV2;
 interface PayloadUserDetailsBaseV2<T extends PayloadLoginTypeV2> {
     type: T;
-    userId: string;
 }
 interface PayloadLoggedInUserDetailsBaseV2<T extends PayloadLoginTypeV2> extends PayloadUserDetailsBaseV2<T> {
     email: string;

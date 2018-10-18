@@ -18,7 +18,6 @@ export type PayloadUserV2 = PayloadFacebookUserDetailsV2 | PayloadGoogleUserDeta
 
 interface PayloadUserDetailsBaseV2<T extends PayloadLoginTypeV2> {
   type: T
-  userId: string
 }
 
 interface PayloadLoggedInUserDetailsBaseV2<T extends PayloadLoginTypeV2> extends PayloadUserDetailsBaseV2<T> {
