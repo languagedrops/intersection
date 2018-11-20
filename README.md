@@ -18,10 +18,10 @@ This installs all required dependencies.
 
 ```yarn build```
 
-```yarn verion --new-version [major|minor|patch]```
+```yarn version --new-version [major|minor|patch]```
 
 ```git push && git push --tags```
 
 ```npm publish```
 
-This creates a new release
+This creates a new release and publishes it on npm.
