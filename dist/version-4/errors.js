@@ -1,49 +1,47 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var Errors;
-(function (Errors) {
-    Errors["InvalidUserEmail"] = "InvalidUserEmail";
-    Errors["Unauthorized"] = "Unauthorized";
-    Errors["InvalidPayload"] = "Invalid payload";
-    Errors["DuplicateUserEmail"] = "DuplicateUserEmail";
-    Errors["MissingReceipt"] = "Invalid input: missing receipt";
-    Errors["MissingReceiptSignature"] = "Invalid input: missing receiptSignature";
-    Errors["MissingProductIdInReceipt"] = "Didn't find productId in receipt";
-    Errors["CannotMergeTwoEmptyWords"] = "Cannot merge two empty words";
-    Errors["CannotMergeTwoEmptyTopics"] = "Cannot merge two empty topics";
-    Errors["CannotMergeTwoEmptyUsers"] = "Cannot merge two empty users";
-    Errors["CannotMergeTwoEmptyUserPayloads"] = "Cannot merge two empty user payloads";
-    Errors["WrongPayloadFromClient"] = "WrongPayloadFromClient";
-    Errors["NoClientProductId"] = "No clientProductId";
-    Errors["WrongFormattedReceipt"] = "Receipt is formatted in a wrong way";
-    Errors["NoLanguagesToDelete"] = "No languages to delete supplied";
-    Errors["NoWordsToDelete"] = "No words to delete supplied";
-    Errors["NoTopicsToDelete"] = "No topics to delete supplied";
-})(Errors = exports.Errors || (exports.Errors = {}));
-(function (Errors) {
-    Errors.getEventType = (error) => {
-        switch (error) {
-            case Errors.InvalidUserEmail:
-            case Errors.DuplicateUserEmail:
-            case Errors.InvalidPayload:
-            case Errors.MissingReceipt:
-            case Errors.MissingReceiptSignature:
-            case Errors.MissingProductIdInReceipt:
-            case Errors.WrongPayloadFromClient:
-                return 'warning';
-            case Errors.Unauthorized:
-            case Errors.CannotMergeTwoEmptyWords:
-            case Errors.CannotMergeTwoEmptyTopics:
-            case Errors.CannotMergeTwoEmptyUsers:
-            case Errors.CannotMergeTwoEmptyUserPayloads:
-            case Errors.NoClientProductId:
-            case Errors.WrongFormattedReceipt:
-            case Errors.NoLanguagesToDelete:
-            case Errors.NoWordsToDelete:
-            case Errors.NoTopicsToDelete:
-                return 'error';
-        }
-    };
-    Errors.isWarning = (error) => Errors.getEventType(error) === 'warning';
-    Errors.isError = (error) => Errors.getEventType(error) === 'error';
-})(Errors = exports.Errors || (exports.Errors = {}));
+var PayloadErrorsResponseV4;
+(function (PayloadErrorsResponseV4) {
+    PayloadErrorsResponseV4["InvalidUserEmail"] = "InvalidUserEmail";
+    PayloadErrorsResponseV4["Unauthorized"] = "Unauthorized";
+    PayloadErrorsResponseV4["InvalidPayload"] = "Invalid payload";
+    PayloadErrorsResponseV4["DuplicateUserEmail"] = "DuplicateUserEmail";
+    PayloadErrorsResponseV4["MissingReceipt"] = "Invalid input: missing receipt";
+    PayloadErrorsResponseV4["MissingReceiptSignature"] = "Invalid input: missing receiptSignature";
+    PayloadErrorsResponseV4["MissingProductIdInReceipt"] = "Didn't find productId in receipt";
+    PayloadErrorsResponseV4["CannotMergeTwoEmptyWords"] = "Cannot merge two empty words";
+    PayloadErrorsResponseV4["CannotMergeTwoEmptyTopics"] = "Cannot merge two empty topics";
+    PayloadErrorsResponseV4["CannotMergeTwoEmptyUsers"] = "Cannot merge two empty users";
+    PayloadErrorsResponseV4["CannotMergeTwoEmptyUserPayloads"] = "Cannot merge two empty user payloads";
+    PayloadErrorsResponseV4["WrongPayloadFromClient"] = "WrongPayloadFromClient";
+    PayloadErrorsResponseV4["NoClientProductId"] = "No clientProductId";
+    PayloadErrorsResponseV4["WrongFormattedReceipt"] = "Receipt is formatted in a wrong way";
+    PayloadErrorsResponseV4["NoLanguagesToDelete"] = "No languages to delete supplied";
+    PayloadErrorsResponseV4["NoWordsToDelete"] = "No words to delete supplied";
+    PayloadErrorsResponseV4["NoTopicsToDelete"] = "No topics to delete supplied";
+})(PayloadErrorsResponseV4 = exports.PayloadErrorsResponseV4 || (exports.PayloadErrorsResponseV4 = {}));
+exports.getEventTypeV4 = (error) => {
+    switch (error) {
+        case PayloadErrorsResponseV4.InvalidUserEmail:
+        case PayloadErrorsResponseV4.DuplicateUserEmail:
+        case PayloadErrorsResponseV4.InvalidPayload:
+        case PayloadErrorsResponseV4.MissingReceipt:
+        case PayloadErrorsResponseV4.MissingReceiptSignature:
+        case PayloadErrorsResponseV4.MissingProductIdInReceipt:
+        case PayloadErrorsResponseV4.WrongPayloadFromClient:
+            return 'warning';
+        case PayloadErrorsResponseV4.Unauthorized:
+        case PayloadErrorsResponseV4.CannotMergeTwoEmptyWords:
+        case PayloadErrorsResponseV4.CannotMergeTwoEmptyTopics:
+        case PayloadErrorsResponseV4.CannotMergeTwoEmptyUsers:
+        case PayloadErrorsResponseV4.CannotMergeTwoEmptyUserPayloads:
+        case PayloadErrorsResponseV4.NoClientProductId:
+        case PayloadErrorsResponseV4.WrongFormattedReceipt:
+        case PayloadErrorsResponseV4.NoLanguagesToDelete:
+        case PayloadErrorsResponseV4.NoWordsToDelete:
+        case PayloadErrorsResponseV4.NoTopicsToDelete:
+            return 'error';
+    }
+};
+exports.PayloadIsWarningResponseV4 = (error) => exports.getEventTypeV4(error) === 'warning';
+exports.PayloadIsErrorResponseV4 = (error) => exports.getEventTypeV4(error) === 'error';
