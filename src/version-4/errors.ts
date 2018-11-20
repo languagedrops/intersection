@@ -46,6 +46,6 @@ export namespace PayloadErrorsResponseV4 {
     }
   }
 
-  export const isWarningV4 = (error: Errors) => getEventType(error) === 'warning'
-  export const isErrorV4 = (error: Errors) => getEventType(error) === 'error'
+  export const isWarning = (error: Errors) => getEventType(error) === 'warning'
+  export const isError = (error: Errors) => getEventType(error) === 'error'
 }

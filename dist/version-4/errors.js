@@ -45,6 +45,6 @@ var PayloadErrorsResponseV4;
                 return 'error';
         }
     };
-    PayloadErrorsResponseV4.isWarningV4 = (error) => PayloadErrorsResponseV4.getEventType(error) === 'warning';
-    PayloadErrorsResponseV4.isErrorV4 = (error) => PayloadErrorsResponseV4.getEventType(error) === 'error';
+    PayloadErrorsResponseV4.isWarning = (error) => PayloadErrorsResponseV4.getEventType(error) === 'warning';
+    PayloadErrorsResponseV4.isError = (error) => PayloadErrorsResponseV4.getEventType(error) === 'error';
 })(PayloadErrorsResponseV4 = exports.PayloadErrorsResponseV4 || (exports.PayloadErrorsResponseV4 = {}));

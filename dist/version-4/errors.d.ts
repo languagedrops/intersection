@@ -20,6 +20,6 @@ export declare namespace PayloadErrorsResponseV4 {
         NoTopicsToDelete = "No topics to delete supplied"
     }
     const getEventType: (error: Errors) => EventType;
-    const isWarningV4: (error: Errors) => boolean;
-    const isErrorV4: (error: Errors) => boolean;
+    const isWarning: (error: Errors) => boolean;
+    const isError: (error: Errors) => boolean;
 }
