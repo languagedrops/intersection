@@ -1,4 +1,4 @@
-export namespace ErrorsV4 {
+export namespace PayloadErrorsResponseV4 {
 
   export type EventType = 'error' | 'warning' | 'info' | 'success'
 
