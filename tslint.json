@@ -3,6 +3,7 @@
         "tslint:recommended",
         "tslint-react",
         "tslint-eslint-rules",
+        "tslint-immutable",
         "tslint-no-circular-imports"
     ],
     "rules": {
@@ -144,6 +145,9 @@
                 "asyncArrow": "always"
             }
         ],
+        "readonly-keyword": true,
+        "readonly-array": false,
+        "no-array-mutation": false,
         "object-curly-spacing": [
             true,
             "always"
