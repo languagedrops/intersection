@@ -147,6 +147,7 @@
         ],
         "readonly-keyword": true,
         "readonly-array": false,
+        "no-array-mutation": false,
         "object-curly-spacing": [
             true,
             "always"
