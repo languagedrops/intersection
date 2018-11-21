@@ -1,3 +1,3 @@
 export interface CurrentUTCTimeResponseV4 {
-    currentUTCTime: number,
+    readonly currentUTCTime: number,
 }
