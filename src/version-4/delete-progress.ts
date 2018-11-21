@@ -1,5 +1,5 @@
 export interface PayloadDeleteProgressRequestV4 {
-    languages: string[]
-    wordIds: number[]
-    topicIds: number[]
+    readonly languages: string[]
+    readonly wordIds: number[]
+    readonly topicIds: number[]
 }
