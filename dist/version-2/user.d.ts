@@ -1,8 +1,8 @@
 export interface PayloadDeviceDataV2 {
-    deviceId: string;
-    type?: string;
-    name?: string;
-    appType?: string;
+    readonly deviceId: string;
+    readonly type?: string;
+    readonly name?: string;
+    readonly appType?: string;
 }
 export declare enum PayloadLoginTypeV2 {
     Google = "Google",
@@ -12,19 +12,19 @@ export declare enum PayloadLoginTypeV2 {
 }
 export declare type PayloadUserV2 = PayloadFacebookUserDetailsV2 | PayloadGoogleUserDetailsV2 | PayloadEmailUserDetailsV2;
 interface PayloadUserDetailsBaseV2<T extends PayloadLoginTypeV2> {
-    type: T;
+    readonly type: T;
 }
 interface PayloadLoggedInUserDetailsBaseV2<T extends PayloadLoginTypeV2> extends PayloadUserDetailsBaseV2<T> {
-    email: string;
-    device?: PayloadDeviceDataV2;
-    firstName: string;
-    lastName: string;
-    locale: string;
-    profileUrl: string;
+    readonly email: string;
+    readonly device?: PayloadDeviceDataV2;
+    readonly firstName: string;
+    readonly lastName: string;
+    readonly locale: string;
+    readonly profileUrl: string;
 }
 export interface PayloadFacebookUserDetailsV2 extends PayloadLoggedInUserDetailsBaseV2<PayloadLoginTypeV2.Facebook> {
-    facebookId: string;
-    gender: string;
+    readonly facebookId: string;
+    readonly gender: string;
 }
 export interface PayloadGoogleUserDetailsV2 extends PayloadLoggedInUserDetailsBaseV2<PayloadLoginTypeV2.Google> {
 }
