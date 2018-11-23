@@ -1,4 +1,9 @@
 export declare type PayloadEventTypeResponseV4 = 'error' | 'warning' | 'info' | 'success';
+export interface PayloadErrorResponseV4 {
+    readonly message: PayloadErrorsResponseV4;
+    readonly details: string;
+    readonly payload: string;
+}
 export declare enum PayloadErrorsResponseV4 {
     InvalidUserEmail = "InvalidUserEmail",
     Unauthorized = "Unauthorized",
