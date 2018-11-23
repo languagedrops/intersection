@@ -39,15 +39,15 @@ type PayloadUserDetailsV2 = PayloadEmailUserDetailsV2 | PayloadGoogleUserDetails
 
 interface PayloadDeviceSendUserDetailsRequestV2 {
   readonly deviceId: string
-  readonly type: string
-  readonly name: string
-  readonly clientId: string
-  readonly appType: string
+  readonly type?: string
+  readonly name?: string
+  readonly clientId?: string
+  readonly appType?: string
 }
 
 interface PayloadUserDetailsRestRequestV2 {
-  readonly device: PayloadDeviceSendUserDetailsRequestV2
-  readonly consent: {readonly [key: string]: boolean}
+  readonly device?: PayloadDeviceSendUserDetailsRequestV2
+  readonly consent?: {readonly [key: string]: boolean}
 }
 
 export type PayloadSendUserDetailsRequestV2 = PayloadUserDetailsV2 & PayloadUserDetailsRestRequestV2
