@@ -76,11 +76,18 @@ export interface PayloadUserLanguageSettingsV4 {
   readonly characterDrawing?: PropertyWithMetadata<Dictionary<boolean>>
 }
 
-export interface PayloadDeviceDetailsV4 {
+export interface PayloadDeviceDetailsRequestV4 {
   readonly deviceId: string
   readonly type?: string
   readonly name?: string
   readonly clientId?: string
+  readonly appType?: string
+}
+
+export interface PayloadDeviceDetailsResponseV4 {
+  readonly deviceId: string
+  readonly type?: string
+  readonly name?: string
   readonly appType?: string
 }
 
@@ -89,5 +96,13 @@ export interface PayloadSyncSettingsRequestV4 {
   readonly userSettings: PayloadUserSettingsV4
   readonly appData: PayloadUserAppDataV4
   readonly languageSettings: PayloadUserLanguageSettingsV4
-  readonly device: PayloadDeviceDetailsV4
+  readonly device: PayloadDeviceDetailsRequestV4
+}
+
+export interface PayloadSyncSettingsResponseV4 {
+  readonly user: PayloadUserDetailsV4
+  readonly userSettings: PayloadUserSettingsV4
+  readonly appData: PayloadUserAppDataV4
+  readonly languageSettings: PayloadUserLanguageSettingsV4
+  readonly device: PayloadDeviceDetailsResponseV4
 }
