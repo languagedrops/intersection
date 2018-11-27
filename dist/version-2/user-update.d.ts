@@ -30,7 +30,7 @@ export interface PayloadEmailUserDetailsV2 extends PayloadLoggedInUserDetailsBas
     readonly refreshToken: string;
 }
 declare type PayloadUserDetailsV2 = PayloadEmailUserDetailsV2 | PayloadGoogleUserDetailsV2 | PayloadFacebookUserDetailsV2;
-interface PayloadDeviceSendUserDetailsRequestV2 {
+export interface PayloadDeviceSendUserDetailsRequestV2 {
     readonly deviceId: string;
     readonly type?: string;
     readonly name?: string;
