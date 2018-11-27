@@ -45,7 +45,7 @@ interface PayloadDeviceSendUserDetailsRequestV2 {
   readonly appType?: string
 }
 
-interface PayloadUserDetailsRestRequestV2 {
+export interface PayloadUserDetailsRestRequestV2 {
   readonly device?: PayloadDeviceSendUserDetailsRequestV2
   readonly consent?: {readonly [key: string]: boolean}
 }
