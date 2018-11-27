@@ -1,4 +1,4 @@
-interface PropertyWithMetadata<T> {
+export interface PropertyWithMetadata<T> {
     readonly value: T;
     readonly lastModified: number | null;
 }
@@ -54,8 +54,8 @@ export interface PayloadUserAppDataV4 {
     readonly promoteScreensViewCounts?: PropertyWithMetadata<Dictionary<number>>;
     readonly screenLastShown?: PropertyWithMetadata<Dictionary<number>>;
     readonly monetizationSegment?: PropertyWithMetadata<string>;
-    readonly segmentLongTermRetention: PropertyWithMetadata<string>;
-    readonly segmentFeatureUsageSegment: PropertyWithMetadata<string>;
+    readonly segmentLongTermRetention?: PropertyWithMetadata<string>;
+    readonly segmentFeatureUsageSegment?: PropertyWithMetadata<string>;
     readonly dojoScreensCompleted?: PropertyWithMetadata<number>;
     readonly userMigrations?: PropertyWithMetadata<Dictionary<boolean>>;
     readonly wordListSectionsCollapsed?: PropertyWithMetadata<Dictionary<Dictionary<boolean>>>;
