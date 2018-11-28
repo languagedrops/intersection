@@ -73,12 +73,6 @@ export interface PayloadDeviceDetailsRequestV4 {
     readonly clientId?: string;
     readonly appType?: string;
 }
-export interface PayloadDeviceDetailsResponseV4 {
-    readonly deviceId: string;
-    readonly type?: string;
-    readonly name?: string;
-    readonly appType?: string;
-}
 export interface PayloadSyncSettingsRequestV4 {
     readonly user: PayloadUserDetailsV4;
     readonly userSettings: PayloadUserSettingsV4;
