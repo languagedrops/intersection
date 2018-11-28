@@ -91,6 +91,5 @@ export interface PayloadSyncSettingsResponseV4 {
     readonly userSettings: PayloadUserSettingsV4;
     readonly appData: PayloadUserAppDataV4;
     readonly languageSettings: PayloadUserLanguageSettingsV4;
-    readonly device: PayloadDeviceDetailsResponseV4;
 }
 export {};
