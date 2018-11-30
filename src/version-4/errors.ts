@@ -2,12 +2,12 @@
 export type PayloadEventTypeResponseV4 = 'error' | 'warning' | 'info' | 'success'
 
 export interface PayloadErrorResponseV4 {
-  readonly message: PayloadErrorsResponseV4,
+  readonly errorMessage: PayloadErrorsV4,
   readonly details: string,
   readonly payload: string,
 }
 
-export enum PayloadErrorsResponseV4 {
+export enum PayloadErrorsV4 {
   InvalidUserEmail = 'InvalidUserEmail',
   Unauthorized = 'Unauthorized',
   InvalidPayload = 'Invalid payload',
@@ -27,30 +27,30 @@ export enum PayloadErrorsResponseV4 {
   NoTopicsToDelete = 'No topics to delete supplied',
 }
 
-export const getEventTypeV4 = (error: PayloadErrorsResponseV4): PayloadEventTypeResponseV4 => {
+export const getEventTypeV4 = (error: PayloadErrorsV4): PayloadEventTypeResponseV4 => {
   switch (error) {
-    case PayloadErrorsResponseV4.InvalidUserEmail:
-    case PayloadErrorsResponseV4.DuplicateUserEmail:
-    case PayloadErrorsResponseV4.InvalidPayload:
-    case PayloadErrorsResponseV4.MissingReceipt:
-    case PayloadErrorsResponseV4.MissingReceiptSignature:
-    case PayloadErrorsResponseV4.MissingProductIdInReceipt:
-    case PayloadErrorsResponseV4.WrongPayloadFromClient:
+    case PayloadErrorsV4.InvalidUserEmail:
+    case PayloadErrorsV4.DuplicateUserEmail:
+    case PayloadErrorsV4.InvalidPayload:
+    case PayloadErrorsV4.MissingReceipt:
+    case PayloadErrorsV4.MissingReceiptSignature:
+    case PayloadErrorsV4.MissingProductIdInReceipt:
+    case PayloadErrorsV4.WrongPayloadFromClient:
       return 'warning'
-    case PayloadErrorsResponseV4.Unauthorized:
-    case PayloadErrorsResponseV4.CannotMergeTwoEmptyWords:
-    case PayloadErrorsResponseV4.CannotMergeTwoEmptyTopics:
-    case PayloadErrorsResponseV4.CannotMergeTwoEmptyUsers:
-    case PayloadErrorsResponseV4.CannotMergeTwoEmptyUserPayloads:
-    case PayloadErrorsResponseV4.NoClientProductId:
-    case PayloadErrorsResponseV4.WrongFormattedReceipt:
-    case PayloadErrorsResponseV4.NoLanguagesToDelete:
-    case PayloadErrorsResponseV4.NoWordsToDelete:
-    case PayloadErrorsResponseV4.NoTopicsToDelete:
+    case PayloadErrorsV4.Unauthorized:
+    case PayloadErrorsV4.CannotMergeTwoEmptyWords:
+    case PayloadErrorsV4.CannotMergeTwoEmptyTopics:
+    case PayloadErrorsV4.CannotMergeTwoEmptyUsers:
+    case PayloadErrorsV4.CannotMergeTwoEmptyUserPayloads:
+    case PayloadErrorsV4.NoClientProductId:
+    case PayloadErrorsV4.WrongFormattedReceipt:
+    case PayloadErrorsV4.NoLanguagesToDelete:
+    case PayloadErrorsV4.NoWordsToDelete:
+    case PayloadErrorsV4.NoTopicsToDelete:
       return 'error'
   }
 }
 
-export const PayloadIsWarningResponseV4 = (error: PayloadErrorsResponseV4) => getEventTypeV4(error) === 'warning'
-export const PayloadIsErrorResponseV4 = (error: PayloadErrorsResponseV4) => getEventTypeV4(error) === 'error'
+export const PayloadIsWarningResponseV4 = (error: PayloadErrorsV4) => getEventTypeV4(error) === 'warning'
+export const PayloadIsErrorResponseV4 = (error: PayloadErrorsV4) => getEventTypeV4(error) === 'error'
 
