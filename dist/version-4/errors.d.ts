@@ -1,10 +1,10 @@
 export declare type PayloadEventTypeResponseV4 = 'error' | 'warning' | 'info' | 'success';
 export interface PayloadErrorResponseV4 {
-    readonly message: PayloadErrorsResponseV4;
+    readonly errorMessage: PayloadErrorsV4;
     readonly details: string;
     readonly payload: string;
 }
-export declare enum PayloadErrorsResponseV4 {
+export declare enum PayloadErrorsV4 {
     InvalidUserEmail = "InvalidUserEmail",
     Unauthorized = "Unauthorized",
     InvalidPayload = "Invalid payload",
@@ -23,6 +23,6 @@ export declare enum PayloadErrorsResponseV4 {
     NoWordsToDelete = "No words to delete supplied",
     NoTopicsToDelete = "No topics to delete supplied"
 }
-export declare const getEventTypeV4: (error: PayloadErrorsResponseV4) => PayloadEventTypeResponseV4;
-export declare const PayloadIsWarningResponseV4: (error: PayloadErrorsResponseV4) => boolean;
-export declare const PayloadIsErrorResponseV4: (error: PayloadErrorsResponseV4) => boolean;
+export declare const getEventTypeV4: (error: PayloadErrorsV4) => PayloadEventTypeResponseV4;
+export declare const PayloadIsWarningResponseV4: (error: PayloadErrorsV4) => boolean;
+export declare const PayloadIsErrorResponseV4: (error: PayloadErrorsV4) => boolean;
