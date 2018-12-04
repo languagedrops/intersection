@@ -19,6 +19,7 @@ var PayloadErrorsV4;
     PayloadErrorsV4["NoLanguagesToDelete"] = "No languages to delete supplied";
     PayloadErrorsV4["NoWordsToDelete"] = "No words to delete supplied";
     PayloadErrorsV4["NoTopicsToDelete"] = "No topics to delete supplied";
+    PayloadErrorsV4["WrongWebhook"] = "An unrecognised webhook was triggered";
 })(PayloadErrorsV4 = exports.PayloadErrorsV4 || (exports.PayloadErrorsV4 = {}));
 exports.getEventTypeV4 = (error) => {
     switch (error) {
@@ -40,6 +41,7 @@ exports.getEventTypeV4 = (error) => {
         case PayloadErrorsV4.NoLanguagesToDelete:
         case PayloadErrorsV4.NoWordsToDelete:
         case PayloadErrorsV4.NoTopicsToDelete:
+        case PayloadErrorsV4.WrongWebhook:
             return 'error';
     }
 };

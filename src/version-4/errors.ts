@@ -25,6 +25,7 @@ export enum PayloadErrorsV4 {
   NoLanguagesToDelete = 'No languages to delete supplied',
   NoWordsToDelete = 'No words to delete supplied',
   NoTopicsToDelete = 'No topics to delete supplied',
+  WrongWebhook = 'An unrecognised webhook was triggered',
 }
 
 export const getEventTypeV4 = (error: PayloadErrorsV4): PayloadEventTypeResponseV4 => {
@@ -47,6 +48,7 @@ export const getEventTypeV4 = (error: PayloadErrorsV4): PayloadEventTypeResponse
     case PayloadErrorsV4.NoLanguagesToDelete:
     case PayloadErrorsV4.NoWordsToDelete:
     case PayloadErrorsV4.NoTopicsToDelete:
+    case PayloadErrorsV4.WrongWebhook:
       return 'error'
   }
 }
