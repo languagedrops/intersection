@@ -20,7 +20,7 @@ var PayloadErrorsV4;
     PayloadErrorsV4["NoWordsToDelete"] = "No words to delete supplied";
     PayloadErrorsV4["NoTopicsToDelete"] = "No topics to delete supplied";
     PayloadErrorsV4["WrongWebhook"] = "An unrecognised webhook was triggered";
-    PayloadErrorsV4["EmptyEmail"] = "updateUser with empty email field";
+    PayloadErrorsV4["EmptyEmail"] = "Empty email field";
 })(PayloadErrorsV4 = exports.PayloadErrorsV4 || (exports.PayloadErrorsV4 = {}));
 exports.getEventTypeV4 = (error) => {
     switch (error) {
