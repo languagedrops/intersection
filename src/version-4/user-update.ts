@@ -1,8 +1,16 @@
-import {
-    PayloadDeviceSendUserDetailsRequestV2,
-    PayloadSendUserDetailsRequestV2,
-} from '../version-2'
+import { PayloadUserDetailsV4 } from './user'
 
-export type PayloadDeviceSendUserDetailsRequestV4 = PayloadDeviceSendUserDetailsRequestV2
+export interface PayloadDeviceSendUserDetailsRequestV4 {
+    readonly deviceId: string
+    readonly type?: string
+    readonly name?: string
+    readonly clientId?: string
+    readonly appType?: string
+  }
 
-export type PayloadSendUserDetailsRequestV4 = PayloadSendUserDetailsRequestV2
+export interface PayloadUserDetailsRestRequestV4 {
+    readonly device?: PayloadDeviceSendUserDetailsRequestV4
+    readonly consent?: {readonly [key: string]: boolean}
+}
+
+export type PayloadSendUserDetailsRequestV4 = PayloadUserDetailsV4 & PayloadUserDetailsRestRequestV4
