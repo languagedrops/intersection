@@ -5,4 +5,3 @@ function __export(m) {
 Object.defineProperty(exports, "__esModule", { value: true });
 __export(require("./purchase"));
 __export(require("./errors"));
-__export(require("./settings-sync"));
