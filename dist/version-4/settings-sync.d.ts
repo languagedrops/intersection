@@ -5,9 +5,6 @@ export interface PropertyWithMetadata<T> {
 interface Dictionary<T> {
     readonly [key: string]: T;
 }
-export interface PayloadUserSettingsV4 {
-    readonly deviceLanguage?: PropertyWithMetadata<string>;
-}
 export interface PayloadUserAppDataV4 {
     readonly numberOfTimeouts?: PropertyWithMetadata<number>;
     readonly persistedTime?: PropertyWithMetadata<number>;
@@ -33,14 +30,13 @@ export interface PayloadUserLanguageSettingsV4 {
     readonly skillLevel?: PropertyWithMetadata<Dictionary<string>>;
     readonly romanicAid?: PropertyWithMetadata<Dictionary<string>>;
     readonly characterDrawing?: PropertyWithMetadata<Dictionary<boolean>>;
+    readonly deviceLanguage?: PropertyWithMetadata<string>;
 }
 export interface PayloadSyncSettingsRequestV4 {
-    readonly userSettings: PayloadUserSettingsV4;
     readonly appData: PayloadUserAppDataV4;
     readonly languageSettings: PayloadUserLanguageSettingsV4;
 }
 export interface PayloadSyncSettingsResponseV4 {
-    readonly userSettings: PayloadUserSettingsV4;
     readonly appData: PayloadUserAppDataV4;
     readonly languageSettings: PayloadUserLanguageSettingsV4;
 }
