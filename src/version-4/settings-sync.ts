@@ -7,7 +7,6 @@ interface Dictionary<T> { readonly [key: string]: T }
 
 export interface PayloadUserSettingsV4 {
   readonly deviceLanguage?: PropertyWithMetadata<string>
-  readonly consent?: PropertyWithMetadata<Dictionary<boolean>>
 }
 
 export interface PayloadUserAppDataV4 {
