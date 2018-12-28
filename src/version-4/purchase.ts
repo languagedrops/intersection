@@ -65,6 +65,17 @@ export enum PayloadPurchaseProviderV4 {
   Paddle = 'paddle',
 }
 
+export enum SubscriptionType {
+  subscription = 'subscription',
+  lifetime = 'lifetime',
+}
+
+export interface PayloadPurchaseBaseV4 {
+  readonly purchaseId: PayloadIAPIdentifierV4,
+  readonly clientProductId: string,
+  readonly type: SubscriptionType,
+}
+
 export interface PayloadValidateSaveAppleRequestV4 {
   readonly provider: PayloadPurchaseProviderV4.Apple
   readonly receipt: string
@@ -80,7 +91,7 @@ export interface PayloadValidateSavePaddleRequestV4 {
   readonly receipts: PayloadPaddleReceiptV4[]
 }
 
-export type ValidateSavePurchasesRequestV4 = PayloadValidateSaveAppleRequestV4 | PayloadValidateSaveGoogleRequestV4 | PayloadValidateSavePaddleRequestV4
+export type ValidateSavePurchasesRequestV4 = (PayloadValidateSaveAppleRequestV4 | PayloadValidateSaveGoogleRequestV4 | PayloadValidateSavePaddleRequestV4) & PayloadPurchaseBaseV4
 
 export enum PayloadPurchaseStatusV4 {
   Valid = 'valid',
@@ -91,10 +102,13 @@ export enum PayloadPurchaseStatusV4 {
 }
 
 export interface PayloadPurchaseMetadataV4 {
-  readonly purchaseId: PayloadIAPIdentifierV4
   readonly status: PayloadPurchaseStatusV4.Valid | PayloadPurchaseStatusV4.Expired | PayloadPurchaseStatusV4.Refunded | PayloadPurchaseStatusV4.Invalid
   readonly purchaseDate: number
   readonly expirationDate?: number
+  readonly transactionId: string,
+  readonly productId: string,
+  readonly cancellationDate?: Date,
+  readonly lastValidationDate: Date,
 }
 
 export interface PayloadPurchaseErrorV4 {
