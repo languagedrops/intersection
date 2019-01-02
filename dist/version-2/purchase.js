@@ -1,0 +1,56 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var PayloadIAPIdentifierV2;
+(function (PayloadIAPIdentifierV2) {
+    PayloadIAPIdentifierV2["iapForever10Mins"] = "iapForever10Mins";
+    PayloadIAPIdentifierV2["iapForever10MinsDiscounted"] = "iapForever10MinsDiscounted";
+    PayloadIAPIdentifierV2["iapForever10MinsDiscounted40"] = "iapForever10MinsDiscounted40";
+    PayloadIAPIdentifierV2["iapForever10MinsDiscounted45"] = "iapForever10MinsDiscounted45";
+    PayloadIAPIdentifierV2["iapForever10MinsDiscounted50"] = "iapForever10MinsDiscounted50";
+    PayloadIAPIdentifierV2["iapForever10MinsDiscounted80"] = "iapForever10MinsDiscounted80";
+    PayloadIAPIdentifierV2["iapForever99Mins"] = "iapForever99Mins";
+    PayloadIAPIdentifierV2["iapForever99MinsDiscounted"] = "iapForever99MinsDiscounted";
+    PayloadIAPIdentifierV2["iapForever99MinsDiscounted40"] = "iapForever99MinsDiscounted40";
+    PayloadIAPIdentifierV2["iapForever99MinsDiscounted45"] = "iapForever99MinsDiscounted45";
+    PayloadIAPIdentifierV2["iapForever99MinsDiscounted50"] = "iapForever99MinsDiscounted50";
+    PayloadIAPIdentifierV2["iapForever99MinsDiscounted80"] = "iapForever99MinsDiscounted80";
+    PayloadIAPIdentifierV2["iapForeverAllLanguages"] = "iapForeverAllLanguages";
+    PayloadIAPIdentifierV2["iapForeverAllLanguagesDiscounted"] = "iapForeverAllLanguagesDiscounted";
+    PayloadIAPIdentifierV2["iapForeverAllLanguagesDiscounted40"] = "iapForeverAllLanguagesDiscounted40";
+    PayloadIAPIdentifierV2["iapForeverAllLanguagesDiscounted45"] = "iapForeverAllLanguagesDiscounted45";
+    PayloadIAPIdentifierV2["iapForeverAllLanguagesDiscounted50"] = "iapForeverAllLanguagesDiscounted50";
+    PayloadIAPIdentifierV2["iapForeverAllLanguagesDiscounted80"] = "iapForeverAllLanguagesDiscounted80";
+    PayloadIAPIdentifierV2["iap10MinsMonthly"] = "iap10MinsMonthly";
+    PayloadIAPIdentifierV2["iap10MinsYearly"] = "iap10MinsYearly";
+    PayloadIAPIdentifierV2["iapUnlimitedMonthly"] = "iapUnlimitedMonthly";
+    PayloadIAPIdentifierV2["iapUnlimitedYearly"] = "iapUnlimitedYearly";
+    PayloadIAPIdentifierV2["iapAllLanguagesMonthly"] = "iapAllLanguagesMonthly";
+    PayloadIAPIdentifierV2["iapAllLanguagesMonthlyFreeTrial"] = "iapAllLanguagesMonthlyFreeTrial";
+    PayloadIAPIdentifierV2["iapAllLanguagesYearly"] = "iapAllLanguagesYearly";
+    PayloadIAPIdentifierV2["iapUnlimitedMonthlyFreeTrial"] = "iapUnlimitedMonthlyFreeTrial";
+    PayloadIAPIdentifierV2["iapPremiumMonthly10"] = "iapPremiumMonthly10";
+    PayloadIAPIdentifierV2["iapPremiumMonthly15"] = "iapPremiumMonthly15";
+    PayloadIAPIdentifierV2["iapPremiumYearly70"] = "iapPremiumYearly70";
+    PayloadIAPIdentifierV2["iapPremiumYearly70FreeTrial"] = "iapPremiumYearly70FreeTrial";
+    PayloadIAPIdentifierV2["iapPremiumYearly40"] = "iapPremiumYearly40";
+    PayloadIAPIdentifierV2["iapPremiumYearly35"] = "iapPremiumYearly35";
+    PayloadIAPIdentifierV2["iapPremiumLifetime160"] = "iapPremiumLifetime160";
+})(PayloadIAPIdentifierV2 = exports.PayloadIAPIdentifierV2 || (exports.PayloadIAPIdentifierV2 = {}));
+var PayloadPurchaseProviderV2;
+(function (PayloadPurchaseProviderV2) {
+    PayloadPurchaseProviderV2["Google"] = "google";
+    PayloadPurchaseProviderV2["Apple"] = "apple";
+    PayloadPurchaseProviderV2["Paddle"] = "paddle";
+})(PayloadPurchaseProviderV2 = exports.PayloadPurchaseProviderV2 || (exports.PayloadPurchaseProviderV2 = {}));
+var SubscriptionType;
+(function (SubscriptionType) {
+    SubscriptionType["subscription"] = "subscription";
+    SubscriptionType["lifetime"] = "lifetime";
+})(SubscriptionType = exports.SubscriptionType || (exports.SubscriptionType = {}));
+var PayloadPurchaseStatusV2;
+(function (PayloadPurchaseStatusV2) {
+    PayloadPurchaseStatusV2["Valid"] = "valid";
+    PayloadPurchaseStatusV2["Expired"] = "expired";
+    PayloadPurchaseStatusV2["Refunded"] = "refunded";
+    PayloadPurchaseStatusV2["Invalid"] = "invalid";
+})(PayloadPurchaseStatusV2 = exports.PayloadPurchaseStatusV2 || (exports.PayloadPurchaseStatusV2 = {}));
