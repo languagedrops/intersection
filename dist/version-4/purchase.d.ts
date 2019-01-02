@@ -66,7 +66,7 @@ export interface PayloadValidateSavePaddleRequestV4 {
     readonly provider: PayloadPurchaseProviderV4.Paddle;
     readonly receipts: PayloadPaddleReceiptV4[];
 }
-export declare type ValidateSavePurchasesRequestV4 = PayloadValidateSaveAppleRequestV4 | PayloadValidateSaveGoogleRequestV4 | PayloadValidateSavePaddleRequestV4;
+export declare type ValidateSavePurchasesRequestV4 = (PayloadValidateSaveAppleRequestV4 | PayloadValidateSaveGoogleRequestV4 | PayloadValidateSavePaddleRequestV4);
 export declare enum PayloadPurchaseStatusV4 {
     Valid = "valid",
     Expired = "expired",
@@ -75,7 +75,6 @@ export declare enum PayloadPurchaseStatusV4 {
     Error = "Error"
 }
 export interface PayloadPurchaseMetadataV4 {
-    readonly purchaseId: PayloadIAPIdentifierV4;
     readonly status: PayloadPurchaseStatusV4.Valid | PayloadPurchaseStatusV4.Expired | PayloadPurchaseStatusV4.Refunded | PayloadPurchaseStatusV4.Invalid;
     readonly purchaseDate: number;
     readonly expirationDate?: number;
