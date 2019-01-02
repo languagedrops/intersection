@@ -54,6 +54,9 @@ export interface PayloadPaddleReceiptV4 {
   readonly coupon?: string,
   readonly paddleUserId: string
   readonly email?: string
+  readonly subscriptionId?: string
+  readonly cancellationEffectiveDate?: number | Date
+  readonly expirationDate?: number | Date
 }
 
 export enum PayloadPurchaseProviderV4 {
@@ -77,7 +80,7 @@ export interface PayloadValidateSavePaddleRequestV4 {
   readonly receipts: PayloadPaddleReceiptV4[]
 }
 
-export type ValidateSavePurchasesRequestV4 = PayloadValidateSaveAppleRequestV4 | PayloadValidateSaveGoogleRequestV4 | PayloadValidateSavePaddleRequestV4
+export type ValidateSavePurchasesRequestV4 = (PayloadValidateSaveAppleRequestV4 | PayloadValidateSaveGoogleRequestV4 | PayloadValidateSavePaddleRequestV4)
 
 export enum PayloadPurchaseStatusV4 {
   Valid = 'valid',
@@ -88,7 +91,6 @@ export enum PayloadPurchaseStatusV4 {
 }
 
 export interface PayloadPurchaseMetadataV4 {
-  readonly purchaseId: PayloadIAPIdentifierV4
   readonly status: PayloadPurchaseStatusV4.Valid | PayloadPurchaseStatusV4.Expired | PayloadPurchaseStatusV4.Refunded | PayloadPurchaseStatusV4.Invalid
   readonly purchaseDate: number
   readonly expirationDate?: number
