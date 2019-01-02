@@ -116,7 +116,7 @@ export interface PayloadPurchaseErrorV4 {
   readonly errorCode: string
 }
 
-export type PayloadPurchaseDataV4 = PayloadPurchaseMetadataV4 | PayloadPurchaseErrorV4
+export type PayloadPurchaseDataV4 = (PayloadPurchaseMetadataV4 & PayloadPurchaseBaseV4) | PayloadPurchaseErrorV4
 
 export interface PayloadValidateSavePurchasesResponseV4 {
   readonly purchases: PayloadPurchaseDataV4[]
