@@ -89,6 +89,9 @@ export enum PayloadPurchaseStatusV4 {
   Invalid = 'invalid',
   Error = 'Error',
 }
+interface TopUpIdProperty {
+  readonly topUpId: string,
+}
 
 export interface PayloadPurchaseMetadataV4 {
   readonly status: PayloadPurchaseStatusV4.Valid | PayloadPurchaseStatusV4.Expired | PayloadPurchaseStatusV4.Refunded | PayloadPurchaseStatusV4.Invalid
@@ -101,7 +104,7 @@ export interface PayloadPurchaseErrorV4 {
   readonly errorCode: string
 }
 
-export type PayloadPurchaseDataV4 = PayloadPurchaseMetadataV4 | PayloadPurchaseErrorV4
+export type PayloadPurchaseDataV4 = (PayloadPurchaseMetadataV4 | PayloadPurchaseErrorV4) & TopUpIdProperty
 
 export interface PayloadValidateSavePurchasesResponseV4 {
   readonly purchases: PayloadPurchaseDataV4[]
