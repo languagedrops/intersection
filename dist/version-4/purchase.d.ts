@@ -75,15 +75,16 @@ export declare enum PayloadPurchaseStatusV4 {
     Error = "Error"
 }
 export interface PayloadPurchaseMetadataV4 {
-    readonly status: PayloadPurchaseStatusV4.Valid | PayloadPurchaseStatusV4.Expired | PayloadPurchaseStatusV4.Refunded | PayloadPurchaseStatusV4.Invalid;
+    readonly topUpId: string;
+    readonly status: PayloadPurchaseStatusV4.Valid | PayloadPurchaseStatusV4.Expired | PayloadPurchaseStatusV4.Refunded;
     readonly purchaseDate: number;
     readonly expirationDate?: number;
 }
 export interface PayloadPurchaseErrorV4 {
-    readonly status: PayloadPurchaseStatusV4.Error;
+    readonly status: PayloadPurchaseStatusV4.Error | PayloadPurchaseStatusV4.Invalid;
     readonly errorCode: string;
 }
-export declare type PayloadPurchaseDataV4 = PayloadPurchaseMetadataV4 | PayloadPurchaseErrorV4;
+export declare type PayloadPurchaseDataV4 = (PayloadPurchaseMetadataV4 | PayloadPurchaseErrorV4);
 export interface PayloadValidateSavePurchasesResponseV4 {
     readonly purchases: PayloadPurchaseDataV4[];
 }
