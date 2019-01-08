@@ -13,9 +13,9 @@ export interface PayloadWordUserDataV4 {
     readonly lastModified?: number
 }
 
-export interface PayloadSyncUserProgressStateRequestV4 {
+export interface PayloadSyncUserProgressRequestV4 {
     readonly topicUserData: Dictionary<PayloadTopicUserDataV4>
     readonly wordUserData: Dictionary<PayloadWordUserDataV4>
 }
 
-export type PayloadSyncUserProgressStateResponseV4 = PayloadSyncUserProgressStateRequestV4
+export type PayloadSyncUserProgressResponseV4 = PayloadSyncUserProgressRequestV4

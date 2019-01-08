@@ -10,8 +10,8 @@ export interface PayloadWordUserDataV4 {
     readonly failures?: number;
     readonly lastModified?: number;
 }
-export interface PayloadSyncUserProgressStateRequestV4 {
+export interface PayloadSyncUserProgressRequestV4 {
     readonly topicUserData: Dictionary<PayloadTopicUserDataV4>;
     readonly wordUserData: Dictionary<PayloadWordUserDataV4>;
 }
-export declare type PayloadSyncUserProgressStateResponseV4 = PayloadSyncUserProgressStateRequestV4;
+export declare type PayloadSyncUserProgressResponseV4 = PayloadSyncUserProgressRequestV4;
