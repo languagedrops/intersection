@@ -1,9 +1,7 @@
+import { Dictionary } from './dictionary';
 export interface PropertyWithMetadata<T> {
     readonly value: T;
     readonly lastModified: number | null;
-}
-interface Dictionary<T> {
-    readonly [key: string]: T;
 }
 export interface PayloadUserAppDataV4 {
     readonly numberOfTimeouts?: PropertyWithMetadata<number>;
@@ -40,4 +38,3 @@ export interface PayloadSyncSettingsResponseV4 {
     readonly appData: PayloadUserAppDataV4;
     readonly languageSettings: PayloadUserLanguageSettingsV4;
 }
-export {};
