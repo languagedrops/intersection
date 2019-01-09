@@ -41,6 +41,7 @@ var PayloadPurchaseProviderV4;
     PayloadPurchaseProviderV4["Google"] = "google";
     PayloadPurchaseProviderV4["Apple"] = "apple";
     PayloadPurchaseProviderV4["Paddle"] = "paddle";
+    PayloadPurchaseProviderV4["NoProvider"] = "noprovider";
 })(PayloadPurchaseProviderV4 = exports.PayloadPurchaseProviderV4 || (exports.PayloadPurchaseProviderV4 = {}));
 var PayloadPurchaseStatusV4;
 (function (PayloadPurchaseStatusV4) {

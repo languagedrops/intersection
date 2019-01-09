@@ -52,7 +52,8 @@ export interface PayloadPaddleReceiptV4 {
 export declare enum PayloadPurchaseProviderV4 {
     Google = "google",
     Apple = "apple",
-    Paddle = "paddle"
+    Paddle = "paddle",
+    NoProvider = "noprovider"
 }
 export interface PayloadValidateSyncAppleRequestV4 {
     readonly provider: PayloadPurchaseProviderV4.Apple;
@@ -66,7 +67,10 @@ export interface PayloadValidateSyncPaddleRequestV4 {
     readonly provider: PayloadPurchaseProviderV4.Paddle;
     readonly receipts: PayloadPaddleReceiptV4[];
 }
-export declare type ValidateSyncPurchasesRequestV4 = (PayloadValidateSyncAppleRequestV4 | PayloadValidateSyncGoogleRequestV4 | PayloadValidateSyncPaddleRequestV4) | {};
+export interface PayloadValidateSyncEmptyRequestV4 {
+    readonly provider: PayloadPurchaseProviderV4.NoProvider;
+}
+export declare type ValidateSyncPurchasesRequestV4 = (PayloadValidateSyncAppleRequestV4 | PayloadValidateSyncGoogleRequestV4 | PayloadValidateSyncPaddleRequestV4 | PayloadValidateSyncEmptyRequestV4);
 export declare enum PayloadPurchaseStatusV4 {
     Valid = "valid",
     Expired = "expired",
@@ -86,5 +90,5 @@ export interface PayloadPurchaseErrorV4 {
 }
 export declare type PayloadPurchaseDataV4 = (PayloadPurchaseMetadataV4 | PayloadPurchaseErrorV4);
 export interface PayloadValidateSyncPurchasesResponseV4 {
-    readonly purchases: PayloadPurchaseDataV4[] | [];
+    readonly purchases: PayloadPurchaseDataV4[];
 }
