@@ -63,7 +63,7 @@ export enum PayloadPurchaseProviderV4 {
   Google = 'google',
   Apple = 'apple',
   Paddle = 'paddle',
-  NoProvider = 'noprovider',
+  NoProvider = 'noProvider',
 }
 
 export interface PayloadValidateSyncAppleRequestV4 {

@@ -53,7 +53,7 @@ export declare enum PayloadPurchaseProviderV4 {
     Google = "google",
     Apple = "apple",
     Paddle = "paddle",
-    NoProvider = "noprovider"
+    NoProvider = "noProvider"
 }
 export interface PayloadValidateSyncAppleRequestV4 {
     readonly provider: PayloadPurchaseProviderV4.Apple;
