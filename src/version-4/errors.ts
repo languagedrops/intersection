@@ -27,6 +27,7 @@ export enum PayloadErrorsV4 {
   NoTopicsToDelete = 'No topics to delete supplied',
   WrongWebhook = 'An unrecognised webhook was triggered',
   EmptyEmail = 'Empty email field',
+  InternalServerError = 'Internal server error',
 }
 
 export const getEventTypeV4 = (error: PayloadErrorsV4): PayloadEventTypeResponseV4 => {
@@ -51,6 +52,7 @@ export const getEventTypeV4 = (error: PayloadErrorsV4): PayloadEventTypeResponse
     case PayloadErrorsV4.NoTopicsToDelete:
     case PayloadErrorsV4.WrongWebhook:
     case PayloadErrorsV4.EmptyEmail:
+    case PayloadErrorsV4.InternalServerError:
       return 'error'
   }
 }
