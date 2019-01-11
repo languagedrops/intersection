@@ -1,7 +1,6 @@
-export interface PayloadContentReportMetadataRequestV4 {
+export interface PayloadContentReportRequestV4 {
   readonly nativeLanguage: string
   readonly learningLanguage: string
-  readonly wordId: string
   readonly appVersion: string
   readonly platform: string
   readonly osVersion: string
@@ -10,10 +9,7 @@ export interface PayloadContentReportMetadataRequestV4 {
   readonly soundVersion: string
   readonly romanization: string
   readonly alternativeWriting: string
-}
-
-export interface PayloadContentReportRequestV4 {
-  readonly metadata: PayloadContentReportMetadataRequestV4
+  readonly wordId: string
   readonly cliendUserId: string
   readonly email: string
   readonly comment: string
