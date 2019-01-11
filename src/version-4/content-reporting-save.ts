@@ -2,7 +2,6 @@ export interface PayloadContentReportV4 {
   readonly nativeLanguage: string
   readonly learningLanguage: string
   readonly wordId: string
-  readonly soundId: string
   readonly cliendUserId: string
   readonly email: string
   readonly appVersion: string
@@ -12,5 +11,6 @@ export interface PayloadContentReportV4 {
   readonly comment: string
   readonly contentVersion: string
   readonly soundVersion: string
-  readonly translationVersion: string
+  readonly romanization: string
+  readonly alternativeWriting: string
 }
