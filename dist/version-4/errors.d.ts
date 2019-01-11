@@ -23,7 +23,8 @@ export declare enum PayloadErrorsV4 {
     NoWordsToDelete = "No words to delete supplied",
     NoTopicsToDelete = "No topics to delete supplied",
     WrongWebhook = "An unrecognised webhook was triggered",
-    EmptyEmail = "Empty email field"
+    EmptyEmail = "Empty email field",
+    InternalServerError = "Internal server error"
 }
 export declare const getEventTypeV4: (error: PayloadErrorsV4) => PayloadEventTypeResponseV4;
 export declare const PayloadIsWarningResponseV4: (error: PayloadErrorsV4) => boolean;
