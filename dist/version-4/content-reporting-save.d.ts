@@ -1,4 +1,4 @@
-export declare enum ContentReportIssueType {
+export declare enum PayloadContentReportIssueType {
     Misspelling = "Misspelling",
     Translation = "Translation",
     Illustration = "Illustration",
@@ -19,5 +19,5 @@ export interface PayloadContentReportRequestV4 {
     readonly cliendUserId: string;
     readonly email: string;
     readonly comment: string;
-    readonly issueTypes: ContentReportIssueType[];
+    readonly issueTypes: PayloadContentReportIssueType[];
 }
