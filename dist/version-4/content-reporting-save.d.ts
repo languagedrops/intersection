@@ -1,3 +1,9 @@
+export declare enum ContentReportIssueType {
+    Misspelling = "Misspelling",
+    Translation = "Translation",
+    Illustration = "Illustration",
+    Pronunciation = "Pronunciation"
+}
 export interface PayloadContentReportRequestV4 {
     readonly nativeLanguage: string;
     readonly learningLanguage: string;
@@ -13,5 +19,5 @@ export interface PayloadContentReportRequestV4 {
     readonly cliendUserId: string;
     readonly email: string;
     readonly comment: string;
-    readonly issueType: string;
+    readonly issueTypes: ContentReportIssueType[];
 }
