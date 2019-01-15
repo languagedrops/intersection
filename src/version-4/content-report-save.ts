@@ -18,8 +18,12 @@ export interface PayloadContentReportRequestV4 {
   readonly romanization: string
   readonly alternativeWriting: string
   readonly wordId: string
-  readonly cliendUserId: string
+  readonly clientUserId: string
   readonly email: string
   readonly comment: string
   readonly issueTypes: PayloadContentReportIssueType[]
+}
+
+export interface PayloadContentReportResponseV4 {
+  readonly success: boolean
 }
