@@ -11,7 +11,7 @@ export interface PayloadContentReportRequestV4 {
     readonly platform: string;
     readonly osVersion: string;
     readonly appType: string;
-    readonly contentVersion: string;
+    readonly translationVersion: string;
     readonly soundVersion: string;
     readonly romanization: string;
     readonly alternativeWriting: string;
