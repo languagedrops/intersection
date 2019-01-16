@@ -6,7 +6,7 @@ export interface PayloadWordUserDataV4 {
     readonly progress: number;
     readonly firstTestDate?: number;
     readonly lastTestDate?: number;
-    readonly hidden: boolean;
+    readonly hidden?: boolean;
     readonly failures?: number;
     readonly lastModified?: number;
 }
