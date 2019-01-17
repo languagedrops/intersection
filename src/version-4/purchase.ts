@@ -96,7 +96,7 @@ export enum PayloadPurchaseStatusV4 {
 }
 
 export interface PayloadPurchaseMetadataV4 {
-  readonly topUpId: string,
+  readonly topUpId: PayloadIAPIdentifierV4,
   readonly status: PayloadPurchaseStatusV4.Valid | PayloadPurchaseStatusV4.Expired | PayloadPurchaseStatusV4.Refunded
   readonly purchaseDate: number
   readonly expirationDate?: number
