@@ -22,7 +22,6 @@ export interface PayloadContentReportRequestV4 {
   readonly email: string
   readonly comment: string
   readonly issueTypes: PayloadContentReportIssueType[]
-  readonly englishTranslation: string
   readonly nativeLanguageTranslation: string
   readonly learningLanguageTranslation: string
 }
