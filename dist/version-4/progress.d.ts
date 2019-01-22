@@ -15,3 +15,7 @@ export interface PayloadSyncUserProgressRequestV4 {
     readonly words: Dictionary<PayloadWordUserDataV4>;
 }
 export declare type PayloadSyncUserProgressResponseV4 = PayloadSyncUserProgressRequestV4;
+export declare type PayloadSaveProgressRequestV4 = PayloadSyncUserProgressRequestV4;
+export interface PayloadSaveProgressResponseV4 {
+    readonly success: boolean;
+}
