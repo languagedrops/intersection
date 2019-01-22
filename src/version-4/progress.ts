@@ -19,3 +19,9 @@ export interface PayloadSyncUserProgressRequestV4 {
 }
 
 export type PayloadSyncUserProgressResponseV4 = PayloadSyncUserProgressRequestV4
+
+export type PayloadSaveProgressRequestV4 = PayloadSyncUserProgressRequestV4
+
+export interface PayloadSaveProgressResponseV4 {
+    readonly success: boolean
+}
