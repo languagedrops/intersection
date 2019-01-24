@@ -6,3 +6,4 @@ export * from './settings-sync';
 export * from './user-update';
 export * from './progress';
 export * from './content-report-save';
+export * from './dictionary';
