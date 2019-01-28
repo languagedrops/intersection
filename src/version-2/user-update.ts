@@ -43,6 +43,7 @@ export interface PayloadDeviceSendUserDetailsRequestV2 {
   readonly name?: string
   readonly clientId?: string
   readonly appType?: string
+  readonly platform?: string
 }
 
 export interface PayloadUserDetailsRestRequestV2 {
