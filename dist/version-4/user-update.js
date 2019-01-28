@@ -6,3 +6,8 @@ var PayloadLoginTypeV4;
     PayloadLoginTypeV4["Facebook"] = "Facebook";
     PayloadLoginTypeV4["Email"] = "Email";
 })(PayloadLoginTypeV4 = exports.PayloadLoginTypeV4 || (exports.PayloadLoginTypeV4 = {}));
+var PayloadAppPlatformSendUserDetailsRequestV4;
+(function (PayloadAppPlatformSendUserDetailsRequestV4) {
+    PayloadAppPlatformSendUserDetailsRequestV4["iOS"] = "iOS";
+    PayloadAppPlatformSendUserDetailsRequestV4["Android"] = "Android";
+})(PayloadAppPlatformSendUserDetailsRequestV4 = exports.PayloadAppPlatformSendUserDetailsRequestV4 || (exports.PayloadAppPlatformSendUserDetailsRequestV4 = {}));

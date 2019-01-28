@@ -36,13 +36,19 @@ export interface PayloadEmailUserDetailsV4 extends PayloadLoggedInUserDetailsBas
 
 export type PayloadUserDetailsV4 = PayloadEmailUserDetailsV4 | PayloadGoogleUserDetailsV4 | PayloadFacebookUserDetailsV4
 
+export enum PayloadAppPlatformSendUserDetailsRequestV4 {
+    iOS = 'iOS',
+    Android = 'Android',
+}
+
 export interface PayloadDeviceSendUserDetailsRequestV4 {
     readonly deviceId: string
     readonly type?: string
     readonly name?: string
     readonly clientId?: string
     readonly appType?: string
-  }
+    readonly platform?: PayloadAppPlatformSendUserDetailsRequestV4
+}
 
 export interface PayloadUserDetailsRestRequestV4 {
     readonly device?: PayloadDeviceSendUserDetailsRequestV4
