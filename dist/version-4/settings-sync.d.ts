@@ -13,7 +13,6 @@ export interface PayloadUserAppDataV4 {
     readonly redeemedDailyRewardLastDate?: PropertyWithMetadata<number>;
     readonly activeSegment?: PropertyWithMetadata<string>;
     readonly screenTutorialCompleted?: PropertyWithMetadata<Dictionary<boolean>>;
-    readonly topicCompletedPopupDisplayed?: PropertyWithMetadata<Dictionary<boolean>>;
     readonly promoteScreensViewCounts?: PropertyWithMetadata<Dictionary<number>>;
     readonly screenLastShown?: PropertyWithMetadata<Dictionary<number>>;
     readonly monetizationSegment?: PropertyWithMetadata<string>;
