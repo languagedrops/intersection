@@ -10,6 +10,9 @@ export interface PayloadUserAppDataV4 {
   readonly persistedTime?: PropertyWithMetadata<number>
   readonly transientTime?: PropertyWithMetadata<number>
   readonly sessionResetDate?: PropertyWithMetadata<number | undefined>
+  readonly dailyRewardStreak?: PropertyWithMetadata<number>
+  readonly dailyRewardNextCutoff?: PropertyWithMetadata<number | null>
+  readonly redeemedDailyRewardLastDate?: PropertyWithMetadata<number>
   readonly activeSegment?: PropertyWithMetadata<string>
   readonly screenTutorialCompleted?: PropertyWithMetadata<Dictionary<boolean>>
   readonly promoteScreensViewCounts?: PropertyWithMetadata<Dictionary<number>>
