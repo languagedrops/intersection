@@ -1,9 +1,10 @@
+import { PayloadRequestBaseV4 } from './base';
 export declare enum PayloadLoginTypeV4 {
     Google = "Google",
     Facebook = "Facebook",
     Email = "Email"
 }
-interface PayloadUserDetailsBaseV4<T extends PayloadLoginTypeV4> {
+interface PayloadUserDetailsBaseV4<T extends PayloadLoginTypeV4> extends PayloadRequestBaseV4 {
     readonly type: T;
 }
 interface PayloadLoggedInUserDetailsBaseV4<T extends PayloadLoginTypeV4> extends PayloadUserDetailsBaseV4<T> {

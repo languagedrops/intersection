@@ -1,3 +1,5 @@
+import { PayloadRequestBaseV4 } from './base'
+
 export enum PayloadIAPIdentifierV4 {
   iapForever10Mins = 'iapForever10Mins',
   iapForever10MinsDiscounted = 'iapForever10MinsDiscounted',
@@ -66,22 +68,22 @@ export enum PayloadPurchaseProviderV4 {
   NoProvider = 'noProvider',
 }
 
-export interface PayloadValidateSyncAppleRequestV4 {
+export interface PayloadValidateSyncAppleRequestV4 extends PayloadRequestBaseV4 {
   readonly provider: PayloadPurchaseProviderV4.Apple
   readonly receipt: string
 }
 
-export interface PayloadValidateSyncGoogleRequestV4 {
+export interface PayloadValidateSyncGoogleRequestV4 extends PayloadRequestBaseV4 {
   readonly provider: PayloadPurchaseProviderV4.Google
   readonly receipts: PayloadAndroidReceiptV4[]
 }
 
-export interface PayloadValidateSyncPaddleRequestV4 {
+export interface PayloadValidateSyncPaddleRequestV4 extends PayloadRequestBaseV4 {
   readonly provider: PayloadPurchaseProviderV4.Paddle
   readonly receipts: PayloadPaddleReceiptV4[]
 }
 
-export interface PayloadValidateSyncEmptyRequestV4 {
+export interface PayloadValidateSyncEmptyRequestV4 extends PayloadRequestBaseV4 {
   readonly provider: PayloadPurchaseProviderV4.NoProvider
 }
 
