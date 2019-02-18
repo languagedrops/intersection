@@ -1,4 +1,5 @@
 import { Dictionary } from './dictionary';
+import { PayloadRequestBaseV4 } from './base';
 export interface PropertyWithMetadata<T> {
     readonly value: T;
     readonly lastModified: number | null;
@@ -26,7 +27,7 @@ export interface PayloadUserLanguageSettingsV4 {
     readonly characterDrawing?: PropertyWithMetadata<Dictionary<boolean>>;
     readonly deviceLanguage?: PropertyWithMetadata<string>;
 }
-export interface PayloadSyncSettingsRequestV4 {
+export interface PayloadSyncSettingsRequestV4 extends PayloadRequestBaseV4 {
     readonly appData: PayloadUserAppDataV4;
     readonly languageSettings: PayloadUserLanguageSettingsV4;
 }

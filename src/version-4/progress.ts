@@ -1,4 +1,5 @@
 import { Dictionary } from './dictionary'
+import { PayloadRequestBaseV4 } from './base'
 
 export interface PayloadTopicUserDataV4 {
     readonly lastModified?: number
@@ -13,7 +14,7 @@ export interface PayloadWordUserDataV4 {
     readonly lastModified?: number
 }
 
-export interface PayloadSyncUserProgressRequestV4 {
+export interface PayloadSyncUserProgressRequestV4 extends PayloadRequestBaseV4 {
     readonly topics: Dictionary<PayloadTopicUserDataV4>
     readonly words: Dictionary<PayloadWordUserDataV4>
 }
