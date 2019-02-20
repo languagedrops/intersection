@@ -22,7 +22,7 @@ export interface PayloadUserAppDataV4 {
     readonly screensCompleted?: PropertyWithMetadata<number>;
     readonly introStatus?: PropertyWithMetadata<string>;
     readonly lastPracticeTopicId?: PropertyWithMetadata<Dictionary<number>>;
-    readonly lastCelebratedMilestone?: PropertyWithMetadata<Dictionary<string>>;
+    readonly lastCelebratedMilestone?: PropertyWithMetadata<Dictionary<Dictionary<string | number>>>;
     readonly sessionFinishDates?: PropertyWithMetadata<number[]>;
 }
 export interface PayloadUserLanguageSettingsV4 {
