@@ -16,6 +16,7 @@ export interface PayloadUserAppDataV4 {
     readonly monetizationSegment?: PropertyWithMetadata<string>;
     readonly segmentLongTermRetention?: PropertyWithMetadata<string>;
     readonly segmentFeatureUsageSegment?: PropertyWithMetadata<string>;
+    readonly segmentShare?: PropertyWithMetadata<string>;
     readonly dojoScreensCompleted?: PropertyWithMetadata<number>;
     readonly userMigrations?: PropertyWithMetadata<Dictionary<boolean>>;
     readonly wordListSectionsCollapsed?: PropertyWithMetadata<Dictionary<Dictionary<boolean>>>;
