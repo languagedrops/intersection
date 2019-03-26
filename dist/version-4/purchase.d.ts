@@ -83,6 +83,7 @@ export interface PayloadPurchaseMetadataV4 {
     readonly topUpId: PayloadIAPIdentifierV4;
     readonly status: PayloadPurchaseStatusV4.Valid | PayloadPurchaseStatusV4.Expired | PayloadPurchaseStatusV4.Refunded;
     readonly purchaseDate: number;
+    readonly provider: PayloadPurchaseProviderV4;
     readonly expirationDate?: number;
 }
 export interface PayloadPurchaseErrorV4 {
