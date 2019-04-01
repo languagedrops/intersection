@@ -102,8 +102,8 @@ export interface PayloadPurchaseMetadataV4 {
   readonly status: PayloadPurchaseStatusV4.Valid | PayloadPurchaseStatusV4.Expired | PayloadPurchaseStatusV4.Refunded
   readonly purchaseDate: number
   readonly provider: PayloadPurchaseProviderV4
-  readonly transactionId: string,
-  readonly cancellationDate?: number,
+  readonly transactionId: string
+  readonly cancellationDate?: number
   readonly expirationDate?: number
 }
 
