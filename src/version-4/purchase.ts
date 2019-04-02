@@ -97,20 +97,36 @@ export enum PayloadPurchaseStatusV4 {
   Error = 'Error',
 }
 
-export interface PayloadPurchaseMetadataV4 {
+export interface PayloadPurchaseMetadataBaseV4 {
   readonly topUpId: PayloadIAPIdentifierV4,
   readonly status: PayloadPurchaseStatusV4.Valid | PayloadPurchaseStatusV4.Expired | PayloadPurchaseStatusV4.Refunded
   readonly purchaseDate: number
-  readonly provider: PayloadPurchaseProviderV4
   readonly transactionId: string
   readonly cancellationDate?: number
   readonly expirationDate?: number
+}
+
+export interface PayloadValidateSyncAppleResponseV4 extends PayloadPurchaseMetadataBaseV4 {
+  readonly provider: PayloadPurchaseProviderV4.Apple
+  readonly receipt: string
+}
+
+export interface PayloadValidateSyncGoogleResponseV4 extends PayloadPurchaseMetadataBaseV4 {
+  readonly provider: PayloadPurchaseProviderV4.Google
+  readonly receipts: PayloadAndroidReceiptV4[]
+}
+
+export interface PayloadValidateSyncPaddleResponseV4 extends PayloadPurchaseMetadataBaseV4 {
+  readonly provider: PayloadPurchaseProviderV4.Paddle
+  readonly receipts: PayloadPaddleReceiptV4[]
 }
 
 export interface PayloadPurchaseErrorV4 {
   readonly status: PayloadPurchaseStatusV4.Error | PayloadPurchaseStatusV4.Invalid
   readonly errorCode: string
 }
+
+export type PayloadPurchaseMetadataV4 = (PayloadValidateSyncAppleResponseV4 | PayloadValidateSyncGoogleResponseV4 | PayloadValidateSyncPaddleResponseV4)
 
 export type PayloadPurchaseDataV4 = (PayloadPurchaseMetadataV4 | PayloadPurchaseErrorV4)
 
