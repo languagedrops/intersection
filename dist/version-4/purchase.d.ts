@@ -93,11 +93,11 @@ export interface PayloadValidateSyncAppleResponseV4 extends PayloadPurchaseMetad
 }
 export interface PayloadValidateSyncGoogleResponseV4 extends PayloadPurchaseMetadataBaseV4 {
     readonly provider: PayloadPurchaseProviderV4.Google;
-    readonly receipts: PayloadAndroidReceiptV4[];
+    readonly receipt: PayloadAndroidReceiptV4;
 }
 export interface PayloadValidateSyncPaddleResponseV4 extends PayloadPurchaseMetadataBaseV4 {
     readonly provider: PayloadPurchaseProviderV4.Paddle;
-    readonly receipts: PayloadPaddleReceiptV4[];
+    readonly receipt: PayloadPaddleReceiptV4;
 }
 export interface PayloadPurchaseErrorV4 {
     readonly status: PayloadPurchaseStatusV4.Error | PayloadPurchaseStatusV4.Invalid;
