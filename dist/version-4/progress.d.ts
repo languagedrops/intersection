@@ -10,6 +10,7 @@ export interface PayloadWordUserDataV4 {
     readonly hidden?: boolean;
     readonly failures?: number;
     readonly lastModified?: number;
+    readonly srsScore?: number;
 }
 export interface PayloadSyncUserProgressRequestV4 extends PayloadRequestBaseV4 {
     readonly topics: Dictionary<PayloadTopicUserDataV4>;
