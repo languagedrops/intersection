@@ -41,6 +41,10 @@ export enum PayloadIAPIdentifierV4 {
   iapPremiumYearly40 = 'iapPremiumYearly40',
   iapPremiumYearly35 = 'iapPremiumYearly35',
   iapPremiumLifetime160 = 'iapPremiumLifetime160',
+
+  // non-recurring limited time
+  iapPremium3months = 'iapPremium3months',
+  iapPremium1year = 'iapPremium1year',
 }
 
 export interface PayloadAndroidReceiptV4 {
