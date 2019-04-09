@@ -36,8 +36,8 @@ var PayloadIAPIdentifierV4;
     PayloadIAPIdentifierV4["iapPremiumYearly35"] = "iapPremiumYearly35";
     PayloadIAPIdentifierV4["iapPremiumLifetime160"] = "iapPremiumLifetime160";
     // non-recurring limited time
-    PayloadIAPIdentifierV4["iapPremium3months"] = "iapPremium3months";
-    PayloadIAPIdentifierV4["iapPremium1year"] = "iapPremium1year";
+    PayloadIAPIdentifierV4["iapPremium3months30"] = "iapPremium3months30";
+    PayloadIAPIdentifierV4["iapPremium1year70"] = "iapPremium1year70";
 })(PayloadIAPIdentifierV4 = exports.PayloadIAPIdentifierV4 || (exports.PayloadIAPIdentifierV4 = {}));
 var PayloadPurchaseProviderV4;
 (function (PayloadPurchaseProviderV4) {

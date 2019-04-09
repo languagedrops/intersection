@@ -33,8 +33,8 @@ export declare enum PayloadIAPIdentifierV4 {
     iapPremiumYearly40 = "iapPremiumYearly40",
     iapPremiumYearly35 = "iapPremiumYearly35",
     iapPremiumLifetime160 = "iapPremiumLifetime160",
-    iapPremium3months = "iapPremium3months",
-    iapPremium1year = "iapPremium1year"
+    iapPremium3months30 = "iapPremium3months30",
+    iapPremium1year70 = "iapPremium1year70"
 }
 export interface PayloadAndroidReceiptV4 {
     readonly data: string;
