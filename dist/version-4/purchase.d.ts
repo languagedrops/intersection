@@ -51,6 +51,7 @@ export interface PayloadPaddleReceiptV4 {
     readonly subscriptionId?: string;
     readonly cancellationEffectiveDate?: number | Date;
     readonly expirationDate?: number | Date;
+    readonly cancelUrl?: string;
 }
 export declare enum PayloadPurchaseProviderV4 {
     Google = "google",

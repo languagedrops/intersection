@@ -63,6 +63,7 @@ export interface PayloadPaddleReceiptV4 {
   readonly subscriptionId?: string
   readonly cancellationEffectiveDate?: number | Date
   readonly expirationDate?: number | Date
+  readonly cancelUrl?: string
 }
 
 export enum PayloadPurchaseProviderV4 {
