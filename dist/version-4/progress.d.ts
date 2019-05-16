@@ -17,7 +17,7 @@ export interface PayloadSaveUserProgressRequestV4 extends PayloadRequestBaseV4 {
     readonly words: Dictionary<PayloadWordUserDataV4>;
 }
 export interface PayloadSyncUserProgressRequestV4 extends PayloadSaveUserProgressRequestV4 {
-    readonly lang?: string;
+    readonly language?: string;
 }
 export declare type PayloadSyncUserProgressResponseV4 = PayloadSyncUserProgressRequestV4;
 export declare type PayloadSaveProgressRequestV4 = PayloadSaveUserProgressRequestV4;
