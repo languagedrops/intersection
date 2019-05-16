@@ -12,12 +12,15 @@ export interface PayloadWordUserDataV4 {
     readonly lastModified?: number;
     readonly srsScore?: number;
 }
-export interface PayloadSyncUserProgressRequestV4 extends PayloadRequestBaseV4 {
+export interface PayloadSaveUserProgressRequestV4 extends PayloadRequestBaseV4 {
     readonly topics: Dictionary<PayloadTopicUserDataV4>;
     readonly words: Dictionary<PayloadWordUserDataV4>;
 }
+export interface PayloadSyncUserProgressRequestV4 extends PayloadSaveUserProgressRequestV4 {
+    readonly language?: string;
+}
 export declare type PayloadSyncUserProgressResponseV4 = PayloadSyncUserProgressRequestV4;
-export declare type PayloadSaveProgressRequestV4 = PayloadSyncUserProgressRequestV4;
+export declare type PayloadSaveProgressRequestV4 = PayloadSaveUserProgressRequestV4;
 export interface PayloadSaveProgressResponseV4 {
     readonly success: boolean;
 }
