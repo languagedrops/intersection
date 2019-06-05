@@ -1,4 +1,5 @@
 export declare type PayloadEventTypeResponseV4 = 'error' | 'warning' | 'info' | 'success';
+export declare type PayloadStatusCodesV4 = 400 | 401 | 500 | 501;
 export interface PayloadErrorResponseV4 {
     readonly errorMessage: PayloadErrorsV4;
     readonly details: string;
@@ -27,5 +28,6 @@ export declare enum PayloadErrorsV4 {
     InternalServerError = "Internal server error"
 }
 export declare const getEventTypeV4: (error: PayloadErrorsV4) => PayloadEventTypeResponseV4;
+export declare const getStatusCodeV4: (error: PayloadErrorsV4) => PayloadStatusCodesV4;
 export declare const PayloadIsWarningResponseV4: (error: PayloadErrorsV4) => boolean;
 export declare const PayloadIsErrorResponseV4: (error: PayloadErrorsV4) => boolean;

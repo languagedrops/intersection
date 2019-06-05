@@ -49,5 +49,33 @@ exports.getEventTypeV4 = (error) => {
             return 'error';
     }
 };
+exports.getStatusCodeV4 = (error) => {
+    switch (error) {
+        case PayloadErrorsV4.InvalidUserEmail:
+        case PayloadErrorsV4.DuplicateUserEmail:
+        case PayloadErrorsV4.InvalidPayload:
+        case PayloadErrorsV4.MissingReceipt:
+        case PayloadErrorsV4.MissingReceiptSignature:
+        case PayloadErrorsV4.MissingProductIdInReceipt:
+        case PayloadErrorsV4.WrongPayloadFromClient:
+        case PayloadErrorsV4.CannotMergeTwoEmptyWords:
+        case PayloadErrorsV4.CannotMergeTwoEmptyTopics:
+        case PayloadErrorsV4.CannotMergeTwoEmptyUsers:
+        case PayloadErrorsV4.CannotMergeTwoEmptyUserPayloads:
+        case PayloadErrorsV4.NoClientProductId:
+        case PayloadErrorsV4.WrongFormattedReceipt:
+        case PayloadErrorsV4.EmptyEmail:
+        case PayloadErrorsV4.NoLanguagesToDelete:
+        case PayloadErrorsV4.NoWordsToDelete:
+        case PayloadErrorsV4.NoTopicsToDelete:
+            return 400;
+        case PayloadErrorsV4.Unauthorized:
+            return 401;
+        case PayloadErrorsV4.InternalServerError:
+            return 500;
+        case PayloadErrorsV4.WrongWebhook:
+            return 501;
+    }
+};
 exports.PayloadIsWarningResponseV4 = (error) => exports.getEventTypeV4(error) === 'warning';
 exports.PayloadIsErrorResponseV4 = (error) => exports.getEventTypeV4(error) === 'error';
