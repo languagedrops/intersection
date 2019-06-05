@@ -13,6 +13,7 @@ export interface PayloadWordUserDataV4 {
     readonly failures?: number
     readonly lastModified?: number
     readonly srsScore?: number
+    readonly isUpdated?: boolean
 }
 
 export interface PayloadSaveUserProgressRequestV4 extends PayloadRequestBaseV4 {
