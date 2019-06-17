@@ -27,6 +27,7 @@ export interface PayloadUserAppDataV4 {
     readonly lastPracticeTopicId?: PropertyWithMetadata<Dictionary<number>>;
     readonly lastCelebratedMilestone?: PropertyWithMetadata<Dictionary<Dictionary<string | number>>>;
     readonly sessionFinishDates?: PropertyWithMetadata<number[]>;
+    readonly lastStreakRewardDate?: PropertyWithMetadata<number>;
 }
 export interface PayloadUserLanguageSettingsV4 {
     readonly useAlternativeTranslation?: PropertyWithMetadata<Dictionary<boolean>>;
