@@ -1,6 +1,6 @@
 {
   "name": "@drops-developers/intersection",
-  "version": "0.11.3",
+  "version": "0.11.4",
   "description": "Drops payload types between frontent and backend",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
