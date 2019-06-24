@@ -30,7 +30,7 @@ export interface PayloadUserAppDataV4 {
   readonly lastCelebratedMilestone?: PropertyWithMetadata<Dictionary<Dictionary<string | number>>>
   readonly sessionFinishDates?: PropertyWithMetadata<number[]>
   readonly lastStreakRewardDate?: PropertyWithMetadata<number>
-  readonly sessionLength?: PropertyWithMetadata<string | null>
+  readonly sessionLength?: PropertyWithMetadata<string>
 }
 
 export interface PayloadUserLanguageSettingsV4 {
