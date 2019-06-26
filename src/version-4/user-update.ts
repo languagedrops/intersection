@@ -57,4 +57,11 @@ export interface PayloadUserDetailsRestRequestV4 {
     readonly consent?: {readonly [key: string]: boolean}
 }
 
+export interface PayloadUserEmailTimeResponseV4 {
+    readonly lastExpirationEmailTime?: number
+    readonly lastCancellationEmailTime?: number
+}
+
 export type PayloadSendUserDetailsRequestV4 = PayloadUserDetailsV4 & PayloadUserDetailsRestRequestV4
+
+export type PayloadUpdateUserResponseV4 = PayloadUserDetailsV4 & PayloadUserEmailTimeResponseV4
