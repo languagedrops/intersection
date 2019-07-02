@@ -29,6 +29,7 @@ export interface PayloadUserAppDataV4 {
     readonly sessionFinishDates?: PropertyWithMetadata<number[]>;
     readonly lastStreakRewardDate?: PropertyWithMetadata<number>;
     readonly sessionLength?: PropertyWithMetadata<string>;
+    readonly revealNativeWord?: PropertyWithMetadata<boolean>;
 }
 export interface PayloadUserLanguageSettingsV4 {
     readonly useAlternativeTranslation?: PropertyWithMetadata<Dictionary<boolean>>;
