@@ -40,6 +40,7 @@ var PayloadIAPIdentifierV4;
     // non-recurring limited time
     PayloadIAPIdentifierV4["iapPremium3months30"] = "iapPremium3months30";
     PayloadIAPIdentifierV4["iapPremium1year70"] = "iapPremium1year70";
+    PayloadIAPIdentifierV4["iapPremium1year40"] = "iapPremium1year40";
 })(PayloadIAPIdentifierV4 = exports.PayloadIAPIdentifierV4 || (exports.PayloadIAPIdentifierV4 = {}));
 var PayloadPurchaseProviderV4;
 (function (PayloadPurchaseProviderV4) {
