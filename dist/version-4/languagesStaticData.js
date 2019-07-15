@@ -1,6 +1,20 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const language_1 = require("./language");
+exports.getHumanReadableLanguageName = (languageIso) => {
+    switch (languageIso) {
+        case language_1.LanguageISO.ES:
+            return 'Spanish (Castilian)';
+        case language_1.LanguageISO.ESMX:
+            return 'Spanish (Latin America)';
+        case language_1.LanguageISO.PTPT:
+            return 'Portuguese (European)';
+        case language_1.LanguageISO.ENGB:
+            return 'English (American)';
+        default:
+            return exports.languagesStaticData[languageIso].name;
+    }
+};
 exports.languagesStaticData = {
     [language_1.LanguageISO.KO]: {
         iso: language_1.LanguageISO.KO,
