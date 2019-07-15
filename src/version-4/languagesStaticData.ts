@@ -2,14 +2,20 @@ import { LanguageName, LanguageISO, Language } from './language'
 
 export const getHumanReadableLanguageName = (languageIso: LanguageISO): string => {
   switch (languageIso) {
+    case LanguageISO.ZHYUE:
+      return 'Cantonese'
     case LanguageISO.ES:
       return 'Spanish (Castilian)'
     case LanguageISO.ESMX:
       return 'Spanish (Latin America)'
-      case LanguageISO.PTPT:
+    case LanguageISO.PT:
+      return 'Portuguese (Brazilian)'
+    case LanguageISO.PTPT:
       return 'Portuguese (European)'
-      case LanguageISO.ENGB:
-      return 'English (American)'
+    case LanguageISO.ENGB:
+      return 'English (British)'
+    case LanguageISO.EN:
+      return 'English (American)”'
     default:
       return languagesStaticData[languageIso].name
   }
