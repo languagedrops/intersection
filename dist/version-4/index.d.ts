@@ -8,3 +8,5 @@ export * from './progress';
 export * from './content-report-save';
 export * from './dictionary';
 export * from './login-provider';
+export * from './language';
+export * from './languagesStaticData';
