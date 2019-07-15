@@ -1,19 +1,4 @@
-import { LanguageName, LanguageISO, LocalizedKey } from 'types/'
-import { Fonts } from 'constants/'
-
-
-export interface Language {
-    readonly iso: LanguageISO
-    readonly name: LanguageName
-    readonly alphabet: string[]
-    readonly alternativeAlphabet?: string[]
-    readonly hasRomanAid: boolean
-    readonly hasAlternativeTranslation: boolean
-    readonly alternativeTranslationTitles?: () => string[]
-    readonly hasAlphabetTopic: boolean
-    readonly availableAsLearning: boolean
-    readonly availableAsDevice: boolean
-}
+import { LanguageName, LanguageISO, Language } from './language'
 
 export const languagesStaticData: { readonly [key: string]: Language } = {
   [LanguageISO.KO]: {
@@ -25,7 +10,6 @@ export const languagesStaticData: { readonly [key: string]: Language } = {
     hasAlphabetTopic: true,
     availableAsLearning: true,
     availableAsDevice: true,
-    font: Fonts.UIBold,
   } as Language,
   [LanguageISO.ES]: {
     iso: LanguageISO.ES,
@@ -36,7 +20,6 @@ export const languagesStaticData: { readonly [key: string]: Language } = {
     hasAlphabetTopic: false,
     availableAsLearning: true,
     availableAsDevice: true,
-    font: Fonts.UIBold,
   } as Language,
   [LanguageISO.JP]: {
     iso: LanguageISO.JP,
@@ -45,11 +28,9 @@ export const languagesStaticData: { readonly [key: string]: Language } = {
     alternativeAlphabet: 'アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン'.split(''),
     hasRomanAid: true,
     hasAlternativeTranslation: true,
-    alternativeTranslationTitles: () => [ LocalizedKey.settingsJapaneseKanaLabel, LocalizedKey.settingsJapaneseKanaandkanjiLabel ],
     hasAlphabetTopic: true,
     availableAsLearning: true,
     availableAsDevice: true,
-    font: Fonts.UIBold,
   } as Language,
   [LanguageISO.FR]: {
     iso: LanguageISO.FR,
@@ -60,7 +41,6 @@ export const languagesStaticData: { readonly [key: string]: Language } = {
     hasAlphabetTopic: false,
     availableAsLearning: true,
     availableAsDevice: true,
-    font: Fonts.UIBold,
   } as Language,
   [LanguageISO.EN]: {
     iso: LanguageISO.EN,
@@ -71,7 +51,6 @@ export const languagesStaticData: { readonly [key: string]: Language } = {
     hasAlphabetTopic: true,
     availableAsLearning: true,
     availableAsDevice: true,
-    font: Fonts.UIBold,
   } as Language,
   [LanguageISO.ZH]: {
     iso: LanguageISO.ZH,
@@ -80,11 +59,9 @@ export const languagesStaticData: { readonly [key: string]: Language } = {
     alternativeAlphabet: '的壹是不了人我在有他這中大來上國個到說們為子和你地出道也時年得就那要下以生會自著去之過家學對可她里後小麼心多天而能好都然沒日於起還發成事只作當想看文無(開手十用主行方又如前所本見經頭面公同三已老從動兩長'.split(''),
     hasRomanAid: true,
     hasAlternativeTranslation: true,
-    alternativeTranslationTitles: () => [ LocalizedKey.languageSelectionChineseSimplified, LocalizedKey.languageSelectionChineseTraditional ],
     hasAlphabetTopic: true,
     availableAsLearning: true,
     availableAsDevice: true,
-    font: Fonts.UIBold,
   } as Language,
   [LanguageISO.IT]: {
     iso: LanguageISO.IT,
@@ -95,7 +72,6 @@ export const languagesStaticData: { readonly [key: string]: Language } = {
     hasAlphabetTopic: false,
     availableAsLearning: true,
     availableAsDevice: true,
-    font: Fonts.UIBold,
   } as Language,
   [LanguageISO.DE]: {
     iso: LanguageISO.DE,
@@ -106,7 +82,6 @@ export const languagesStaticData: { readonly [key: string]: Language } = {
     hasAlphabetTopic: false,
     availableAsLearning: true,
     availableAsDevice: true,
-    font: Fonts.UIBold,
   } as Language,
   [LanguageISO.RU]: {
     iso: LanguageISO.RU,
@@ -117,7 +92,6 @@ export const languagesStaticData: { readonly [key: string]: Language } = {
     hasAlphabetTopic: true,
     availableAsLearning: true,
     availableAsDevice: true,
-    font: Fonts.UIBold,
   } as Language,
   [LanguageISO.PT]: {
     iso: LanguageISO.PT,
@@ -128,7 +102,6 @@ export const languagesStaticData: { readonly [key: string]: Language } = {
     hasAlphabetTopic: false,
     availableAsLearning: true,
     availableAsDevice: true,
-    font: Fonts.UIBold,
   } as Language,
   [LanguageISO.HE]: {
     iso: LanguageISO.HE,
@@ -136,11 +109,9 @@ export const languagesStaticData: { readonly [key: string]: Language } = {
     alphabet: 'א,בּ,ב,ג,ד,ה,ו‬,ז‬,ח‬,ט,י,ך‬‬,כּ,כ,ךּ,ל,מ,ם,נ‬,ן,‬ס,ע,פּ,פ‬,ף,צ‬,ץ,ק,שׂ‬,תּ‬,שׁ‬,ר,ת‬‬'.split(','),
     hasRomanAid: true,
     hasAlternativeTranslation: true,
-    alternativeTranslationTitles: () => [ LocalizedKey.profileFemale, LocalizedKey.profileMale ],
     hasAlphabetTopic: true,
     availableAsLearning: true,
     availableAsDevice: true,
-    font: Fonts.UIBold,
   } as Language,
   [LanguageISO.AR]: {
     iso: LanguageISO.AR,
@@ -151,7 +122,6 @@ export const languagesStaticData: { readonly [key: string]: Language } = {
     hasAlphabetTopic: true,
     availableAsLearning: true,
     availableAsDevice: true,
-    font: Fonts.UIBold,
   } as Language,
   [LanguageISO.TR]: {
     iso: LanguageISO.TR,
@@ -162,7 +132,6 @@ export const languagesStaticData: { readonly [key: string]: Language } = {
     hasAlphabetTopic: false,
     availableAsLearning: true,
     availableAsDevice: true,
-    font: Fonts.UIBold,
   } as Language,
   [LanguageISO.DA]: {
     iso: LanguageISO.DA,
@@ -173,7 +142,6 @@ export const languagesStaticData: { readonly [key: string]: Language } = {
     hasAlphabetTopic: false,
     availableAsLearning: true,
     availableAsDevice: true,
-    font: Fonts.UIBold,
   } as Language,
   [LanguageISO.SV]: {
     iso: LanguageISO.SV,
@@ -184,7 +152,6 @@ export const languagesStaticData: { readonly [key: string]: Language } = {
     hasAlphabetTopic: false,
     availableAsLearning: true,
     availableAsDevice: true,
-    font: Fonts.UIBold,
   } as Language,
   [LanguageISO.NO]: {
     iso: LanguageISO.NO,
@@ -195,7 +162,6 @@ export const languagesStaticData: { readonly [key: string]: Language } = {
     hasAlphabetTopic: false,
     availableAsLearning: true,
     availableAsDevice: true,
-    font: Fonts.UIBold,
   } as Language,
   [LanguageISO.HI]: {
     iso: LanguageISO.HI,
@@ -206,7 +172,6 @@ export const languagesStaticData: { readonly [key: string]: Language } = {
     hasAlphabetTopic: true,
     availableAsLearning: true,
     availableAsDevice: true,
-    font: Fonts.UIBold,
   } as Language,
   [LanguageISO.TL]: {
     iso: LanguageISO.TL,
@@ -217,7 +182,6 @@ export const languagesStaticData: { readonly [key: string]: Language } = {
     hasAlphabetTopic: false,
     availableAsLearning: true,
     availableAsDevice: true,
-    font: Fonts.UIBold,
   } as Language,
   [LanguageISO.VI]: {
     iso: LanguageISO.VI,
@@ -228,7 +192,6 @@ export const languagesStaticData: { readonly [key: string]: Language } = {
     hasAlphabetTopic: false,
     availableAsLearning: true,
     availableAsDevice: true,
-    font: Fonts.UIBold,
   } as Language,
   [LanguageISO.EO]: {
     iso: LanguageISO.EO,
@@ -239,7 +202,6 @@ export const languagesStaticData: { readonly [key: string]: Language } = {
     hasAlphabetTopic: false,
     availableAsLearning: true,
     availableAsDevice: true,
-    font: Fonts.UIBold,
   } as Language,
   [LanguageISO.HU]: {
     iso: LanguageISO.HU,
@@ -250,7 +212,6 @@ export const languagesStaticData: { readonly [key: string]: Language } = {
     hasAlphabetTopic: false,
     availableAsLearning: true,
     availableAsDevice: true,
-    font: Fonts.UIBold,
   } as Language,
   [LanguageISO.NL]: {
     iso: LanguageISO.NL,
@@ -261,7 +222,6 @@ export const languagesStaticData: { readonly [key: string]: Language } = {
     hasAlphabetTopic: false,
     availableAsLearning: true,
     availableAsDevice: true,
-    font: Fonts.UIBold,
   } as Language,
   [LanguageISO.IC]: {
     iso: LanguageISO.IC,
@@ -272,7 +232,6 @@ export const languagesStaticData: { readonly [key: string]: Language } = {
     hasAlphabetTopic: false,
     availableAsLearning: true,
     availableAsDevice: true,
-    font: Fonts.UIBold,
   } as Language,
   [LanguageISO.ID]: {
     iso: LanguageISO.ID,
@@ -283,7 +242,6 @@ export const languagesStaticData: { readonly [key: string]: Language } = {
     hasAlphabetTopic: false,
     availableAsLearning: true,
     availableAsDevice: true,
-    font: Fonts.UIBold,
   } as Language,
   [LanguageISO.ENGB]: {
     iso: LanguageISO.ENGB,
@@ -294,7 +252,6 @@ export const languagesStaticData: { readonly [key: string]: Language } = {
     hasAlphabetTopic: false,
     availableAsLearning: true,
     availableAsDevice: true,
-    font: Fonts.UIBold,
   } as Language,
   [LanguageISO.ESMX]: {
     iso: LanguageISO.ESMX,
@@ -305,7 +262,6 @@ export const languagesStaticData: { readonly [key: string]: Language } = {
     hasAlphabetTopic: false,
     availableAsLearning: true,
     availableAsDevice: true,
-    font: Fonts.UIBold,
   } as Language,
   [LanguageISO.PTPT]: {
     iso: LanguageISO.PTPT,
@@ -316,7 +272,6 @@ export const languagesStaticData: { readonly [key: string]: Language } = {
     hasAlphabetTopic: false,
     availableAsLearning: true,
     availableAsDevice: true,
-    font: Fonts.UIBold,
   } as Language,
   [LanguageISO.ZHYUE]: {
     iso: LanguageISO.ZHYUE,
@@ -324,7 +279,6 @@ export const languagesStaticData: { readonly [key: string]: Language } = {
     alphabet: '的壹是不了人我在有他这中大来上国个到说们为子和你地出道也时年得就那要下以生会自着去之过家学对可她里后小么心多天而能好都然没日于起还发成事只作当想看文无'.split(''),
     hasRomanAid: true,
     hasAlternativeTranslation: true,
-    alternativeTranslationTitles: () => [ LocalizedKey.settingsCantoneseWritten, LocalizedKey.settingsCantoneseSpoken ],
     hasAlphabetTopic: false,
     availableAsLearning: true,
     availableAsDevice: true,
@@ -348,7 +302,6 @@ export const languagesStaticData: { readonly [key: string]: Language } = {
     hasAlphabetTopic: false,
     availableAsLearning: true,
     availableAsDevice: true,
-    font: Fonts.UIBold,
   } as Language,
   [LanguageISO.HAW]: {
     iso: LanguageISO.HAW,
@@ -359,7 +312,6 @@ export const languagesStaticData: { readonly [key: string]: Language } = {
     hasAlphabetTopic: false,
     availableAsLearning: true,
     availableAsDevice: false,
-    font: Fonts.UIBold,
   } as Language,
   [LanguageISO.PA]: {
     iso: LanguageISO.PA,
@@ -370,7 +322,6 @@ export const languagesStaticData: { readonly [key: string]: Language } = {
     hasAlphabetTopic: false,
     availableAsLearning: false,
     availableAsDevice: false,
-    font: Fonts.UIBold,
   } as Language,
   [LanguageISO.MI]: {
     iso: LanguageISO.MI,
@@ -381,7 +332,6 @@ export const languagesStaticData: { readonly [key: string]: Language } = {
     hasAlphabetTopic: false,
     availableAsLearning: true,
     availableAsDevice: false,
-    font: Fonts.UIBold,
   } as Language,
   [LanguageISO.SM]: {
     iso: LanguageISO.SM,
@@ -392,7 +342,6 @@ export const languagesStaticData: { readonly [key: string]: Language } = {
     hasAlphabetTopic: false,
     availableAsLearning: true,
     availableAsDevice: false,
-    font: Fonts.UIBold,
   } as Language,
   [LanguageISO.EL]: {
     iso: LanguageISO.EL,
@@ -403,6 +352,5 @@ export const languagesStaticData: { readonly [key: string]: Language } = {
     hasAlphabetTopic: true,
     availableAsLearning: false,
     availableAsDevice: false,
-    font: Fonts.UIBold,
   } as Language,
 }
