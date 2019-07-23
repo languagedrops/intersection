@@ -24,6 +24,7 @@ export interface PayloadSaveUserProgressRequestV4 extends PayloadRequestBaseV4 {
 
 export interface PayloadSyncUserProgressRequestV4 extends PayloadSaveUserProgressRequestV4 {
     readonly language?: string
+    readonly lastSyncDate?: number
 }
 
 export type PayloadSyncUserProgressResponseV4 = PayloadSyncUserProgressRequestV4
