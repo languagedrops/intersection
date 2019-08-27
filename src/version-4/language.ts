@@ -76,7 +76,7 @@ export enum LanguageName {
     Samoan = 'Samoan',
     Greek = 'Greek',
     Finnish = 'Finish',
-   ASL = 'Asl',
+    ASL = 'Asl',
 }
 
 export interface Language {
