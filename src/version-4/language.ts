@@ -35,6 +35,8 @@ export enum LanguageISO {
     MI = 'MI',
     SM = 'SM',
     EL = 'EL',
+    FI = 'FI',
+    ASE = 'ASE',
 }
 
 export enum LanguageName {
@@ -73,6 +75,8 @@ export enum LanguageName {
     Maori = 'Maori',
     Samoan = 'Samoan',
     Greek = 'Greek',
+    Finnish = 'Finish',
+    ASL = 'Asl',
 }
 
 export interface Language {
