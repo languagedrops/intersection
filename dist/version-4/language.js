@@ -37,6 +37,8 @@ var LanguageISO;
     LanguageISO["MI"] = "MI";
     LanguageISO["SM"] = "SM";
     LanguageISO["EL"] = "EL";
+    LanguageISO["FI"] = "FI";
+    LanguageISO["ASE"] = "ASE";
 })(LanguageISO = exports.LanguageISO || (exports.LanguageISO = {}));
 var LanguageName;
 (function (LanguageName) {
@@ -75,4 +77,6 @@ var LanguageName;
     LanguageName["Maori"] = "Maori";
     LanguageName["Samoan"] = "Samoan";
     LanguageName["Greek"] = "Greek";
+    LanguageName["Finnish"] = "Finish";
+    LanguageName["ASL"] = "Asl";
 })(LanguageName = exports.LanguageName || (exports.LanguageName = {}));

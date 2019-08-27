@@ -33,7 +33,9 @@ export declare enum LanguageISO {
     PA = "PA",
     MI = "MI",
     SM = "SM",
-    EL = "EL"
+    EL = "EL",
+    FI = "FI",
+    ASE = "ASE"
 }
 export declare enum LanguageName {
     English = "English",
@@ -70,7 +72,9 @@ export declare enum LanguageName {
     Punjabi = "Punjabi",
     Maori = "Maori",
     Samoan = "Samoan",
-    Greek = "Greek"
+    Greek = "Greek",
+    Finnish = "Finish",
+    ASL = "Asl"
 }
 export interface Language {
     readonly iso: LanguageISO;
