@@ -10,3 +10,4 @@ export * from './dictionary';
 export * from './login-provider';
 export * from './language';
 export * from './languagesStaticData';
+export * from './translations';
