@@ -1,5 +1,5 @@
 export interface WordTranslation {
-    readonly p: string;
+    readonly p?: string;
     readonly ro?: string;
     readonly alt?: string;
     readonly male?: string;
@@ -9,11 +9,11 @@ export interface WordTranslation {
     readonly verbalRo?: string;
 }
 export interface TopicTranslation {
-    readonly p: string;
+    readonly p?: string;
     readonly alt?: string;
 }
 export interface CategoryTranslation {
-    readonly p: string;
+    readonly p?: string;
     readonly alt?: string;
 }
 export interface TranslationDatabase {
