@@ -34,7 +34,7 @@ export interface PayloadUserAppDataV4 {
   readonly revealNativeWord?: PropertyWithMetadata<boolean>
   readonly currentStreak?: PropertyWithMetadata<number>
   readonly previousStreakRecord?: PropertyWithMetadata<number>
-  readonly lastSessionFinishDay?: PropertyWithMetadata<number>
+  readonly lastStreakCompletionDay?: PropertyWithMetadata<number>
 }
 
 export interface PayloadUserLanguageSettingsV4 {
