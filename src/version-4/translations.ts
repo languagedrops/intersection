@@ -7,6 +7,7 @@ export interface WordTranslation {
   readonly altRo?: string
   readonly maleRo?: string
   readonly verbalRo?: string
+  readonly v?: number
 }
 
 export interface TopicTranslation {
@@ -17,6 +18,7 @@ export interface TopicTranslation {
 export interface CategoryTranslation {
   readonly p?: string
   readonly alt?: string
+  readonly desc?: string
 }
 
 export interface TranslationDatabase {
