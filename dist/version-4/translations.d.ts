@@ -8,6 +8,13 @@ export interface WordTranslation {
     readonly maleRo?: string;
     readonly verbalRo?: string;
     readonly v?: number;
+    readonly vRo?: number;
+    readonly vAlt?: number;
+    readonly vAltRo?: number;
+    readonly vMale?: number;
+    readonly vMaleRo?: number;
+    readonly vVerbal?: number;
+    readonly vVerbalRo?: number;
 }
 export interface TopicTranslation {
     readonly p?: string;
