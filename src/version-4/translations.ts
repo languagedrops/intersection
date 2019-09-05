@@ -26,6 +26,7 @@ export interface CategoryTranslation {
   readonly p?: string
   readonly alt?: string
   readonly desc?: string
+  readonly altDesc?: string
 }
 
 export interface TranslationDatabase {
