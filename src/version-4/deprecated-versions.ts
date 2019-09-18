@@ -1,8 +1,8 @@
-export interface DeprecatedAppInfo {
+export interface PayloadGetDeprecatedStatusRequestV4 {
   readonly version: string
-  readonly message?: string
 }
 
 export interface PayloadGetDeprecatedAppVersionsResponseV4 {
-  readonly deprecatedVersion: DeprecatedAppInfo[]
+  readonly isDeprecated: boolean
+  readonly message?: string
 }
