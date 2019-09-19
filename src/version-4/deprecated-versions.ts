@@ -1,7 +1,9 @@
+import { AppPlatform } from './appPlatform'
+
 export interface PayloadGetDeprecatedStatusRequestV4 {
   readonly version: string
   readonly appType: string
-  readonly platform: string
+  readonly platform: AppPlatform
   readonly osVersion: string
   readonly manufacturer: string
 }
