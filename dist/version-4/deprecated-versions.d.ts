@@ -10,9 +10,14 @@ export declare enum DeprecatedMessage {
     WaitForNextVersion = "WaitForNextVersion",
     UpdateVersion = "UpdateVersion"
 }
-export interface PayloadGetDeprecatedAppVersionsResponseV4 {
-    readonly isDeprecated: boolean;
+interface DeprecatedPayloadGetDeprecatedAppVersionsResponseV4 {
+    readonly isDeprecated: true;
     readonly message: DeprecatedMessage;
     readonly explanation?: string;
     readonly link?: string;
 }
+interface NotDeprecatedPayloadGetDeprecatedAppVersionsResponseV4 {
+    readonly isDeprecated: false;
+}
+export declare type PayloadGetDeprecatedAppVersionsResponseV4 = DeprecatedPayloadGetDeprecatedAppVersionsResponseV4 | NotDeprecatedPayloadGetDeprecatedAppVersionsResponseV4;
+export {};
