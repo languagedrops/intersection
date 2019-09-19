@@ -2,7 +2,7 @@ export interface PayloadGetDeprecatedStatusRequestV4 {
   readonly version: string
   readonly appType: string
   readonly platform: string
-  readonly osVerion: string
+  readonly osVersion: string
   readonly manufacturer: string
 }
 
