@@ -75,7 +75,7 @@ export enum LanguageName {
     Maori = 'Maori',
     Samoan = 'Samoan',
     Greek = 'Greek',
-    Finnish = 'Finish',
+    Finnish = 'Finnish',
     ASL = 'Asl',
 }
 
