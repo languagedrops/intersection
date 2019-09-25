@@ -73,7 +73,7 @@ export declare enum LanguageName {
     Maori = "Maori",
     Samoan = "Samoan",
     Greek = "Greek",
-    Finnish = "Finish",
+    Finnish = "Finnish",
     ASL = "Asl"
 }
 export interface Language {

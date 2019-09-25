@@ -77,6 +77,6 @@ var LanguageName;
     LanguageName["Maori"] = "Maori";
     LanguageName["Samoan"] = "Samoan";
     LanguageName["Greek"] = "Greek";
-    LanguageName["Finnish"] = "Finish";
+    LanguageName["Finnish"] = "Finnish";
     LanguageName["ASL"] = "Asl";
 })(LanguageName = exports.LanguageName || (exports.LanguageName = {}));
