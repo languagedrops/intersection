@@ -42,6 +42,9 @@ export declare enum PayloadIAPIdentifierV4 {
     iapPremium1year70 = "iapPremium1year70",
     iapPremium1year40 = "iapPremium1year40"
 }
+export declare namespace PayloadIAPIdentifierV4 {
+    const all: PayloadIAPIdentifierV4[];
+}
 export interface PayloadAndroidReceiptV4 {
     readonly data: string;
     readonly signature: string;

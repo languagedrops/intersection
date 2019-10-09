@@ -39,6 +39,11 @@ export enum LanguageISO {
     ASE = 'ASE',
 }
 
+export namespace LanguageISO {
+  export const all: LanguageISO[] = Object.values(LanguageISO).filter((v) => typeof v === 'string')
+  export const getByName = (name: string) => all.find((languageIso) => languageIso.toString() === name)
+}
+
 export enum LanguageName {
     English = 'English',
     Hungarian = 'Hungarian',
