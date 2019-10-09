@@ -53,6 +53,10 @@ export enum PayloadIAPIdentifierV4 {
   iapPremium1year40 = 'iapPremium1year40',
 }
 
+export namespace PayloadIAPIdentifierV4 {
+  export const all: PayloadIAPIdentifierV4[] = Object.values(PayloadIAPIdentifierV4).filter((v) => typeof v === 'string')
+}
+
 export interface PayloadAndroidReceiptV4 {
   readonly data: string
   readonly signature: string

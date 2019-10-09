@@ -40,6 +40,10 @@ var LanguageISO;
     LanguageISO["FI"] = "FI";
     LanguageISO["ASE"] = "ASE";
 })(LanguageISO = exports.LanguageISO || (exports.LanguageISO = {}));
+(function (LanguageISO) {
+    LanguageISO.all = Object.values(LanguageISO).filter((v) => typeof v === 'string');
+    LanguageISO.getByName = (name) => LanguageISO.all.find((languageIso) => languageIso.toString() === name);
+})(LanguageISO = exports.LanguageISO || (exports.LanguageISO = {}));
 var LanguageName;
 (function (LanguageName) {
     LanguageName["English"] = "English";

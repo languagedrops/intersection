@@ -45,6 +45,9 @@ var PayloadIAPIdentifierV4;
     PayloadIAPIdentifierV4["iapPremium1year70"] = "iapPremium1year70";
     PayloadIAPIdentifierV4["iapPremium1year40"] = "iapPremium1year40";
 })(PayloadIAPIdentifierV4 = exports.PayloadIAPIdentifierV4 || (exports.PayloadIAPIdentifierV4 = {}));
+(function (PayloadIAPIdentifierV4) {
+    PayloadIAPIdentifierV4.all = Object.values(PayloadIAPIdentifierV4).filter((v) => typeof v === 'string');
+})(PayloadIAPIdentifierV4 = exports.PayloadIAPIdentifierV4 || (exports.PayloadIAPIdentifierV4 = {}));
 var PayloadPurchaseProviderV4;
 (function (PayloadPurchaseProviderV4) {
     PayloadPurchaseProviderV4["Google"] = "google";

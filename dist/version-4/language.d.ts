@@ -37,6 +37,10 @@ export declare enum LanguageISO {
     FI = "FI",
     ASE = "ASE"
 }
+export declare namespace LanguageISO {
+    const all: LanguageISO[];
+    const getByName: (name: string) => LanguageISO | undefined;
+}
 export declare enum LanguageName {
     English = "English",
     Hungarian = "Hungarian",
