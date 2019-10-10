@@ -397,7 +397,7 @@ export const languagesStaticData: { readonly [key: string]: Language } = {
   [LanguageISO.AIN]: {
     iso: LanguageISO.AIN,
     name: LanguageName.Ainu,
-    alphabet: 'ㇰ,ㇱ,ㇲ,ㇳ,ㇴ,ㇵ,ㇶ,ㇷ,ㇸ,ㇹ,ㇺ,ㇻ,ㇼ,ㇽ,ㇾ,ㇿ,ㇷ゚,セ゚,ツ゚,ト'.split(','),
+    alphabet: 'ㇰ,ㇱ,ㇲ,ㇳ,ㇴ,ㇵ,ㇶ,ㇷ,ㇸ,ㇹ,ㇺ,ㇻ,ㇼ,ㇽ,ㇾ,ㇿ'.split(','),
     hasRomanAid: false,
     hasAlternativeTranslation: false,
     hasAlphabetTopic: false,
