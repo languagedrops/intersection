@@ -17,6 +17,7 @@ export interface PayloadWordUserDataV4 {
 export interface PayloadSaveUserProgressRequestV4 extends PayloadRequestBaseV4 {
     readonly topics: Dictionary<PayloadTopicUserDataV4>;
     readonly words: Dictionary<PayloadWordUserDataV4>;
+    readonly profileId?: string;
 }
 export interface PayloadSyncUserProgressRequestV4 extends PayloadSaveUserProgressRequestV4 {
     readonly language?: string;

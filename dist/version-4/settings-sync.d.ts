@@ -44,6 +44,7 @@ export interface PayloadUserLanguageSettingsV4 {
 export interface PayloadSyncSettingsRequestV4 extends PayloadRequestBaseV4 {
     readonly appData: PayloadUserAppDataV4;
     readonly languageSettings: PayloadUserLanguageSettingsV4;
+    readonly profileId?: string;
 }
 export interface PayloadSyncSettingsResponseV4 {
     readonly appData: PayloadUserAppDataV4;
