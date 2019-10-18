@@ -4,12 +4,12 @@ export interface PayloadProfileData {
     readonly lastName?: string;
     readonly profileId: string;
 }
-export interface PayloadSaveProfileRequestV4 extends PayloadRequestBaseV4 {
+export interface PayloadUpdateProfileRequestV4 extends PayloadRequestBaseV4 {
     readonly firstName: string;
     readonly lastName?: string;
     readonly profileId: string;
 }
-export declare type PayloadSaveProfileResponseV4 = PayloadProfileData;
+export declare type PayloadUpdateProfileResponseV4 = PayloadProfileData;
 export interface PayloadCreateProfileRequestV4 extends PayloadRequestBaseV4 {
     readonly firstName: string;
 }
