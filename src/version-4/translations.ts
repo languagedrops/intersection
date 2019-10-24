@@ -15,6 +15,14 @@ export interface WordTranslation {
   readonly vMaleRo?: number
   readonly vVerbal?: number
   readonly vVerbalRo?: number
+  readonly isSoft?: boolean
+  readonly isSoftRo?: boolean
+  readonly isSoftAlt?: boolean
+  readonly isSoftAltRo?: boolean
+  readonly isSoftMale?: boolean
+  readonly isSoftMaleRo?: boolean
+  readonly isSoftVerbal?: boolean
+  readonly isSoftVerbalRo?: boolean
 }
 
 export interface TopicTranslation {
