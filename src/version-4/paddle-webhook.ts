@@ -1,11 +1,11 @@
-export type GiftingPremiumPeriod = 'month' | 'year' | 'lifetime' | '3months'
+export type GiftPeriod = 'month' | 'year' | 'lifetime' | '3months'
 
-export interface PaddlePassthroughDataGifting {
+export interface PaddlePassthroughGiftData {
     readonly gifterEmail: string,
     readonly receiverName: string,
-    readonly premiumPeriod: GiftingPremiumPeriod,
+    readonly period: GiftPeriod,
 }
 
-export interface PaddlePassthroughObjectGifting {
-    readonly passthrough: PaddlePassthroughDataGifting
+export interface PaddlePassthroughGiftObject {
+    readonly passthrough: PaddlePassthroughGiftData
 }
