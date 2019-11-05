@@ -41,6 +41,7 @@ var PayloadIAPIdentifierV4;
     PayloadIAPIdentifierV4["iapPremiumYearly30"] = "iapPremiumYearly30";
     PayloadIAPIdentifierV4["iapPremiumLifetime160"] = "iapPremiumLifetime160";
     // non-recurring limited time
+    PayloadIAPIdentifierV4["iapPremium1month10"] = "iapPremium1month10";
     PayloadIAPIdentifierV4["iapPremium3months30"] = "iapPremium3months30";
     PayloadIAPIdentifierV4["iapPremium1year70"] = "iapPremium1year70";
     PayloadIAPIdentifierV4["iapPremium1year40"] = "iapPremium1year40";
