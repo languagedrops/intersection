@@ -4,6 +4,7 @@ export * from './delete-progress';
 export * from './errors';
 export * from './settings-sync';
 export * from './user-update';
+export * from './paddle-webhook';
 export * from './progress';
 export * from './content-report-save';
 export * from './dictionary';
