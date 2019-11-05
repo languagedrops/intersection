@@ -10,3 +10,4 @@ __export(require("./content-report-save"));
 __export(require("./language"));
 __export(require("./languagesStaticData"));
 __export(require("./deprecated-versions"));
+__export(require("./giftSubscription"));
