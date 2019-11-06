@@ -45,6 +45,7 @@ var PayloadIAPIdentifierV4;
     PayloadIAPIdentifierV4["iapPremium3months30"] = "iapPremium3months30";
     PayloadIAPIdentifierV4["iapPremium1year70"] = "iapPremium1year70";
     PayloadIAPIdentifierV4["iapPremium1year40"] = "iapPremium1year40";
+    PayloadIAPIdentifierV4["iapPremium1year35"] = "iapPremium1year35";
 })(PayloadIAPIdentifierV4 = exports.PayloadIAPIdentifierV4 || (exports.PayloadIAPIdentifierV4 = {}));
 (function (PayloadIAPIdentifierV4) {
     PayloadIAPIdentifierV4.all = Object.values(PayloadIAPIdentifierV4).filter((v) => typeof v === 'string');

@@ -41,7 +41,8 @@ export declare enum PayloadIAPIdentifierV4 {
     iapPremium1month10 = "iapPremium1month10",
     iapPremium3months30 = "iapPremium3months30",
     iapPremium1year70 = "iapPremium1year70",
-    iapPremium1year40 = "iapPremium1year40"
+    iapPremium1year40 = "iapPremium1year40",
+    iapPremium1year35 = "iapPremium1year35"
 }
 export declare namespace PayloadIAPIdentifierV4 {
     const all: PayloadIAPIdentifierV4[];

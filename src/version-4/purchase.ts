@@ -52,6 +52,7 @@ export enum PayloadIAPIdentifierV4 {
   iapPremium3months30 = 'iapPremium3months30',
   iapPremium1year70 = 'iapPremium1year70',
   iapPremium1year40 = 'iapPremium1year40',
+  iapPremium1year35 = 'iapPremium1year35',
 }
 
 export namespace PayloadIAPIdentifierV4 {
