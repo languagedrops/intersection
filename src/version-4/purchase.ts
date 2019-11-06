@@ -48,10 +48,15 @@ export enum PayloadIAPIdentifierV4 {
   iapPremiumLifetime160 = 'iapPremiumLifetime160',
 
   // non-recurring limited time
-  iapPremium1month10 = 'iapPremium1month10',
   iapPremium3months30 = 'iapPremium3months30',
   iapPremium1year70 = 'iapPremium1year70',
   iapPremium1year40 = 'iapPremium1year40',
+
+
+  // gift purchases
+  iapPremiumGift1Month10 = 'iapPremiumGift1Month10',
+  iapPremiumGift1Year35 = 'iapPremiumGift1Year35',
+  iapPremiumGiftLifetime160 = 'iapPremiumGiftLifetime160',
 }
 
 export namespace PayloadIAPIdentifierV4 {
