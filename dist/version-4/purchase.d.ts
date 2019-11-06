@@ -38,6 +38,7 @@ export declare enum PayloadIAPIdentifierV4 {
     iapPremiumYearly35 = "iapPremiumYearly35",
     iapPremiumYearly30 = "iapPremiumYearly30",
     iapPremiumLifetime160 = "iapPremiumLifetime160",
+    iapPremium1month10 = "iapPremium1month10",
     iapPremium3months30 = "iapPremium3months30",
     iapPremium1year70 = "iapPremium1year70",
     iapPremium1year40 = "iapPremium1year40"
