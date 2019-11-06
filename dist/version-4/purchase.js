@@ -41,11 +41,13 @@ var PayloadIAPIdentifierV4;
     PayloadIAPIdentifierV4["iapPremiumYearly30"] = "iapPremiumYearly30";
     PayloadIAPIdentifierV4["iapPremiumLifetime160"] = "iapPremiumLifetime160";
     // non-recurring limited time
-    PayloadIAPIdentifierV4["iapPremium1month10"] = "iapPremium1month10";
     PayloadIAPIdentifierV4["iapPremium3months30"] = "iapPremium3months30";
     PayloadIAPIdentifierV4["iapPremium1year70"] = "iapPremium1year70";
     PayloadIAPIdentifierV4["iapPremium1year40"] = "iapPremium1year40";
-    PayloadIAPIdentifierV4["iapPremium1year35"] = "iapPremium1year35";
+    // gift purchases
+    PayloadIAPIdentifierV4["iapPremiumGift1Month10"] = "iapPremiumGift1Month10";
+    PayloadIAPIdentifierV4["iapPremiumGift1Year35"] = "iapPremiumGift1Year35";
+    PayloadIAPIdentifierV4["iapPremiumGiftLifetime160"] = "iapPremiumGiftLifetime160";
 })(PayloadIAPIdentifierV4 = exports.PayloadIAPIdentifierV4 || (exports.PayloadIAPIdentifierV4 = {}));
 (function (PayloadIAPIdentifierV4) {
     PayloadIAPIdentifierV4.all = Object.values(PayloadIAPIdentifierV4).filter((v) => typeof v === 'string');
