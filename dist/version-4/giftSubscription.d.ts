@@ -4,7 +4,6 @@ export interface PayloadGiftSubscriptionRedeemCodeRequestV4 extends PayloadReque
 }
 export declare enum PayloaddGiftSubscriptionRedeemCodeStatusV4 {
     Success = "success",
-    Expired = "expired",
     Error = "error"
 }
 interface PayloadGiftSubscriptionRedeemCodeResponseBase<T extends PayloaddGiftSubscriptionRedeemCodeStatusV4> {
@@ -13,5 +12,5 @@ interface PayloadGiftSubscriptionRedeemCodeResponseBase<T extends PayloaddGiftSu
 export interface PayloadGiftSubscriptionRedeemCodeErrorV4 extends PayloadGiftSubscriptionRedeemCodeResponseBase<PayloaddGiftSubscriptionRedeemCodeStatusV4.Error> {
     readonly errorCode: string;
 }
-export declare type PayloadGiftSubscriptionRedeemCodeResponseV4 = PayloadGiftSubscriptionRedeemCodeErrorV4 | PayloadGiftSubscriptionRedeemCodeResponseBase<PayloaddGiftSubscriptionRedeemCodeStatusV4.Success> | PayloadGiftSubscriptionRedeemCodeResponseBase<PayloaddGiftSubscriptionRedeemCodeStatusV4.Expired>;
+export declare type PayloadGiftSubscriptionRedeemCodeResponseV4 = PayloadGiftSubscriptionRedeemCodeErrorV4 | PayloadGiftSubscriptionRedeemCodeResponseBase<PayloaddGiftSubscriptionRedeemCodeStatusV4.Success>;
 export {};

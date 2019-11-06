@@ -6,7 +6,6 @@ export interface PayloadGiftSubscriptionRedeemCodeRequestV4 extends PayloadReque
 
 export enum PayloaddGiftSubscriptionRedeemCodeStatusV4 {
   Success = 'success',
-  Expired = 'expired',
   Error = 'error',
 }
 
@@ -20,4 +19,3 @@ export interface PayloadGiftSubscriptionRedeemCodeErrorV4 extends PayloadGiftSub
 
 export type PayloadGiftSubscriptionRedeemCodeResponseV4 = PayloadGiftSubscriptionRedeemCodeErrorV4
 | PayloadGiftSubscriptionRedeemCodeResponseBase<PayloaddGiftSubscriptionRedeemCodeStatusV4.Success>
-| PayloadGiftSubscriptionRedeemCodeResponseBase<PayloaddGiftSubscriptionRedeemCodeStatusV4.Expired>
