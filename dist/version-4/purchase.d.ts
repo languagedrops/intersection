@@ -63,11 +63,19 @@ export interface PayloadPaddleReceiptV4 {
     readonly expirationDate?: number | Date;
     readonly cancelUrl?: string;
 }
+export interface PayloadGiftReceiptV4 {
+    readonly couponCode: string;
+}
 export declare enum PayloadPurchaseProviderV4 {
     Google = "google",
     Apple = "apple",
     Paddle = "paddle",
-    NoProvider = "noProvider"
+    NoProvider = "noProvider",
+    Gift = "gift"
+}
+export interface PayloadValidateSyncGiftRequestV4 extends PayloadRequestBaseV4 {
+    readonly provider: PayloadPurchaseProviderV4.Gift;
+    readonly receipt: PayloadGiftReceiptV4;
 }
 export interface PayloadValidateSyncAppleRequestV4 extends PayloadRequestBaseV4 {
     readonly provider: PayloadPurchaseProviderV4.Apple;
@@ -99,6 +107,10 @@ export interface PayloadPurchaseMetadataBaseV4 {
     readonly transactionId: string;
     readonly cancellationDate?: number;
     readonly expirationDate?: number;
+}
+export interface PayloadValidateSyncGiftResponseV4 extends PayloadPurchaseMetadataBaseV4 {
+    readonly provider: PayloadPurchaseProviderV4.Gift;
+    readonly receipt: PayloadGiftReceiptV4;
 }
 export interface PayloadValidateSyncAppleResponseV4 extends PayloadPurchaseMetadataBaseV4 {
     readonly provider: PayloadPurchaseProviderV4.Apple;
