@@ -113,7 +113,7 @@ export interface PayloadValidateSyncEmptyRequestV4 extends PayloadRequestBaseV4 
   readonly provider: PayloadPurchaseProviderV4.NoProvider
 }
 
-export type ValidateSyncPurchasesRequestV4 = (PayloadValidateSyncAppleRequestV4 | PayloadValidateSyncGoogleRequestV4 | PayloadValidateSyncPaddleRequestV4 | PayloadValidateSyncEmptyRequestV4)
+export type ValidateSyncPurchasesRequestV4 = (PayloadValidateSyncAppleRequestV4 | PayloadValidateSyncGoogleRequestV4 | PayloadValidateSyncPaddleRequestV4 | PayloadValidateSyncEmptyRequestV4 | PayloadValidateSyncGiftRequestV4)
 
 export enum PayloadPurchaseStatusV4 {
   Valid = 'valid',
@@ -156,7 +156,7 @@ export interface PayloadPurchaseErrorV4 {
   readonly errorCode: string
 }
 
-export type PayloadPurchaseMetadataV4 = (PayloadValidateSyncAppleResponseV4 | PayloadValidateSyncGoogleResponseV4 | PayloadValidateSyncPaddleResponseV4)
+export type PayloadPurchaseMetadataV4 = (PayloadValidateSyncAppleResponseV4 | PayloadValidateSyncGoogleResponseV4 | PayloadValidateSyncPaddleResponseV4 | PayloadValidateSyncGiftResponseV4)
 
 export type PayloadPurchaseDataV4 = (PayloadPurchaseMetadataV4 | PayloadPurchaseErrorV4)
 

@@ -92,7 +92,7 @@ export interface PayloadValidateSyncPaddleRequestV4 extends PayloadRequestBaseV4
 export interface PayloadValidateSyncEmptyRequestV4 extends PayloadRequestBaseV4 {
     readonly provider: PayloadPurchaseProviderV4.NoProvider;
 }
-export declare type ValidateSyncPurchasesRequestV4 = (PayloadValidateSyncAppleRequestV4 | PayloadValidateSyncGoogleRequestV4 | PayloadValidateSyncPaddleRequestV4 | PayloadValidateSyncEmptyRequestV4);
+export declare type ValidateSyncPurchasesRequestV4 = (PayloadValidateSyncAppleRequestV4 | PayloadValidateSyncGoogleRequestV4 | PayloadValidateSyncPaddleRequestV4 | PayloadValidateSyncEmptyRequestV4 | PayloadValidateSyncGiftRequestV4);
 export declare enum PayloadPurchaseStatusV4 {
     Valid = "valid",
     Expired = "expired",
@@ -128,7 +128,7 @@ export interface PayloadPurchaseErrorV4 {
     readonly status: PayloadPurchaseStatusV4.Error | PayloadPurchaseStatusV4.Invalid;
     readonly errorCode: string;
 }
-export declare type PayloadPurchaseMetadataV4 = (PayloadValidateSyncAppleResponseV4 | PayloadValidateSyncGoogleResponseV4 | PayloadValidateSyncPaddleResponseV4);
+export declare type PayloadPurchaseMetadataV4 = (PayloadValidateSyncAppleResponseV4 | PayloadValidateSyncGoogleResponseV4 | PayloadValidateSyncPaddleResponseV4 | PayloadValidateSyncGiftResponseV4);
 export declare type PayloadPurchaseDataV4 = (PayloadPurchaseMetadataV4 | PayloadPurchaseErrorV4);
 export interface PayloadValidateSyncPurchasesResponseV4 {
     readonly purchases: PayloadPurchaseDataV4[];
