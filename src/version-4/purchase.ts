@@ -82,11 +82,21 @@ export interface PayloadPaddleReceiptV4 {
   readonly cancelUrl?: string
 }
 
+export interface PayloadGiftReceiptV4 {
+  readonly couponCode: string,
+}
+
 export enum PayloadPurchaseProviderV4 {
   Google = 'google',
   Apple = 'apple',
   Paddle = 'paddle',
   NoProvider = 'noProvider',
+  Gift = 'gift',
+}
+
+export interface PayloadValidateSyncGiftRequestV4 extends PayloadRequestBaseV4 {
+  readonly provider: PayloadPurchaseProviderV4.Gift
+  readonly receipt: PayloadGiftReceiptV4
 }
 
 export interface PayloadValidateSyncAppleRequestV4 extends PayloadRequestBaseV4 {
@@ -108,7 +118,7 @@ export interface PayloadValidateSyncEmptyRequestV4 extends PayloadRequestBaseV4 
   readonly provider: PayloadPurchaseProviderV4.NoProvider
 }
 
-export type ValidateSyncPurchasesRequestV4 = (PayloadValidateSyncAppleRequestV4 | PayloadValidateSyncGoogleRequestV4 | PayloadValidateSyncPaddleRequestV4 | PayloadValidateSyncEmptyRequestV4)
+export type ValidateSyncPurchasesRequestV4 = (PayloadValidateSyncAppleRequestV4 | PayloadValidateSyncGoogleRequestV4 | PayloadValidateSyncPaddleRequestV4 | PayloadValidateSyncEmptyRequestV4 | PayloadValidateSyncGiftRequestV4)
 
 export enum PayloadPurchaseStatusV4 {
   Valid = 'valid',
@@ -127,6 +137,10 @@ export interface PayloadPurchaseMetadataBaseV4 {
   readonly expirationDate?: number
 }
 
+export interface PayloadValidateSyncGiftResponseV4 extends PayloadPurchaseMetadataBaseV4 {
+  readonly provider: PayloadPurchaseProviderV4.Gift
+  readonly receipt: PayloadGiftReceiptV4
+}
 export interface PayloadValidateSyncAppleResponseV4 extends PayloadPurchaseMetadataBaseV4 {
   readonly provider: PayloadPurchaseProviderV4.Apple
   readonly receipt: string
@@ -147,7 +161,7 @@ export interface PayloadPurchaseErrorV4 {
   readonly errorCode: string
 }
 
-export type PayloadPurchaseMetadataV4 = (PayloadValidateSyncAppleResponseV4 | PayloadValidateSyncGoogleResponseV4 | PayloadValidateSyncPaddleResponseV4)
+export type PayloadPurchaseMetadataV4 = (PayloadValidateSyncAppleResponseV4 | PayloadValidateSyncGoogleResponseV4 | PayloadValidateSyncPaddleResponseV4 | PayloadValidateSyncGiftResponseV4)
 
 export type PayloadPurchaseDataV4 = (PayloadPurchaseMetadataV4 | PayloadPurchaseErrorV4)
 
