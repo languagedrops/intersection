@@ -1,4 +1,8 @@
-export type GiftPeriod = 'month' | 'year' | 'lifetime' | '3months'
+export enum GiftPeriod {
+   Month = 'month',
+   Year = 'year',
+   Lifetime = 'lifetime',
+}
 
 export interface PaddlePassthroughGiftData {
     readonly gifterEmail: string,
