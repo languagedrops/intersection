@@ -15,6 +15,7 @@ export interface PayloadWordUserDataV4 {
     readonly lastModified?: number
     readonly srsScore?: number
     readonly isUpdated?: boolean
+    readonly useSoftUpdate?: boolean
 }
 
 export interface PayloadSaveUserProgressRequestV4 extends PayloadRequestBaseV4 {
