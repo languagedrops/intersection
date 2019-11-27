@@ -12,3 +12,5 @@ __export(require("./language"));
 __export(require("./languagesStaticData"));
 __export(require("./deprecated-versions"));
 __export(require("./giftSubscription"));
+__export(require("./appPlatform"));
+__export(require("./appType"));

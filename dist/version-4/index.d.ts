@@ -15,3 +15,5 @@ export * from './translations';
 export * from './deprecated-versions';
 export * from './profile';
 export * from './giftSubscription';
+export * from './appPlatform';
+export * from './appType';
