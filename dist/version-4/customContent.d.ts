@@ -1,8 +1,6 @@
 import { LanguageISO } from './language';
 export interface PayloadWordResponseV4 {
     readonly id: string;
-    readonly foreignLanguage: LanguageISO;
-    readonly nativeLanguage: LanguageISO;
     readonly nativeTranslation: string;
     readonly foreignTranslation: string;
     readonly foreignTranslationRoman?: string;
@@ -15,8 +13,6 @@ export declare enum PayloadTopicTypeV4 {
 export interface PayloadTopicResponseV4 {
     readonly id: string;
     readonly type: PayloadTopicTypeV4;
-    readonly foreignLanguage: LanguageISO;
-    readonly nativeLanguage: LanguageISO;
     readonly name: string;
     readonly wordIds: string[];
 }
@@ -28,8 +24,6 @@ export declare enum PayloadPlaylistTypeV4 {
 export interface PayloadPlaylistResponseV4 {
     readonly id: number;
     readonly type: PayloadPlaylistTypeV4;
-    readonly foreignLanguage: LanguageISO;
-    readonly nativeLanguage: LanguageISO;
     readonly name: string;
     readonly topicIds: number[];
 }
@@ -37,6 +31,8 @@ export interface PayloadContentResponseV4 {
     readonly words: PayloadWordResponseV4[];
     readonly topic: PayloadTopicResponseV4[];
     readonly playlist: PayloadPlaylistResponseV4[];
+    readonly foreignLanguage: LanguageISO;
+    readonly nativeLanguage: LanguageISO;
     readonly lastSyncDate: number;
 }
 export declare namespace PayloadPlaylistV4 {
@@ -122,6 +118,8 @@ export declare namespace PayloadSyncV4 {
         readonly lastModifiedDate?: string;
     }
     interface Request {
+        readonly foreignLanguage: LanguageISO;
+        readonly nativeLanguage: LanguageISO;
         readonly playlists: PlaylistRequest[];
         readonly topics: TopicRequest[];
         readonly words: WordRequest[];
