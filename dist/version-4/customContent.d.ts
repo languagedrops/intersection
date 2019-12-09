@@ -103,7 +103,7 @@ export declare namespace PayloadWordV4 {
         }
     }
 }
-export declare namespace Sync {
+export declare namespace PayloadSyncV4 {
     interface PlaylistRequest {
         readonly id: string;
         readonly name?: string;
