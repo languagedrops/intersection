@@ -5,6 +5,7 @@ export interface PayloadWordResponseV4 {
   readonly nativeTranslation: string
   readonly foreignTranslation: string
   readonly foreignTranslationRoman?: string
+  readonly lastModifiedDate: number
 }
 
 export enum PayloadTopicTypeV4 {
@@ -18,6 +19,7 @@ export interface PayloadTopicResponseV4 {
   readonly type: PayloadTopicTypeV4
   readonly name: string
   readonly wordIds: string[]
+  readonly lastModifiedDate: number
 }
 
 export enum PayloadPlaylistTypeV4 {
@@ -31,6 +33,7 @@ export interface PayloadPlaylistResponseV4 {
   readonly type: PayloadPlaylistTypeV4
   readonly name: string
   readonly topicIds: number[]
+  readonly lastModifiedDate: number
 }
 
 export interface PayloadContentResponseV4 {
@@ -120,18 +123,20 @@ export namespace PayloadSyncV4 {
     readonly id: string
     readonly name?: string
     readonly topicIds?: number[]
+    readonly lastModifiedDate: number
   }
   interface TopicRequest {
     readonly id: string
     readonly name?: string
     readonly wordIds?: string[]
+    readonly lastModifiedDate: number
   }
   interface WordRequest {
     readonly id: string
     readonly nativeTranslation?: string
     readonly foreignTranslation?: string
     readonly foreignTranslationRoman?: string
-    readonly lastModifiedDate?: string
+    readonly lastModifiedDate: number
   }
 
   export interface Request {
@@ -140,7 +145,7 @@ export namespace PayloadSyncV4 {
     readonly playlists: PlaylistRequest[]
     readonly topics: TopicRequest[]
     readonly words: WordRequest[]
-    readonly lastSyncDate: number
+    readonly lastSyncDate?: number
   }
   export interface Response {
     readonly allContent: PayloadContentResponseV4
