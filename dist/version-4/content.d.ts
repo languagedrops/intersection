@@ -108,12 +108,14 @@ export declare namespace PayloadContentSyncV4 {
         readonly name?: string;
         readonly topicIds?: number[];
         readonly lastModifiedDate: number;
+        readonly type: PayloadPlaylistTypeV4;
     }
     interface TopicRequest {
         readonly id: string;
         readonly name?: string;
         readonly wordIds?: string[];
         readonly lastModifiedDate: number;
+        readonly type: PayloadTopicTypeV4;
     }
     interface WordRequest {
         readonly id: string;
