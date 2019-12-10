@@ -14,3 +14,4 @@ __export(require("./deprecated-versions"));
 __export(require("./giftSubscription"));
 __export(require("./appPlatform"));
 __export(require("./appType"));
+__export(require("./content"));
