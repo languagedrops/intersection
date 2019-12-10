@@ -1,6 +1,6 @@
 import { LanguageISO } from './language'
 
-export interface PayloadWordResponseV4 {
+export interface PayloadCustomWordResponseV4 {
   readonly id: string
   readonly nativeTranslation: string
   readonly foreignTranslation: string
@@ -8,78 +8,78 @@ export interface PayloadWordResponseV4 {
   readonly lastModifiedDate: number
 }
 
-export enum PayloadTopicTypeV4 {
+export enum PayloadCustomTopicTypeV4 {
   Favorite = 'Favorite',
   UserAdded = 'UserAdded',
   TrashBin = 'TrashBin',
 }
 
-export interface PayloadTopicResponseV4 {
+export interface PayloadCustomTopicResponseV4 {
   readonly id: string
-  readonly type: PayloadTopicTypeV4
+  readonly type: PayloadCustomTopicTypeV4
   readonly name: string
   readonly wordIds: string[]
   readonly lastModifiedDate: number
 }
 
-export enum PayloadPlaylistTypeV4 {
+export enum PayloadCustomPlaylistTypeV4 {
   Favorite = 'Favorite',
   UserAdded = 'UserAdded',
   TrashBin = 'TrashBin',
 }
 
-export interface PayloadPlaylistResponseV4 {
+export interface PayloadCustomPlaylistResponseV4 {
   readonly id: number
-  readonly type: PayloadPlaylistTypeV4
+  readonly type: PayloadCustomPlaylistTypeV4
   readonly name: string
   readonly topicIds: number[]
   readonly lastModifiedDate: number
 }
 
-export interface PayloadContentResponseV4 {
-  readonly words: PayloadWordResponseV4[]
-  readonly topic: PayloadTopicResponseV4[]
-  readonly playlist: PayloadPlaylistResponseV4[]
+export interface PayloadCustomContentResponseV4 {
+  readonly words: PayloadCustomWordResponseV4[]
+  readonly topic: PayloadCustomTopicResponseV4[]
+  readonly playlist: PayloadCustomPlaylistResponseV4[]
   readonly foreignLanguage: LanguageISO
   readonly nativeLanguage: LanguageISO
   readonly lastSyncDate: number
 }
 
-export namespace PayloadContentPlaylistV4 {
+export namespace PayloadCustomPlaylistV4 {
   export namespace Create {
     export interface Request {
       readonly name: string
-      readonly type: PayloadPlaylistTypeV4.UserAdded
+      readonly type: PayloadCustomPlaylistTypeV4.UserAdded
       readonly foreignLanguage: LanguageISO
       readonly nativeLanguage: LanguageISO
     }
     export interface Response {
-      readonly playlist: PayloadPlaylistResponseV4
-      readonly allContent: PayloadContentResponseV4
+      readonly playlist: PayloadCustomPlaylistResponseV4
+      readonly allContent: PayloadCustomContentResponseV4
     }
   }
 
   export namespace BatchCreate {
     export type Request = Create.Request[]
     export interface Response {
-      readonly playlists: PayloadPlaylistResponseV4[]
-      readonly allContent: PayloadContentResponseV4
+      readonly playlists: PayloadCustomPlaylistResponseV4[]
+      readonly allContent: PayloadCustomContentResponseV4
     }
   }
 
 }
 
-export namespace PayloadContentTopicV4 {
+export namespace PayloadCustomTopicV4 {
   export namespace Create {
     export interface Request {
       readonly name: string
-      readonly type: PayloadTopicTypeV4.UserAdded
+      readonly type: PayloadCustomTopicTypeV4.UserAdded
       readonly foreignLanguage: LanguageISO
       readonly nativeLanguage: LanguageISO
     }
     export interface Response {
-      readonly topic: PayloadTopicResponseV4
-      readonly allContent: PayloadContentResponseV4
+      readonly topic: PayloadCustomTopicResponseV4
+      readonly allContent: PayloadCustomContentResponseV4
     }
   }
 
@@ -87,13 +87,13 @@ export namespace PayloadContentTopicV4 {
     export type Request = Create.Request[]
 
     export interface Response {
-      readonly topics: PayloadTopicResponseV4[]
-      readonly allContent: PayloadContentResponseV4
+      readonly topics: PayloadCustomTopicResponseV4[]
+      readonly allContent: PayloadCustomContentResponseV4
     }
   }
 }
 
-export namespace PayloadContentWordV4 {
+export namespace PayloadCustomWordV4 {
   export namespace Create {
     export interface Request {
       readonly foreignLanguage: LanguageISO
@@ -103,8 +103,8 @@ export namespace PayloadContentWordV4 {
       readonly foreignTranslationRoman?: string
     }
     export interface Response {
-      readonly word: PayloadWordResponseV4
-      readonly allContent: PayloadContentResponseV4
+      readonly word: PayloadCustomWordResponseV4
+      readonly allContent: PayloadCustomContentResponseV4
     }
   }
 
@@ -112,26 +112,26 @@ export namespace PayloadContentWordV4 {
     export type Request = Create.Request[]
 
     export interface Response {
-      readonly words: PayloadWordResponseV4[]
-      readonly allContent: PayloadContentResponseV4
+      readonly words: PayloadCustomWordResponseV4[]
+      readonly allContent: PayloadCustomContentResponseV4
     }
   }
 }
 
-export namespace PayloadContentSyncV4 {
+export namespace PayloadCustomContentSyncV4 {
   interface PlaylistRequest {
     readonly id: string
     readonly name?: string
     readonly topicIds?: number[]
     readonly lastModifiedDate: number
-    readonly type: PayloadPlaylistTypeV4
+    readonly type: PayloadCustomPlaylistTypeV4
   }
   interface TopicRequest {
     readonly id: string
     readonly name?: string
     readonly wordIds?: string[]
     readonly lastModifiedDate: number
-    readonly type: PayloadTopicTypeV4
+    readonly type: PayloadCustomTopicTypeV4
   }
   interface WordRequest {
     readonly id: string
@@ -150,6 +150,6 @@ export namespace PayloadContentSyncV4 {
     readonly lastSyncDate?: number
   }
   export interface Response {
-    readonly allContent: PayloadContentResponseV4
+    readonly allContent: PayloadCustomContentResponseV4
   }
 }
