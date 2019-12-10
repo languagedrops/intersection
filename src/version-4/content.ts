@@ -45,7 +45,7 @@ export interface PayloadContentResponseV4 {
   readonly lastSyncDate: number
 }
 
-export namespace PayloadPlaylistV4 {
+export namespace PayloadContentPlaylistV4 {
   export namespace Create {
     export interface Request {
       readonly name: string
@@ -69,7 +69,7 @@ export namespace PayloadPlaylistV4 {
 
 }
 
-export namespace PayloadTopicV4 {
+export namespace PayloadContentTopicV4 {
   export namespace Create {
     export interface Request {
       readonly name: string
@@ -93,7 +93,7 @@ export namespace PayloadTopicV4 {
   }
 }
 
-export namespace PayloadWordV4 {
+export namespace PayloadContentWordV4 {
   export namespace Create {
     export interface Request {
       readonly foreignLanguage: LanguageISO
@@ -118,7 +118,7 @@ export namespace PayloadWordV4 {
   }
 }
 
-export namespace PayloadSyncV4 {
+export namespace PayloadContentSyncV4 {
   interface PlaylistRequest {
     readonly id: string
     readonly name?: string
