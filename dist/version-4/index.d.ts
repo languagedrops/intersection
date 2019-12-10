@@ -17,4 +17,4 @@ export * from './profile';
 export * from './giftSubscription';
 export * from './appPlatform';
 export * from './appType';
-export * from './content';
+export * from './customContent';
