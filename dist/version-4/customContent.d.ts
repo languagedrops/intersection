@@ -32,8 +32,8 @@ export interface PayloadCustomPlaylistResponseV4 {
 }
 export interface PayloadCustomContentResponseV4 {
     readonly words: PayloadCustomWordResponseV4[];
-    readonly topic: PayloadCustomTopicResponseV4[];
-    readonly playlist: PayloadCustomPlaylistResponseV4[];
+    readonly topics: PayloadCustomTopicResponseV4[];
+    readonly playlists: PayloadCustomPlaylistResponseV4[];
     readonly foreignLanguage: LanguageISO;
     readonly nativeLanguage: LanguageISO;
     readonly lastSyncDate: number;
