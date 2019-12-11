@@ -6,7 +6,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 __export(require("./purchase"));
 __export(require("./errors"));
 __export(require("./user-update"));
-__export(require("./paddle-webhook"));
 __export(require("./content-report-save"));
 __export(require("./language"));
 __export(require("./languagesStaticData"));
