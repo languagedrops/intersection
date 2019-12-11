@@ -20,6 +20,8 @@ export enum PayloadCustomTopicTypeV4 {
 
 interface BaseCreateCustomContentRequestV4<T extends CustomContentType> {
   readonly lastModified: number
+  readonly foreignLanguage: LanguageISO
+  readonly nativeLanguage: LanguageISO
   readonly customContentType: T
 }
 

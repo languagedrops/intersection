@@ -16,6 +16,8 @@ export declare enum PayloadCustomTopicTypeV4 {
 }
 interface BaseCreateCustomContentRequestV4<T extends CustomContentType> {
     readonly lastModified: number;
+    readonly foreignLanguage: LanguageISO;
+    readonly nativeLanguage: LanguageISO;
     readonly customContentType: T;
 }
 interface CreateCustomWordRequestV4 extends BaseCreateCustomContentRequestV4<CustomContentType.Word> {
