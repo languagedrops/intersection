@@ -26,7 +26,7 @@ export interface PayloadUserAppDataV4 {
   readonly wordListSectionsCollapsed?: PropertyWithMetadata<Dictionary<Dictionary<boolean>>>
   readonly screensCompleted?: PropertyWithMetadata<number>
   readonly introStatus?: PropertyWithMetadata<string>
-  readonly lastPracticeTopicId?: PropertyWithMetadata<Dictionary<number>>
+  readonly lastPracticeTopicId?: PropertyWithMetadata<Dictionary<number | string>>
   readonly lastCelebratedMilestone?: PropertyWithMetadata<Dictionary<Dictionary<string | number>>>
   readonly sessionFinishDates?: PropertyWithMetadata<number[]>
   readonly lastStreakRewardDate?: PropertyWithMetadata<number>
