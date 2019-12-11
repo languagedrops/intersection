@@ -1,7 +1,7 @@
 import { LanguageISO } from './language'
 
 export interface PayloadCustomWordResponseV4 {
-  readonly id: string
+  readonly customWordId: string
   readonly nativeTranslation: string
   readonly foreignTranslation: string
   readonly foreignTranslationRoman?: string
@@ -15,7 +15,7 @@ export enum PayloadCustomTopicTypeV4 {
 }
 
 export interface PayloadCustomTopicResponseV4 {
-  readonly id: string
+  readonly customTopicId: string
   readonly type: PayloadCustomTopicTypeV4
   readonly name: string
   readonly wordIds: string[]
@@ -29,10 +29,10 @@ export enum PayloadCustomPlaylistTypeV4 {
 }
 
 export interface PayloadCustomPlaylistResponseV4 {
-  readonly id: number
+  readonly customPlaylistId: string
   readonly type: PayloadCustomPlaylistTypeV4
   readonly name: string
-  readonly topicIds: number[]
+  readonly topicIds: string[]
   readonly lastModifiedDate: number
 }
 
@@ -120,21 +120,21 @@ export namespace PayloadCustomWordV4 {
 
 export namespace PayloadCustomContentSyncV4 {
   interface PlaylistRequest {
-    readonly id: string
+    readonly customPlaylistId: string
     readonly name?: string
-    readonly topicIds?: number[]
+    readonly topicIds?: string[]
     readonly lastModifiedDate: number
     readonly type: PayloadCustomPlaylistTypeV4
   }
   interface TopicRequest {
-    readonly id: string
+    readonly customTopicId: string
     readonly name?: string
     readonly wordIds?: string[]
     readonly lastModifiedDate: number
     readonly type: PayloadCustomTopicTypeV4
   }
   interface WordRequest {
-    readonly id: string
+    readonly customWordId: string
     readonly nativeTranslation?: string
     readonly foreignTranslation?: string
     readonly foreignTranslationRoman?: string
@@ -147,7 +147,7 @@ export namespace PayloadCustomContentSyncV4 {
     readonly playlists: PlaylistRequest[]
     readonly topics: TopicRequest[]
     readonly words: WordRequest[]
-    readonly lastSyncDate?: number
+    readonly lastSyncDate: number
   }
   export interface Response {
     readonly allContent: PayloadCustomContentResponseV4
