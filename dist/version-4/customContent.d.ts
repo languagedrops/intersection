@@ -1,6 +1,6 @@
 import { LanguageISO } from './language';
 export interface PayloadCustomWordResponseV4 {
-    readonly id: string;
+    readonly customWordId: string;
     readonly nativeTranslation: string;
     readonly foreignTranslation: string;
     readonly foreignTranslationRoman?: string;
@@ -11,23 +11,24 @@ export declare enum PayloadCustomTopicTypeV4 {
     UserAdded = "UserAdded",
     TrashBin = "TrashBin"
 }
-export interface PayloadCustomTopicResponseV4 {
-    readonly id: string;
+export interface PayloadCustomTopicRequestV4 {
+    readonly customTopicId: string;
     readonly type: PayloadCustomTopicTypeV4;
     readonly name: string;
     readonly wordIds: string[];
     readonly lastModifiedDate: number;
 }
+export declare type PayloadCustomTopicResponseV4 = PayloadCustomTopicRequestV4;
 export declare enum PayloadCustomPlaylistTypeV4 {
     Favorite = "Favorite",
     UserAdded = "UserAdded",
     TrashBin = "TrashBin"
 }
 export interface PayloadCustomPlaylistResponseV4 {
-    readonly id: number;
+    readonly customPlaylistId: string;
     readonly type: PayloadCustomPlaylistTypeV4;
     readonly name: string;
-    readonly topicIds: number[];
+    readonly topicIds: string[];
     readonly lastModifiedDate: number;
 }
 export interface PayloadCustomContentResponseV4 {
@@ -104,21 +105,21 @@ export declare namespace PayloadCustomWordV4 {
 }
 export declare namespace PayloadCustomContentSyncV4 {
     interface PlaylistRequest {
-        readonly id: string;
+        readonly customPlaylistId: string;
         readonly name?: string;
-        readonly topicIds?: number[];
+        readonly topicIds?: string[];
         readonly lastModifiedDate: number;
         readonly type: PayloadCustomPlaylistTypeV4;
     }
     interface TopicRequest {
-        readonly id: string;
+        readonly customTopicId: string;
         readonly name?: string;
         readonly wordIds?: string[];
         readonly lastModifiedDate: number;
         readonly type: PayloadCustomTopicTypeV4;
     }
     interface WordRequest {
-        readonly id: string;
+        readonly customWordId: string;
         readonly nativeTranslation?: string;
         readonly foreignTranslation?: string;
         readonly foreignTranslationRoman?: string;
@@ -130,9 +131,7 @@ export declare namespace PayloadCustomContentSyncV4 {
         readonly playlists: PlaylistRequest[];
         readonly topics: TopicRequest[];
         readonly words: WordRequest[];
-        readonly lastSyncDate?: number;
+        readonly lastSyncDate: number;
     }
-    interface Response {
-        readonly allContent: PayloadCustomContentResponseV4;
-    }
+    type Response = Request;
 }
