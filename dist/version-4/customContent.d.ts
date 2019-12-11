@@ -133,5 +133,7 @@ export declare namespace PayloadCustomContentSyncV4 {
         readonly words: WordRequest[];
         readonly lastSyncDate: number;
     }
-    type Response = Request;
+    interface Response {
+        readonly allContent: PayloadCustomContentResponseV4;
+    }
 }
