@@ -18,26 +18,26 @@ export enum PayloadCustomTopicTypeV4 {
   TrashBin = 'TrashBin',
 }
 
-interface BaseCreateContentRequestV4<T extends CustomContentType> {
+interface BaseCreateCustomContentRequestV4<T extends CustomContentType> {
   readonly lastModified: number
   readonly customContentType: T
 }
 
-interface CreateCustomWordRequestV4 extends BaseCreateContentRequestV4<CustomContentType.Word> {
+interface CreateCustomWordRequestV4 extends BaseCreateCustomContentRequestV4<CustomContentType.Word> {
   readonly customWordId: string
   readonly nativeTranslation: string
   readonly foreignTranslation: string
   readonly foreignTranslationRoman?: string
 }
 
-interface CreateCustomTopicRequestV4 extends BaseCreateContentRequestV4<CustomContentType.Topic> {
+interface CreateCustomTopicRequestV4 extends BaseCreateCustomContentRequestV4<CustomContentType.Topic> {
   readonly customTopicId: string
   readonly type: PayloadCustomTopicTypeV4
   readonly name: string
   readonly wordIds: string[]
 }
 
-interface CreateCustomPlaylistRequestV4 extends BaseCreateContentRequestV4<CustomContentType.Playlist> {
+interface CreateCustomPlaylistRequestV4 extends BaseCreateCustomContentRequestV4<CustomContentType.Playlist> {
   readonly customPlaylistId: string
   readonly type: PayloadCustomPlaylistTypeV4
   readonly name: string
@@ -46,20 +46,20 @@ interface CreateCustomPlaylistRequestV4 extends BaseCreateContentRequestV4<Custo
 
 export type PayloadCreateCustomContentRequestV4 = CreateCustomWordRequestV4 | CreateCustomTopicRequestV4 | CreateCustomPlaylistRequestV4
 
-interface BaseCreateContentResponseV4<T extends CustomContentType> {
+interface BaseCreateCustomContentResponseV4<T extends CustomContentType> {
   readonly allContent: PayloadCustomContentResponseV4
   readonly customContentType: T
 }
 
-interface CustomTopicResponseV4 extends BaseCreateContentResponseV4<CustomContentType.Topic> {
+interface CustomTopicResponseV4 extends BaseCreateCustomContentResponseV4<CustomContentType.Topic> {
   readonly topics: CreateCustomTopicRequestV4[]
 }
 
-interface CustomWordResponseV4 extends BaseCreateContentResponseV4<CustomContentType.Word> {
+interface CustomWordResponseV4 extends BaseCreateCustomContentResponseV4<CustomContentType.Word> {
   readonly words: CreateCustomWordRequestV4[]
 }
 
-interface CustomPlaylistResponseV4 extends BaseCreateContentResponseV4<CustomContentType.Playlist> {
+interface CustomPlaylistResponseV4 extends BaseCreateCustomContentResponseV4<CustomContentType.Playlist> {
   readonly playlists: CreateCustomPlaylistRequestV4[]
 }
 
