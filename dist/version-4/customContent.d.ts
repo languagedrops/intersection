@@ -11,14 +11,13 @@ export declare enum PayloadCustomTopicTypeV4 {
     UserAdded = "UserAdded",
     TrashBin = "TrashBin"
 }
-export interface PayloadCustomTopicRequestV4 {
+export interface PayloadCustomTopicResponseV4 {
     readonly customTopicId: string;
     readonly type: PayloadCustomTopicTypeV4;
     readonly name: string;
     readonly wordIds: string[];
     readonly lastModifiedDate: number;
 }
-export declare type PayloadCustomTopicResponseV4 = PayloadCustomTopicRequestV4;
 export declare enum PayloadCustomPlaylistTypeV4 {
     Favorite = "Favorite",
     UserAdded = "UserAdded",
