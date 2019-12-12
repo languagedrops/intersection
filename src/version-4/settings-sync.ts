@@ -36,7 +36,7 @@ export interface PayloadUserAppDataV4 {
   readonly previousStreakRecord?: PropertyWithMetadata<number>
   readonly lastStreakCompletionDay?: PropertyWithMetadata<number>
   readonly dailySecondsSpentInGamePlay?: PropertyWithMetadata<Dictionary<number>>
-  readonly challenges?: PropertyWithMetadata<Dictionary<string>>
+  readonly challenges?: PropertyWithMetadata<Dictionary<boolean>>
 }
 
 export interface PayloadUserLanguageSettingsV4 {
