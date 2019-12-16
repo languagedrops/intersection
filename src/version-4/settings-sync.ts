@@ -6,6 +6,18 @@ export interface PropertyWithMetadata<T> {
   readonly lastModified: number | null
 }
 
+export interface StreaksPayloadUserAppDataV4 {
+  readonly name: string
+  readonly currentStreak: number
+  readonly previousStreakRecord: number
+  readonly lastStreakCompletionDay: number
+}
+
+export interface ChallengesPayloadUserAppDataV4 {
+  readonly challengeName: string
+  readonly state: string
+}
+
 export interface PayloadUserAppDataV4 {
   readonly numberOfTimeouts?: PropertyWithMetadata<number>
   readonly persistedTime?: PropertyWithMetadata<number>
@@ -36,7 +48,9 @@ export interface PayloadUserAppDataV4 {
   readonly previousStreakRecord?: PropertyWithMetadata<number>
   readonly lastStreakCompletionDay?: PropertyWithMetadata<number>
   readonly dailySecondsSpentInGamePlay?: PropertyWithMetadata<Dictionary<number>>
-  readonly challenges?: PropertyWithMetadata<Dictionary<boolean>>
+  readonly streaks?: PropertyWithMetadata<Dictionary<StreaksPayloadUserAppDataV4>>
+  readonly challenges?: PropertyWithMetadata<Dictionary<ChallengesPayloadUserAppDataV4>>
+  readonly activeDays?: PropertyWithMetadata<number[]>
 }
 
 export interface PayloadUserLanguageSettingsV4 {
