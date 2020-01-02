@@ -398,7 +398,7 @@ exports.languagesStaticData = {
         iso: language_1.LanguageISO.AIN,
         name: language_1.LanguageName.Ainu,
         alphabet: 'ㇰ,ㇱ,ㇲ,ㇳ,ㇴ,ㇵ,ㇶ,ㇷ,ㇸ,ㇹ,ㇺ,ㇻ,ㇼ,ㇽ,ㇾ,ㇿ'.split(','),
-        hasRomanAid: false,
+        hasRomanAid: true,
         hasAlternativeTranslation: false,
         hasAlphabetTopic: false,
         availableAsLearning: false,
