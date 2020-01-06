@@ -40,6 +40,8 @@ var LanguageISO;
     LanguageISO["FI"] = "FI";
     LanguageISO["ASE"] = "ASE";
     LanguageISO["AIN"] = "AIN";
+    LanguageISO["FA"] = "FA";
+    LanguageISO["ET"] = "ET";
 })(LanguageISO = exports.LanguageISO || (exports.LanguageISO = {}));
 (function (LanguageISO) {
     LanguageISO.all = Object.values(LanguageISO).filter((v) => typeof v === 'string');
@@ -85,4 +87,6 @@ var LanguageName;
     LanguageName["Finnish"] = "Finnish";
     LanguageName["ASL"] = "Asl";
     LanguageName["Ainu"] = "Ainu";
+    LanguageName["Persian"] = "Persian";
+    LanguageName["Estonian"] = "Estonian";
 })(LanguageName = exports.LanguageName || (exports.LanguageName = {}));

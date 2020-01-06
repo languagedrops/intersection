@@ -36,7 +36,9 @@ export declare enum LanguageISO {
     EL = "EL",
     FI = "FI",
     ASE = "ASE",
-    AIN = "AIN"
+    AIN = "AIN",
+    FA = "FA",
+    ET = "ET"
 }
 export declare namespace LanguageISO {
     const all: LanguageISO[];
@@ -80,7 +82,9 @@ export declare enum LanguageName {
     Greek = "Greek",
     Finnish = "Finnish",
     ASL = "Asl",
-    Ainu = "Ainu"
+    Ainu = "Ainu",
+    Persian = "Persian",
+    Estonian = "Estonian"
 }
 export interface Language {
     readonly iso: LanguageISO;
