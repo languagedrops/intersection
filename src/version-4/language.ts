@@ -38,6 +38,8 @@ export enum LanguageISO {
     FI = 'FI',
     ASE = 'ASE',
     AIN = 'AIN',
+    FA = 'FA',
+    ET = 'ET',
 }
 
 export namespace LanguageISO {
@@ -84,6 +86,8 @@ export enum LanguageName {
     Finnish = 'Finnish',
     ASL = 'Asl',
     Ainu = 'Ainu',
+    Persian = 'Persian',
+    Estonian = 'Estonian',
 }
 
 export interface Language {
