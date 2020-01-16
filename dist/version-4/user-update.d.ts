@@ -2,7 +2,8 @@ import { PayloadRequestBaseV4 } from './base';
 export declare enum PayloadLoginTypeV4 {
     Google = "Google",
     Facebook = "Facebook",
-    Email = "Email"
+    Email = "Email",
+    Apple = "Apple"
 }
 interface PayloadUserDetailsBaseV4<T extends PayloadLoginTypeV4> extends PayloadRequestBaseV4 {
     readonly type: T;
@@ -29,7 +30,10 @@ export interface PayloadEmailUserDetailsV4 extends PayloadLoggedInUserDetailsBas
     readonly locale: string;
     readonly name: string;
 }
-export declare type PayloadUserDetailsV4 = PayloadEmailUserDetailsV4 | PayloadGoogleUserDetailsV4 | PayloadFacebookUserDetailsV4;
+export interface PayloadAppleUserDetailsV4 extends PayloadLoggedInUserDetailsBaseV4<PayloadLoginTypeV4.Apple> {
+    readonly name: string;
+}
+export declare type PayloadUserDetailsV4 = PayloadEmailUserDetailsV4 | PayloadGoogleUserDetailsV4 | PayloadFacebookUserDetailsV4 | PayloadAppleUserDetailsV4;
 export declare enum PayloadAppPlatformSendUserDetailsRequestV4 {
     iOS = "iOS",
     Android = "Android"

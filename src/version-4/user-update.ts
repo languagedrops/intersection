@@ -4,6 +4,7 @@ export enum PayloadLoginTypeV4 {
     Google = 'Google',
     Facebook = 'Facebook',
     Email = 'Email',
+    Apple = 'Apple',
   }
 
 interface PayloadUserDetailsBaseV4<T extends PayloadLoginTypeV4> extends PayloadRequestBaseV4 {
@@ -36,7 +37,11 @@ export interface PayloadEmailUserDetailsV4 extends PayloadLoggedInUserDetailsBas
     readonly name: string
 }
 
-export type PayloadUserDetailsV4 = PayloadEmailUserDetailsV4 | PayloadGoogleUserDetailsV4 | PayloadFacebookUserDetailsV4
+export interface PayloadAppleUserDetailsV4 extends PayloadLoggedInUserDetailsBaseV4<PayloadLoginTypeV4.Apple> {
+    readonly name: string
+}
+
+export type PayloadUserDetailsV4 = PayloadEmailUserDetailsV4 | PayloadGoogleUserDetailsV4 | PayloadFacebookUserDetailsV4 | PayloadAppleUserDetailsV4
 
 export enum PayloadAppPlatformSendUserDetailsRequestV4 {
     iOS = 'iOS',
