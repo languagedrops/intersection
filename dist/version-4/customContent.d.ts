@@ -125,4 +125,5 @@ export interface DeleteCustomPlaylistContent {
     readonly customPlaylistId: string;
 }
 export declare type PayloadDeleteCustomContentRequestV4 = DeleteCustomPlaylistContent | DeleteCustomTopicContent | DeleteCustomWordContent;
+export declare type PayloadDeleteCustomContentResponseV4 = PayloadCustomContentSyncV4.Response;
 export {};
