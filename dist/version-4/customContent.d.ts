@@ -18,13 +18,13 @@ interface BaseCreateCustomContentRequestV4<T extends CustomContentType> {
     readonly customContentType: T;
     readonly foreignLanguage: LanguageISO;
     readonly nativeLanguage: LanguageISO;
-    readonly lastModified: number;
+    readonly lastModifiedDate: number;
 }
 interface BaseCreateCustomContentResponseV4<T extends CustomContentType> {
     readonly customContentType: T;
     readonly foreignLanguage: LanguageISO;
     readonly nativeLanguage: LanguageISO;
-    readonly lastModified: number;
+    readonly lastModifiedDate: number;
 }
 interface BaseCreateCustomPlaylistPayload {
     readonly type: PayloadCustomPlaylistTypeV4;
@@ -66,9 +66,9 @@ interface CustomPlaylistResponseV4 extends BaseCreateCustomContentResponseV4<Cus
     readonly playlists: CreateCustomPlaylistResponseV4[];
 }
 export interface PayloadCustomContentResponseV4 {
-    readonly words: CustomWordResponseV4[];
-    readonly topics: CustomTopicResponseV4[];
-    readonly playlists: CustomPlaylistResponseV4[];
+    readonly words: CreateCustomWordResponseV4[];
+    readonly topics: CreateCustomTopicResponseV4[];
+    readonly playlists: CreateCustomPlaylistResponseV4[];
     readonly foreignLanguage: LanguageISO;
     readonly nativeLanguage: LanguageISO;
     readonly lastSyncDate: number;
