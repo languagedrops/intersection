@@ -131,3 +131,20 @@ export namespace PayloadCustomContentSyncV4 {
     readonly allContent: PayloadCustomContentResponseV4
   }
 }
+
+export interface DeleteCustomTopicContent {
+  readonly customContentType: CustomContentType.Topic
+  readonly customTopicId: string
+}
+
+export interface DeleteCustomWordContent {
+  readonly customContentType: CustomContentType.Word
+  readonly customWordId: string
+}
+
+export interface DeleteCustomPlaylistContent {
+  readonly customContentType: CustomContentType.Playlist
+  readonly customPlaylistId: string
+}
+
+export type PayloadDeleteCustomContentRequestV4 = DeleteCustomPlaylistContent | DeleteCustomTopicContent | DeleteCustomWordContent
