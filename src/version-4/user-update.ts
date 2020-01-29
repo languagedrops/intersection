@@ -38,6 +38,7 @@ export interface PayloadEmailUserDetailsV4 extends PayloadLoggedInUserDetailsBas
 }
 
 export interface PayloadAppleUserDetailsV4 extends PayloadLoggedInUserDetailsBaseV4<PayloadLoginTypeV4.Apple> {
+    readonly locale: string
     readonly name: string
 }
 
