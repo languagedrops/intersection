@@ -54,6 +54,7 @@ export interface PayloadUserLanguageSettingsV4 {
     readonly romanicAid?: PropertyWithMetadata<Dictionary<string>>;
     readonly characterDrawing?: PropertyWithMetadata<Dictionary<boolean>>;
     readonly deviceLanguage?: PropertyWithMetadata<string>;
+    readonly voiceOver?: PropertyWithMetadata<Dictionary<string>>;
 }
 export interface PayloadSyncSettingsRequestV4 extends PayloadRequestBaseV4 {
     readonly appData: PayloadUserAppDataV4;
