@@ -40,6 +40,9 @@ export enum LanguageISO {
     AIN = 'AIN',
     FA = 'FA',
     ET = 'ET',
+    HR = 'HR',
+    SR = 'SR',
+    BS = 'BS',
 }
 
 export namespace LanguageISO {
@@ -88,6 +91,9 @@ export enum LanguageName {
     Ainu = 'Ainu',
     Persian = 'Persian',
     Estonian = 'Estonian',
+    Croatian = 'Croatian',
+    Bosnian = 'Bosnian',
+    Serbian = 'Serbian',
 }
 
 export interface Language {
