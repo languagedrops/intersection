@@ -1,5 +1,6 @@
 export declare enum GiftPeriod {
     Month = "month",
+    ThreeMonth = "threeMonth",
     Year = "year",
     Lifetime = "lifetime"
 }
