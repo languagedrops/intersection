@@ -37,12 +37,21 @@ export interface PayloadEmailUserDetailsV4 extends PayloadLoggedInUserDetailsBas
     readonly name: string
 }
 
-export interface PayloadAppleUserDetailsV4 extends PayloadLoggedInUserDetailsBaseV4<PayloadLoginTypeV4.Apple> {
+export interface PayloadAppleUserDetailsRequestV4 extends PayloadUserDetailsBaseV4<PayloadLoginTypeV4.Apple> {
+    readonly userId: string
+    readonly locale: string
+    readonly name?: string
+    readonly email?: string
+}
+
+export interface PayloadAppleUserDetailsResponseV4 extends PayloadLoggedInUserDetailsBaseV4<PayloadLoginTypeV4.Apple> {
+    readonly userId: string
     readonly locale: string
     readonly name: string
 }
 
-export type PayloadUserDetailsV4 = PayloadEmailUserDetailsV4 | PayloadGoogleUserDetailsV4 | PayloadFacebookUserDetailsV4 | PayloadAppleUserDetailsV4
+export type PayloadUserDetailsRequestV4 = PayloadEmailUserDetailsV4 | PayloadGoogleUserDetailsV4 | PayloadFacebookUserDetailsV4 | PayloadAppleUserDetailsRequestV4
+export type PayloadUserDetailsResponseV4 = PayloadEmailUserDetailsV4 | PayloadGoogleUserDetailsV4 | PayloadFacebookUserDetailsV4 | PayloadAppleUserDetailsResponseV4
 
 export enum PayloadAppPlatformSendUserDetailsRequestV4 {
     iOS = 'iOS',
@@ -68,6 +77,6 @@ export interface PayloadUserEmailTimeResponseV4 {
     readonly lastCancellationEmailTime?: number
 }
 
-export type PayloadSendUserDetailsRequestV4 = PayloadUserDetailsV4 & PayloadUserDetailsRestRequestV4
+export type PayloadSendUserDetailsRequestV4 = PayloadUserDetailsRequestV4 & PayloadUserDetailsRestRequestV4
 
-export type PayloadUpdateUserResponseV4 = PayloadUserDetailsV4 & PayloadUserEmailTimeResponseV4
+export type PayloadUpdateUserResponseV4 = PayloadUserDetailsResponseV4 & PayloadUserEmailTimeResponseV4
