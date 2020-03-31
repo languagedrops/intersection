@@ -6,3 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 __export(require("./version-2/"));
 __export(require("./version-4/"));
 __export(require("./version-5/"));
+__export(require("./appPlatform"));
+__export(require("./appType"));
+__export(require("./language"));
+__export(require("./languagesStaticData"));
