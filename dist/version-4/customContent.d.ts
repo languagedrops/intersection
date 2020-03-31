@@ -1,4 +1,4 @@
-import { LanguageISO } from './language';
+import { LanguageISO } from '../language';
 export declare enum CustomContentType {
     Word = "Word",
     Topic = "Topic",

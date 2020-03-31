@@ -1,4 +1,4 @@
-import { Dictionary } from './dictionary'
+import { Dictionary } from '../dictionary'
 import { PayloadRequestBaseV4 } from './base'
 
 export interface PayloadTopicUserDataV4 {
