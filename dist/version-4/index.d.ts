@@ -2,6 +2,7 @@ export * from './purchase';
 export * from './utc-time';
 export * from './delete-progress';
 export * from './errors';
+export * from './feature-switches';
 export * from './settings-sync';
 export * from './user-update';
 export * from './paddle-webhook';
