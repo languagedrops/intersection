@@ -44,6 +44,7 @@ var AppType;
     AppType["lang_el"] = "lang_el";
     AppType["lang_fi"] = "lang_fi";
     AppType["droplets"] = "droplets";
+    AppType["upopoy"] = "upopoy";
 })(AppType = exports.AppType || (exports.AppType = {}));
 (function (AppType) {
     AppType.transformAppType = (input) => {
