@@ -40,7 +40,8 @@ export declare enum AppType {
     lang_sm = "lang_sm",
     lang_el = "lang_el",
     lang_fi = "lang_fi",
-    droplets = "droplets"
+    droplets = "droplets",
+    upopoy = "upopoy"
 }
 export declare namespace AppType {
     const transformAppType: (input: string) => AppType;
