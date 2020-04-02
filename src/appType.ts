@@ -41,6 +41,7 @@ export enum AppType {
   lang_el = 'lang_el',
   lang_fi = 'lang_fi',
   droplets = 'droplets',
+  upopoy = 'upopoy',
 }
 
 export namespace AppType {
