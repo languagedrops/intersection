@@ -14,14 +14,15 @@ export declare enum PayloadCustomTopicTypeV4 {
     UserAdded = "UserAdded",
     TrashBin = "TrashBin"
 }
-interface BaseCreateCustomContentRequestV4<T extends CustomContentType> {
+interface BaseCustomContentTypeV4<T extends CustomContentType> {
     readonly customContentType: T;
+}
+interface BaseCreateCustomContentRequestV4<T extends CustomContentType> extends BaseCustomContentTypeV4<T> {
     readonly foreignLanguage: LanguageISO;
     readonly nativeLanguage: LanguageISO;
     readonly lastModifiedDate: number;
 }
-interface BaseCreateCustomContentResponseV4<T extends CustomContentType> {
-    readonly customContentType: T;
+interface BaseCreateCustomContentResponseV4<T extends CustomContentType> extends BaseCustomContentTypeV4<T> {
     readonly foreignLanguage: LanguageISO;
     readonly nativeLanguage: LanguageISO;
     readonly lastModifiedDate: number;
@@ -56,15 +57,6 @@ interface CreateCustomWordRequestV4 extends BaseCreateCustomContentRequestV4<Cus
 interface CreateCustomWordResponseV4 extends BaseCreateCustomContentResponseV4<CustomContentType.Word>, BaseCreateCustomWordPayload {
     readonly customWordId: string;
 }
-interface CustomTopicResponseV4 extends BaseCreateCustomContentResponseV4<CustomContentType.Topic> {
-    readonly topics: CreateCustomTopicResponseV4[];
-}
-interface CustomWordResponseV4 extends BaseCreateCustomContentResponseV4<CustomContentType.Word> {
-    readonly words: CreateCustomWordResponseV4[];
-}
-interface CustomPlaylistResponseV4 extends BaseCreateCustomContentResponseV4<CustomContentType.Playlist> {
-    readonly playlists: CreateCustomPlaylistResponseV4[];
-}
 export interface PayloadCustomContentResponseV4 {
     readonly words: CreateCustomWordResponseV4[];
     readonly topics: CreateCustomTopicResponseV4[];
@@ -76,7 +68,7 @@ export interface PayloadCustomContentResponseV4 {
 export declare type PayloadCreateCustomContentRequestV4 = CreateCustomWordRequestV4 | CreateCustomTopicRequestV4 | CreateCustomPlaylistRequestV4;
 export interface PayloadCreateCustomContentResponseV4 {
     readonly allContent: PayloadCustomContentResponseV4;
-    readonly newContent: CustomPlaylistResponseV4 | CustomTopicResponseV4 | CustomWordResponseV4;
+    readonly newContent: CreateCustomPlaylistResponseV4 | CreateCustomTopicResponseV4 | CreateCustomWordResponseV4;
 }
 export declare namespace PayloadCustomContentSyncV4 {
     interface PlaylistRequest {
