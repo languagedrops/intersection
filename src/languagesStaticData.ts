@@ -409,7 +409,7 @@ export const languagesStaticData: { readonly [key: string]: Language } = {
     name: LanguageName.Persian,
     alphabet: ''.split(','),
     hasRomanAid: true,
-    hasAlternativeTranslation: true,
+    hasAlternativeTranslation: false,
     hasAlphabetTopic: false,
     availableAsLearning: false,
     availableAsDevice: false,

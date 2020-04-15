@@ -409,7 +409,7 @@ exports.languagesStaticData = {
         name: language_1.LanguageName.Persian,
         alphabet: ''.split(','),
         hasRomanAid: true,
-        hasAlternativeTranslation: true,
+        hasAlternativeTranslation: false,
         hasAlphabetTopic: false,
         availableAsLearning: false,
         availableAsDevice: false,
