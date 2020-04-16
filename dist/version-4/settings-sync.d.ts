@@ -48,6 +48,8 @@ export interface PayloadUserAppDataV4 {
     readonly streaks?: PropertyWithMetadata<Dictionary<StreaksPayloadUserAppDataV4>>;
     readonly challenges?: PropertyWithMetadata<Dictionary<ChallengesPayloadUserAppDataV4>>;
     readonly activeDays?: PropertyWithMetadata<number[]>;
+    readonly activationDate?: PropertyWithMetadata<number>;
+    readonly numberOfReActivations?: PropertyWithMetadata<number>;
 }
 export interface PayloadUserLanguageSettingsV4 {
     readonly useAlternativeTranslation?: PropertyWithMetadata<Dictionary<boolean>>;
