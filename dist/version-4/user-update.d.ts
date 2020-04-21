@@ -33,6 +33,7 @@ export interface PayloadEmailUserDetailsV4 extends PayloadLoggedInUserDetailsBas
 export interface PayloadAppleUserDetailsV4 extends PayloadLoggedInUserDetailsBaseV4<PayloadLoginTypeV4.Apple> {
     readonly locale: string;
     readonly name: string;
+    readonly appleUserId?: string;
 }
 export declare type PayloadUserDetailsV4 = PayloadEmailUserDetailsV4 | PayloadGoogleUserDetailsV4 | PayloadFacebookUserDetailsV4 | PayloadAppleUserDetailsV4;
 export declare enum PayloadAppPlatformSendUserDetailsRequestV4 {
