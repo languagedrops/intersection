@@ -41,6 +41,7 @@ export declare enum AppType {
     lang_el = "lang_el",
     lang_fi = "lang_fi",
     droplets = "droplets",
+    droplets_demo_apple_store = "droplets_demo_apple_store",
     upopoy = "upopoy"
 }
 export declare namespace AppType {
