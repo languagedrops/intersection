@@ -57,5 +57,8 @@
   },
   "homepage": "https://github.com/languagedrops/intersection#readme",
   "author": "drops-developers",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "majime": "^4.2.0"
+  }
 }
