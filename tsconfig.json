@@ -18,6 +18,7 @@
         "target": "es2017",
         "rootDir": "./src",
         "outDir": "dist",
+        "skipLibCheck": true,
         "lib": [
             "dom",
             "dom.iterable",

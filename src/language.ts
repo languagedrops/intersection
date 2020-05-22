@@ -46,7 +46,7 @@ export enum LanguageISO {
 }
 
 export namespace LanguageISO {
-  export const all: LanguageISO[] = Object.values(LanguageISO).filter((v) => typeof v === 'string')
+  export const all: LanguageISO[] = Object.values(LanguageISO).filter((v) => typeof v === 'string') as LanguageISO[]
   export const getByName = (name: string) => all.find((languageIso) => languageIso.toString() === name)
 }
 
@@ -76,7 +76,7 @@ export enum LanguageName {
     Icelandic = 'Icelandic',
     Indonesian = 'Indonesian',
     EnglishBritish = 'EnglishBritish',
-    SpanishLatin = 'SpanishLatin',
+    SpanishMexican = 'SpanishMexican',
     PortugueseEuropean = 'PortugueseEuropean',
     ChineseCantonese = 'ChineseCantonese',
     Thai = 'Thai',
@@ -105,5 +105,7 @@ export interface Language {
     readonly hasAlternativeTranslation: boolean
     readonly hasAlphabetTopic: boolean
     readonly availableAsLearning: boolean
-    readonly availableAsDevice: boolean
+    readonly availableAsNative: boolean
+    readonly isUiLocalized: boolean
+    readonly availableInVisualDictionary: boolean
 }

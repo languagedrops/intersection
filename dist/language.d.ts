@@ -73,7 +73,7 @@ export declare enum LanguageName {
     Icelandic = "Icelandic",
     Indonesian = "Indonesian",
     EnglishBritish = "EnglishBritish",
-    SpanishLatin = "SpanishLatin",
+    SpanishMexican = "SpanishMexican",
     PortugueseEuropean = "PortugueseEuropean",
     ChineseCantonese = "ChineseCantonese",
     Thai = "Thai",
@@ -101,5 +101,7 @@ export interface Language {
     readonly hasAlternativeTranslation: boolean;
     readonly hasAlphabetTopic: boolean;
     readonly availableAsLearning: boolean;
-    readonly availableAsDevice: boolean;
+    readonly availableAsNative: boolean;
+    readonly isUiLocalized: boolean;
+    readonly availableInVisualDictionary: boolean;
 }

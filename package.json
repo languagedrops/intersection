@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "rm -rf dist && tsc",
+    "build": "yarn test && rm -rf dist && tsc",
     "test": "jest",
     "tslint": "tslint --project tsconfig.json --exclude '**/*.js'"
   },
@@ -14,17 +14,17 @@
     "url": "git+https://github.com/languagedrops/intersection.git"
   },
   "devDependencies": {
-    "@types/jest": "^23.0.0",
-    "babel-core": "^6.26.3",
-    "babel-jest": "^23.0.1",
-    "jest": "^23.1.0",
-    "ts-jest": "^23.10.4",
-    "tslint": "^5.9.1",
+    "@types/jest": "24.0.0",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "24.8.0",
+    "jest": "24.5.0",
+    "ts-jest": "24.2.0",
+    "tslint": "5.20.1",
     "tslint-eslint-rules": "^4.1.1",
     "tslint-immutable": "^4.7.0",
     "tslint-no-circular-imports": "^0.2.0",
     "tslint-react": "^3.2.0",
-    "typescript": "^3.0.3"
+    "typescript": "3.7.3"
   },
   "jest": {
     "bail": true,
@@ -57,5 +57,8 @@
   },
   "homepage": "https://github.com/languagedrops/intersection#readme",
   "author": "drops-developers",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "grapheme-splitter": "^1.0.4"
+  }
 }
