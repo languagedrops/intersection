@@ -43,6 +43,9 @@ var PayloadIAPIdentifierV4;
     PayloadIAPIdentifierV4["iapPremiumYearly40FreeTrial"] = "iapPremiumYearly40FreeTrial";
     PayloadIAPIdentifierV4["iapPremiumYearly35"] = "iapPremiumYearly35";
     PayloadIAPIdentifierV4["iapPremiumYearly30"] = "iapPremiumYearly30";
+    PayloadIAPIdentifierV4["iapPremiumYearly25"] = "iapPremiumYearly25";
+    PayloadIAPIdentifierV4["iapPremiumLifetime80"] = "iapPremiumLifetime80";
+    PayloadIAPIdentifierV4["iapPremiumLifetime55"] = "iapPremiumLifetime55";
     PayloadIAPIdentifierV4["iapPremiumLifetime160"] = "iapPremiumLifetime160";
     PayloadIAPIdentifierV4["iapPremiumLifetime180"] = "iapPremiumLifetime180";
     // non-recurring limited time
