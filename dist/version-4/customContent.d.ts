@@ -92,7 +92,7 @@ export declare namespace PayloadCustomContentSyncV4 {
         readonly foreignTranslation?: string;
         readonly foreignTranslationRoman?: string;
     }
-    interface Request {
+    export interface Request {
         readonly foreignLanguage: LanguageISO;
         readonly nativeLanguage: LanguageISO;
         readonly playlists: PlaylistRequest[];
@@ -100,9 +100,10 @@ export declare namespace PayloadCustomContentSyncV4 {
         readonly words: WordRequest[];
         readonly lastSyncDate: number;
     }
-    interface Response {
+    export interface Response {
         readonly allContent: PayloadCustomContentResponseV4;
     }
+    export {};
 }
 export interface DeleteCustomTopicContent {
     readonly customContentType: CustomContentType.Topic;

@@ -77,7 +77,7 @@ var LanguageName;
     LanguageName["Icelandic"] = "Icelandic";
     LanguageName["Indonesian"] = "Indonesian";
     LanguageName["EnglishBritish"] = "EnglishBritish";
-    LanguageName["SpanishLatin"] = "SpanishLatin";
+    LanguageName["SpanishMexican"] = "SpanishMexican";
     LanguageName["PortugueseEuropean"] = "PortugueseEuropean";
     LanguageName["ChineseCantonese"] = "ChineseCantonese";
     LanguageName["Thai"] = "Thai";

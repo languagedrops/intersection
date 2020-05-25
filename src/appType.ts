@@ -51,5 +51,5 @@ export namespace AppType {
     return input as any as AppType
   }
 
-  export const all: AppType[] = Object.values(AppType).filter((v) => typeof v === 'string')
+  export const all: AppType[] = Object.values(AppType).filter((v) => typeof v === 'string') as AppType[]
 }

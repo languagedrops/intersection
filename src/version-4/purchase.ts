@@ -68,7 +68,7 @@ export enum PayloadIAPIdentifierV4 {
 }
 
 export namespace PayloadIAPIdentifierV4 {
-  export const all: PayloadIAPIdentifierV4[] = Object.values(PayloadIAPIdentifierV4).filter((v) => typeof v === 'string')
+  export const all: PayloadIAPIdentifierV4[] = Object.values(PayloadIAPIdentifierV4).filter((v) => typeof v === 'string') as PayloadIAPIdentifierV4[]
 }
 
 export interface PayloadAndroidReceiptV4 {
