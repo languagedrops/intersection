@@ -19,7 +19,7 @@ export interface PayloadProviderForLoginBaseResponseV4 <T extends boolean> {
 
 export interface PayloadProviderForLoginSuccessResponseV4 extends PayloadProviderForLoginBaseResponseV4<true> {
     readonly provider: PayloadLoginTypeV4
-    readonly migratedToFirebase: true
+    readonly migratedToFirebase: boolean
 }
 
 export interface PayloadProviderForLoginNoUserResponseV4 extends PayloadProviderForLoginBaseResponseV4<false> {}
