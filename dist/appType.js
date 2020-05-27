@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.AppType = void 0;
 var AppType;
 (function (AppType) {
     AppType["int"] = "int";

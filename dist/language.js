@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.LanguageName = exports.LanguageISO = void 0;
 var LanguageISO;
 (function (LanguageISO) {
     LanguageISO["HU"] = "HU";

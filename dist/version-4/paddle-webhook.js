@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.GiftPeriod = void 0;
 var GiftPeriod;
 (function (GiftPeriod) {
     GiftPeriod["Month"] = "month";

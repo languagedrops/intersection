@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.PayloadIsErrorResponseV4 = exports.PayloadIsWarningResponseV4 = exports.getStatusCodeV4 = exports.getEventTypeV4 = exports.PayloadErrorsV4 = void 0;
 var PayloadErrorsV4;
 (function (PayloadErrorsV4) {
     PayloadErrorsV4["InvalidUserEmail"] = "InvalidUserEmail";
