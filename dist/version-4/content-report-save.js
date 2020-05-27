@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.PayloadContentReportIssueType = void 0;
 var PayloadContentReportIssueType;
 (function (PayloadContentReportIssueType) {
     PayloadContentReportIssueType["Misspelling"] = "Misspelling";
