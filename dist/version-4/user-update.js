@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.PayloadAppPlatformSendUserDetailsRequestV4 = exports.PayloadLoginTypeV4 = void 0;
 var PayloadLoginTypeV4;
 (function (PayloadLoginTypeV4) {
     PayloadLoginTypeV4["Google"] = "Google";
