@@ -29,6 +29,14 @@ exports.getHumanReadableLanguageName = (languageIso) => {
             return exports.languagesStaticData[languageIso].name;
     }
 };
+exports.getIsDeployedLanguage = (languageISO) => {
+    return (exports.languagesStaticData[languageISO].availableAsLearning ||
+        exports.languagesStaticData[languageISO].availableAsNative ||
+        exports.languagesStaticData[languageISO].availableInVisualDictionary);
+};
+exports.deployedLanguageISOs = () => {
+    return language_1.LanguageISO.all.filter((languageISO) => exports.getIsDeployedLanguage(languageISO));
+};
 exports.languagesStaticData = {
     [language_1.LanguageISO.KO]: {
         iso: language_1.LanguageISO.KO,
