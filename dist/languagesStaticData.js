@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.languagesStaticData = exports.getHumanReadableLanguageName = void 0;
 const language_1 = require("./language");
 const GraphemeSplitter = require("grapheme-splitter");
 const splitter = new GraphemeSplitter();

@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.PayloadCustomTopicTypeV4 = exports.PayloadCustomPlaylistTypeV4 = exports.CustomContentType = void 0;
 var CustomContentType;
 (function (CustomContentType) {
     CustomContentType["Word"] = "Word";

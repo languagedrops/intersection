@@ -1,6 +1,6 @@
 "use strict";
+// import { languagesStaticData } from './languagesStaticData'
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.LanguageName = exports.LanguageISO = void 0;
 var LanguageISO;
 (function (LanguageISO) {
     LanguageISO["HU"] = "HU";
@@ -47,8 +47,19 @@ var LanguageISO;
     LanguageISO["SR"] = "SR";
     LanguageISO["BS"] = "BS";
 })(LanguageISO = exports.LanguageISO || (exports.LanguageISO = {}));
+exports.getIsProductionLanguage = (languageISO) => {
+    switch (languageISO) {
+        case LanguageISO.BS:
+        case LanguageISO.SR:
+        case LanguageISO.PA:
+            return false;
+        default:
+            return true;
+    }
+};
 (function (LanguageISO) {
     LanguageISO.all = Object.values(LanguageISO).filter((v) => typeof v === 'string');
+    LanguageISO.prod = LanguageISO.all.filter((languageISO) => exports.getIsProductionLanguage(languageISO));
     LanguageISO.getByName = (name) => LanguageISO.all.find((languageIso) => languageIso.toString() === name);
 })(LanguageISO = exports.LanguageISO || (exports.LanguageISO = {}));
 var LanguageName;

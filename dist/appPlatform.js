@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AppPlatform = void 0;
 var AppPlatform;
 (function (AppPlatform) {
     AppPlatform["iOS"] = "iOS";
