@@ -28,6 +28,18 @@ export const getHumanReadableLanguageName = (languageIso: LanguageISO): string =
   }
 }
 
+export const getIsDeployedLanguage = (languageISO: LanguageISO): boolean => {
+  return (
+      languagesStaticData[languageISO].availableAsLearning ||
+      languagesStaticData[languageISO].availableAsNative ||
+      languagesStaticData[languageISO].availableInVisualDictionary
+  )
+}
+
+export const deployedLanguageISOs = () => {
+  return LanguageISO.all.filter((languageISO) => getIsDeployedLanguage(languageISO))
+}
+
 export const languagesStaticData: Record<LanguageISO, Language> = {
   [LanguageISO.KO]: {
     iso: LanguageISO.KO,
