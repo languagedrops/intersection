@@ -1,3 +1,4 @@
+// import { languagesStaticData } from './languagesStaticData'
 
 export enum LanguageISO {
     HU = 'HU',
@@ -45,8 +46,20 @@ export enum LanguageISO {
     BS = 'BS',
 }
 
+export const getIsProductionLanguage = (languageISO: LanguageISO): boolean => {
+    switch (languageISO) {
+        case LanguageISO.BS:
+        case LanguageISO.SR:
+        case LanguageISO.PA:
+            return false
+        default:
+            return true
+    }
+}
+
 export namespace LanguageISO {
   export const all: LanguageISO[] = Object.values(LanguageISO).filter((v) => typeof v === 'string') as LanguageISO[]
+  export const prod: LanguageISO[] = all.filter((languageISO) => getIsProductionLanguage(languageISO))
   export const getByName = (name: string) => all.find((languageIso) => languageIso.toString() === name)
 }
 
