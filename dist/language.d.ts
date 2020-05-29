@@ -43,10 +43,8 @@ export declare enum LanguageISO {
     SR = "SR",
     BS = "BS"
 }
-export declare const getIsProductionLanguage: (languageISO: LanguageISO) => boolean;
 export declare namespace LanguageISO {
     const all: LanguageISO[];
-    const prod: LanguageISO[];
     const getByName: (name: string) => LanguageISO | undefined;
 }
 export declare enum LanguageName {
