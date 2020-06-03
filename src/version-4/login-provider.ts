@@ -5,14 +5,25 @@ export interface PayloadProviderForEmailRequestV4 extends PayloadRequestBaseV4 {
     readonly email: string
 }
 
-export interface PayloadProviderForEmailBaseResponseV4 <T extends boolean> {
+export interface PayloadProviderForAppleIdRequestV4 extends PayloadRequestBaseV4 {
+    readonly appleId: string
+}
+
+export interface PayloadProviderForCognitoIdRequestV4 extends PayloadRequestBaseV4 {
+    readonly cognitoId: string
+}
+
+export interface PayloadProviderForLoginBaseResponseV4 <T extends boolean> {
   readonly userExist: T
 }
 
-export interface PayloadProviderForEmailSuccessResponseV4 extends PayloadProviderForEmailBaseResponseV4<true> {
+export interface PayloadProviderForLoginSuccessResponseV4 extends PayloadProviderForLoginBaseResponseV4<true> {
     readonly provider: PayloadLoginTypeV4
+    readonly migratedToFirebase: boolean
 }
 
-export interface PayloadProviderForEmailNoUserResponseV4 extends PayloadProviderForEmailBaseResponseV4<false> {}
+export interface PayloadProviderForLoginNoUserResponseV4 extends PayloadProviderForLoginBaseResponseV4<false> {}
 
-export type PayloadProviderForEmailResponseV4 = PayloadProviderForEmailNoUserResponseV4 | PayloadProviderForEmailSuccessResponseV4
+export type PayloadProviderForLoginResponseV4 = PayloadProviderForLoginNoUserResponseV4 | PayloadProviderForLoginSuccessResponseV4
+
+export type PayloadProviderForLoginRequestV4 = PayloadProviderForEmailRequestV4 | PayloadProviderForAppleIdRequestV4 | PayloadProviderForCognitoIdRequestV4
