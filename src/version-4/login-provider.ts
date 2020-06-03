@@ -3,6 +3,8 @@ import { PayloadLoginTypeV4 } from './user-update'
 
 export interface PayloadProviderForEmailRequestV4 extends PayloadRequestBaseV4 {
     readonly email: string
+    readonly appleUserId?: string
+    readonly cognitoUserId?: string
 }
 
 export interface PayloadProviderForEmailBaseResponseV4 <T extends boolean> {
