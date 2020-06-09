@@ -50,6 +50,7 @@ export interface PayloadUserAppDataV4 {
     readonly activeDays?: PropertyWithMetadata<number[]>;
     readonly activationDate?: PropertyWithMetadata<number>;
     readonly numberOfReActivations?: PropertyWithMetadata<number>;
+    readonly mergedAuthProviders?: PropertyWithMetadata<string[]>;
 }
 export interface PayloadUserLanguageSettingsV4 {
     readonly useAlternativeTranslation?: PropertyWithMetadata<Dictionary<boolean>>;
