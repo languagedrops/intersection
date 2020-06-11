@@ -54,6 +54,7 @@ export interface PayloadUserAppDataV4 {
   readonly activeDays?: PropertyWithMetadata<number[]>
   readonly activationDate?: PropertyWithMetadata<number>
   readonly numberOfReActivations?: PropertyWithMetadata<number>
+  readonly segmentEmailLongTerm?: PropertyWithMetadata<string>
 }
 
 export interface PayloadUserLanguageSettingsV4 {
