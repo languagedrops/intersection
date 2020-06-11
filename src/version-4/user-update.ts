@@ -59,7 +59,15 @@ export interface PayloadDeviceSendUserDetailsRequestV4 {
     readonly platform?: PayloadAppPlatformSendUserDetailsRequestV4
 }
 
-export interface PayloadUserDetailsRestRequestV4 {
+interface PayloadUserMigrationV4<T extends boolean> {
+    readonly migratedToFirebase?: T
+}
+
+interface PayloadWasMigratedV4 extends PayloadUserMigrationV4<true> {
+    readonly mergedAuthProvider?: PayloadLoginTypeV4
+}
+
+export interface PayloadUserDetailsRestRequestV4 extends PayloadWasMigratedV4 {
     readonly device?: PayloadDeviceSendUserDetailsRequestV4
     readonly consent?: {readonly [key: string]: boolean}
 }
