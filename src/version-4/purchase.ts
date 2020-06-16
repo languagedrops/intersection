@@ -37,29 +37,29 @@ export enum PayloadIAPIdentifierV4 {
   iapPremiumMonthly10 = 'iapPremiumMonthly10',
   iapPremiumMonthly13 = 'iapPremiumMonthly13',
   iapPremiumMonthly15 = 'iapPremiumMonthly15',
+
+  iapPremium3months30 = 'iapPremium3months30', // non-recurring limited time
   iapPremiumQuarterly30 = 'iapPremiumQuarterly30',
+
+  iapPremium1year70 = 'iapPremium1year70', // non-recurring limited time
   iapPremiumYearly70 = 'iapPremiumYearly70',
   iapPremiumYearly70FreeTrial = 'iapPremiumYearly70FreeTrial',
   iapPremiumYearly70FreeTrial3Days = 'iapPremiumYearly70FreeTrial3Days',
   iapPremiumYearly70FreeTrial14Days = 'iapPremiumYearly70FreeTrial14Days',
   iapPremiumYearly55 = 'iapPremiumYearly55',
   iapPremiumYearly50 = 'iapPremiumYearly50',
+  iapPremium1year40 = 'iapPremium1year40', // non-recurring limited time
   iapPremiumYearly40 = 'iapPremiumYearly40',
   iapPremiumYearly45 = 'iapPremiumYearly45',
   iapPremiumYearly40FreeTrial = 'iapPremiumYearly40FreeTrial',
   iapPremiumYearly35 = 'iapPremiumYearly35',
   iapPremiumYearly30 = 'iapPremiumYearly30',
   iapPremiumYearly25 = 'iapPremiumYearly25',
+
   iapPremiumLifetime80 = 'iapPremiumLifetime80',
   iapPremiumLifetime55 = 'iapPremiumLifetime55',
   iapPremiumLifetime160 = 'iapPremiumLifetime160',
   iapPremiumLifetime180 = 'iapPremiumLifetime180',
-
-  // non-recurring limited time
-  iapPremium3months30 = 'iapPremium3months30',
-  iapPremium1year70 = 'iapPremium1year70',
-  iapPremium1year40 = 'iapPremium1year40',
-
 
   // gift purchases
   iapPremiumGift1Month10 = 'iapPremiumGift1Month10',
