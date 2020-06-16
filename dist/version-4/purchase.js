@@ -31,13 +31,16 @@ var PayloadIAPIdentifierV4;
     PayloadIAPIdentifierV4["iapPremiumMonthly10"] = "iapPremiumMonthly10";
     PayloadIAPIdentifierV4["iapPremiumMonthly13"] = "iapPremiumMonthly13";
     PayloadIAPIdentifierV4["iapPremiumMonthly15"] = "iapPremiumMonthly15";
+    PayloadIAPIdentifierV4["iapPremium3months30"] = "iapPremium3months30";
     PayloadIAPIdentifierV4["iapPremiumQuarterly30"] = "iapPremiumQuarterly30";
+    PayloadIAPIdentifierV4["iapPremium1year70"] = "iapPremium1year70";
     PayloadIAPIdentifierV4["iapPremiumYearly70"] = "iapPremiumYearly70";
     PayloadIAPIdentifierV4["iapPremiumYearly70FreeTrial"] = "iapPremiumYearly70FreeTrial";
     PayloadIAPIdentifierV4["iapPremiumYearly70FreeTrial3Days"] = "iapPremiumYearly70FreeTrial3Days";
     PayloadIAPIdentifierV4["iapPremiumYearly70FreeTrial14Days"] = "iapPremiumYearly70FreeTrial14Days";
     PayloadIAPIdentifierV4["iapPremiumYearly55"] = "iapPremiumYearly55";
     PayloadIAPIdentifierV4["iapPremiumYearly50"] = "iapPremiumYearly50";
+    PayloadIAPIdentifierV4["iapPremium1year40"] = "iapPremium1year40";
     PayloadIAPIdentifierV4["iapPremiumYearly40"] = "iapPremiumYearly40";
     PayloadIAPIdentifierV4["iapPremiumYearly45"] = "iapPremiumYearly45";
     PayloadIAPIdentifierV4["iapPremiumYearly40FreeTrial"] = "iapPremiumYearly40FreeTrial";
@@ -48,10 +51,6 @@ var PayloadIAPIdentifierV4;
     PayloadIAPIdentifierV4["iapPremiumLifetime55"] = "iapPremiumLifetime55";
     PayloadIAPIdentifierV4["iapPremiumLifetime160"] = "iapPremiumLifetime160";
     PayloadIAPIdentifierV4["iapPremiumLifetime180"] = "iapPremiumLifetime180";
-    // non-recurring limited time
-    PayloadIAPIdentifierV4["iapPremium3months30"] = "iapPremium3months30";
-    PayloadIAPIdentifierV4["iapPremium1year70"] = "iapPremium1year70";
-    PayloadIAPIdentifierV4["iapPremium1year40"] = "iapPremium1year40";
     // gift purchases
     PayloadIAPIdentifierV4["iapPremiumGift1Month10"] = "iapPremiumGift1Month10";
     PayloadIAPIdentifierV4["iapPremiumGift1Year35"] = "iapPremiumGift1Year35";
