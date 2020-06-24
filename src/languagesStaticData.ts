@@ -40,6 +40,10 @@ export const deployedLanguageISOs = () => {
   return LanguageISO.all.filter((languageISO) => getIsDeployedLanguage(languageISO))
 }
 
+export const visualDictionaryLanguageISOs = () => {
+  return LanguageISO.allAlphabetized.filter((languageIso) => languagesStaticData[languageIso].availableInVisualDictionary)
+}
+
 export const languagesStaticData: Record<LanguageISO, Language> = {
   [LanguageISO.KO]: {
     iso: LanguageISO.KO,
@@ -100,7 +104,7 @@ export const languagesStaticData: Record<LanguageISO, Language> = {
     availableAsLearning: true,
     availableAsNative: true,
     isUiLocalized: true,
-    availableInVisualDictionary: false,
+    availableInVisualDictionary: true,
   },
   [LanguageISO.ZH]: {
     iso: LanguageISO.ZH,
@@ -413,7 +417,7 @@ export const languagesStaticData: Record<LanguageISO, Language> = {
     availableAsLearning: true,
     availableAsNative: false,
     isUiLocalized: false,
-    availableInVisualDictionary: true,
+    availableInVisualDictionary: false,
   },
   [LanguageISO.PA]: {
     iso: LanguageISO.PA,
@@ -461,7 +465,7 @@ export const languagesStaticData: Record<LanguageISO, Language> = {
     availableAsLearning: true,
     availableAsNative: true,
     isUiLocalized: false,
-    availableInVisualDictionary: false,
+    availableInVisualDictionary: true,
   },
   [LanguageISO.ASE]: {
     iso: LanguageISO.ASE,
@@ -485,7 +489,7 @@ export const languagesStaticData: Record<LanguageISO, Language> = {
     availableAsLearning: true,
     availableAsNative: true,
     isUiLocalized: false,
-    availableInVisualDictionary: false,
+    availableInVisualDictionary: true,
   },
   [LanguageISO.AIN]: {
     iso: LanguageISO.AIN,
@@ -509,7 +513,7 @@ export const languagesStaticData: Record<LanguageISO, Language> = {
     availableAsLearning: true,
     availableAsNative: true,
     isUiLocalized: false,
-    availableInVisualDictionary: false,
+    availableInVisualDictionary: true,
   },
   [LanguageISO.FA]: {
     iso: LanguageISO.FA,
@@ -521,7 +525,7 @@ export const languagesStaticData: Record<LanguageISO, Language> = {
     availableAsLearning: true,
     availableAsNative: true,
     isUiLocalized: false,
-    availableInVisualDictionary: false,
+    availableInVisualDictionary: true,
   },
   [LanguageISO.HR]: {
     iso: LanguageISO.HR,
@@ -533,7 +537,7 @@ export const languagesStaticData: Record<LanguageISO, Language> = {
     availableAsLearning: true,
     availableAsNative: true,
     isUiLocalized: false,
-    availableInVisualDictionary: false,
+    availableInVisualDictionary: true,
   },
   [LanguageISO.SR]: {
     iso: LanguageISO.SR,

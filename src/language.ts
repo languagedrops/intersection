@@ -1,3 +1,4 @@
+import { sortedByProperty } from 'majime'
 
 export enum LanguageISO {
     HU = 'HU',
@@ -47,6 +48,7 @@ export enum LanguageISO {
 
 export namespace LanguageISO {
   export const all: LanguageISO[] = Object.values(LanguageISO).filter((v) => typeof v === 'string') as LanguageISO[]
+  export const allAlphabetized: LanguageISO[] = sortedByProperty(all, (iso: LanguageISO) => iso)
   export const getByName = (name: string) => all.find((languageIso) => languageIso.toString() === name)
 }
 

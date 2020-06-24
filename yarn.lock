@@ -2315,6 +2315,11 @@ loose-envify@^1.0.0:
   dependencies:
     js-tokens "^3.0.0 || ^4.0.0"
 
+majime@4.2.5:
+  version "4.2.5"
+  resolved "https://registry.yarnpkg.com/majime/-/majime-4.2.5.tgz#b533848a824c77fa807a9deb1f241a6acc6058b1"
+  integrity sha512-Ylzdo8gVhZMb95pKljHBzRuURhM8/Gbmb68aIzx0vA6nSfLb2V8ccLLpysev1qeAQMHZxyCoFsPB1QfPYn5/mQ==
+
 make-dir@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/make-dir/-/make-dir-2.1.0.tgz#5f0310e18b8be898cc07009295a30ae41e91e6f5"
