@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+const majime_1 = require("majime");
 var LanguageISO;
 (function (LanguageISO) {
     LanguageISO["HU"] = "HU";
@@ -48,6 +49,7 @@ var LanguageISO;
 })(LanguageISO = exports.LanguageISO || (exports.LanguageISO = {}));
 (function (LanguageISO) {
     LanguageISO.all = Object.values(LanguageISO).filter((v) => typeof v === 'string');
+    LanguageISO.allAlphabetized = majime_1.sortedByProperty(LanguageISO.all, (iso) => iso);
     LanguageISO.getByName = (name) => LanguageISO.all.find((languageIso) => languageIso.toString() === name);
 })(LanguageISO = exports.LanguageISO || (exports.LanguageISO = {}));
 var LanguageName;

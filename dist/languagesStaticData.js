@@ -37,6 +37,9 @@ exports.getIsDeployedLanguage = (languageISO) => {
 exports.deployedLanguageISOs = () => {
     return language_1.LanguageISO.all.filter((languageISO) => exports.getIsDeployedLanguage(languageISO));
 };
+exports.visualDictionaryLanguageISOs = () => {
+    return language_1.LanguageISO.allAlphabetized.filter((languageIso) => exports.languagesStaticData[languageIso].availableInVisualDictionary);
+};
 exports.languagesStaticData = {
     [language_1.LanguageISO.KO]: {
         iso: language_1.LanguageISO.KO,
@@ -97,7 +100,7 @@ exports.languagesStaticData = {
         availableAsLearning: true,
         availableAsNative: true,
         isUiLocalized: true,
-        availableInVisualDictionary: false,
+        availableInVisualDictionary: true,
     },
     [language_1.LanguageISO.ZH]: {
         iso: language_1.LanguageISO.ZH,
@@ -410,7 +413,7 @@ exports.languagesStaticData = {
         availableAsLearning: true,
         availableAsNative: false,
         isUiLocalized: false,
-        availableInVisualDictionary: true,
+        availableInVisualDictionary: false,
     },
     [language_1.LanguageISO.PA]: {
         iso: language_1.LanguageISO.PA,
@@ -458,7 +461,7 @@ exports.languagesStaticData = {
         availableAsLearning: true,
         availableAsNative: true,
         isUiLocalized: false,
-        availableInVisualDictionary: false,
+        availableInVisualDictionary: true,
     },
     [language_1.LanguageISO.ASE]: {
         iso: language_1.LanguageISO.ASE,
@@ -482,7 +485,7 @@ exports.languagesStaticData = {
         availableAsLearning: true,
         availableAsNative: true,
         isUiLocalized: false,
-        availableInVisualDictionary: false,
+        availableInVisualDictionary: true,
     },
     [language_1.LanguageISO.AIN]: {
         iso: language_1.LanguageISO.AIN,
@@ -506,7 +509,7 @@ exports.languagesStaticData = {
         availableAsLearning: true,
         availableAsNative: true,
         isUiLocalized: false,
-        availableInVisualDictionary: false,
+        availableInVisualDictionary: true,
     },
     [language_1.LanguageISO.FA]: {
         iso: language_1.LanguageISO.FA,
@@ -518,7 +521,7 @@ exports.languagesStaticData = {
         availableAsLearning: true,
         availableAsNative: true,
         isUiLocalized: false,
-        availableInVisualDictionary: false,
+        availableInVisualDictionary: true,
     },
     [language_1.LanguageISO.HR]: {
         iso: language_1.LanguageISO.HR,
@@ -530,7 +533,7 @@ exports.languagesStaticData = {
         availableAsLearning: true,
         availableAsNative: true,
         isUiLocalized: false,
-        availableInVisualDictionary: false,
+        availableInVisualDictionary: true,
     },
     [language_1.LanguageISO.SR]: {
         iso: language_1.LanguageISO.SR,

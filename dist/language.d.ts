@@ -45,6 +45,7 @@ export declare enum LanguageISO {
 }
 export declare namespace LanguageISO {
     const all: LanguageISO[];
+    const allAlphabetized: LanguageISO[];
     const getByName: (name: string) => LanguageISO | undefined;
 }
 export declare enum LanguageName {
