@@ -63,6 +63,7 @@ export interface PayloadUserDetailsRestRequestV4 extends PayloadWasMigratedV4 {
 export interface PayloadUserEmailTimeResponseV4 {
     readonly lastExpirationEmailTime?: number;
     readonly lastCancellationEmailTime?: number;
+    readonly analyticsClientUserId?: string;
 }
 export declare type PayloadSendUserDetailsRequestV4 = PayloadUserDetailsV4 & PayloadUserDetailsRestRequestV4;
 export declare type PayloadUpdateUserResponseV4 = PayloadUserDetailsV4 & PayloadUserEmailTimeResponseV4;
