@@ -9,7 +9,7 @@ export interface PayloadSendEventsCartAbandonedRequestV5 {
     readonly topUpId: PayloadIAPIdentifierV4
 }
 
-export type PayloadSendEventsRequestV5 = PayloadSendEventsCartAbandonedRequestV5
+export type PayloadSendEventsRequestV5 = PayloadSendEventsCartAbandonedRequestV5[]
 
 export interface PayloadSendEventsResponseV5 {
     readonly success: boolean
