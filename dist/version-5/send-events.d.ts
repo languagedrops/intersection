@@ -6,7 +6,7 @@ export interface PayloadSendEventsCartAbandonedRequestV5 {
     readonly type: SendEventsTypes.CartAbandoned;
     readonly topUpId: PayloadIAPIdentifierV4;
 }
-export declare type PayloadSendEventsRequestV5 = PayloadSendEventsCartAbandonedRequestV5;
+export declare type PayloadSendEventsRequestV5 = PayloadSendEventsCartAbandonedRequestV5[];
 export interface PayloadSendEventsResponseV5 {
     readonly success: boolean;
 }
