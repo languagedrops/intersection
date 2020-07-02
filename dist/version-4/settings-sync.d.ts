@@ -51,7 +51,7 @@ export interface PayloadUserAppDataV4 {
     readonly activationDate?: PropertyWithMetadata<number>;
     readonly numberOfReActivations?: PropertyWithMetadata<number>;
     readonly segmentEmailLongTerm?: PropertyWithMetadata<string>;
-    readonly userQuestions?: PropertyWithMetadata<Dictionary<string>>;
+    readonly userQuestions?: PropertyWithMetadata<Dictionary<string | undefined>>;
 }
 export interface PayloadUserLanguageSettingsV4 {
     readonly useAlternativeTranslation?: PropertyWithMetadata<Dictionary<boolean>>;
