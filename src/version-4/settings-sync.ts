@@ -64,6 +64,7 @@ export interface PayloadUserLanguageSettingsV4 {
   readonly romanicAid?: PropertyWithMetadata<Dictionary<string>>
   readonly characterDrawing?: PropertyWithMetadata<Dictionary<boolean>>
   readonly deviceLanguage?: PropertyWithMetadata<string>
+  readonly learningLanguages?: PropertyWithMetadata<Dictionary<string>>
   readonly voiceOver?: PropertyWithMetadata<Dictionary<string>>
 }
 
