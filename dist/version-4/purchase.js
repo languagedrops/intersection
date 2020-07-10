@@ -28,6 +28,7 @@ var PayloadIAPIdentifierV4;
     PayloadIAPIdentifierV4["iapAllLanguagesMonthlyFreeTrial"] = "iapAllLanguagesMonthlyFreeTrial";
     PayloadIAPIdentifierV4["iapAllLanguagesYearly"] = "iapAllLanguagesYearly";
     PayloadIAPIdentifierV4["iapUnlimitedMonthlyFreeTrial"] = "iapUnlimitedMonthlyFreeTrial";
+    PayloadIAPIdentifierV4["iapPremiumMonthly3"] = "iapPremiumMonthly3";
     PayloadIAPIdentifierV4["iapPremiumMonthly10"] = "iapPremiumMonthly10";
     PayloadIAPIdentifierV4["iapPremiumMonthly13"] = "iapPremiumMonthly13";
     PayloadIAPIdentifierV4["iapPremiumMonthly15"] = "iapPremiumMonthly15";
@@ -47,8 +48,10 @@ var PayloadIAPIdentifierV4;
     PayloadIAPIdentifierV4["iapPremiumYearly35"] = "iapPremiumYearly35";
     PayloadIAPIdentifierV4["iapPremiumYearly30"] = "iapPremiumYearly30";
     PayloadIAPIdentifierV4["iapPremiumYearly25"] = "iapPremiumYearly25";
+    PayloadIAPIdentifierV4["iapPremiumYearly15"] = "iapPremiumYearly15";
     PayloadIAPIdentifierV4["iapPremiumLifetime80"] = "iapPremiumLifetime80";
     PayloadIAPIdentifierV4["iapPremiumLifetime55"] = "iapPremiumLifetime55";
+    PayloadIAPIdentifierV4["iapPremiumLifetime35"] = "iapPremiumLifetime35";
     PayloadIAPIdentifierV4["iapPremiumLifetime160"] = "iapPremiumLifetime160";
     PayloadIAPIdentifierV4["iapPremiumLifetime180"] = "iapPremiumLifetime180";
     // gift purchases
