@@ -20,6 +20,7 @@ export interface ChallengesPayloadUserAppDataV4 {
 
 export interface PayloadUserAppDataV4 {
   readonly numberOfTimeouts?: PropertyWithMetadata<number>
+  readonly numberOfCompletedSessions?: PropertyWithMetadata<number>
   readonly persistedTime?: PropertyWithMetadata<number>
   readonly transientTime?: PropertyWithMetadata<number>
   readonly sessionResetDate?: PropertyWithMetadata<number>
