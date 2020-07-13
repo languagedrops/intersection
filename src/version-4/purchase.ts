@@ -172,7 +172,11 @@ export interface PayloadPurchaseErrorV4 {
   readonly errorCode: string
 }
 
-export type PayloadPurchaseMetadataV4 = (PayloadValidateSyncAppleResponseV4 | PayloadValidateSyncGoogleResponseV4 | PayloadValidateSyncPaddleResponseV4 | PayloadValidateSyncGiftResponseV4)
+export interface PayloadBillingIssuesV4 {
+  readonly hasBillingIssues?: boolean
+}
+
+export type PayloadPurchaseMetadataV4 = (PayloadValidateSyncAppleResponseV4 | PayloadValidateSyncGoogleResponseV4 | PayloadValidateSyncPaddleResponseV4 | PayloadValidateSyncGiftResponseV4) & PayloadBillingIssuesV4
 
 export type PayloadPurchaseDataV4 = (PayloadPurchaseMetadataV4 | PayloadPurchaseErrorV4)
 
