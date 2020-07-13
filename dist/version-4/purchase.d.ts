@@ -141,7 +141,10 @@ export interface PayloadPurchaseErrorV4 {
     readonly status: PayloadPurchaseStatusV4.Error | PayloadPurchaseStatusV4.Invalid;
     readonly errorCode: string;
 }
-export declare type PayloadPurchaseMetadataV4 = (PayloadValidateSyncAppleResponseV4 | PayloadValidateSyncGoogleResponseV4 | PayloadValidateSyncPaddleResponseV4 | PayloadValidateSyncGiftResponseV4);
+export interface PayloadBillingIssuesV4 {
+    readonly hasBillingIssues?: boolean;
+}
+export declare type PayloadPurchaseMetadataV4 = (PayloadValidateSyncAppleResponseV4 | PayloadValidateSyncGoogleResponseV4 | PayloadValidateSyncPaddleResponseV4 | PayloadValidateSyncGiftResponseV4) & PayloadBillingIssuesV4;
 export declare type PayloadPurchaseDataV4 = (PayloadPurchaseMetadataV4 | PayloadPurchaseErrorV4);
 export interface PayloadValidateSyncPurchasesResponseV4 {
     readonly purchases: PayloadPurchaseDataV4[];
