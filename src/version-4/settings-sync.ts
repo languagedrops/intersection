@@ -33,7 +33,6 @@ export interface PayloadUserAppDataV4 {
   readonly segmentShare?: PropertyWithMetadata<string>
   readonly segmentGameplay?: PropertyWithMetadata<string>
   readonly segmentUtility?: PropertyWithMetadata<string>
-  readonly segmentEmail?: PropertyWithMetadata<string>
   readonly dojoScreensCompleted?: PropertyWithMetadata<number>
   readonly userMigrations?: PropertyWithMetadata<Dictionary<boolean>>
   readonly wordListSectionsCollapsed?: PropertyWithMetadata<Dictionary<Dictionary<boolean>>>
@@ -54,7 +53,7 @@ export interface PayloadUserAppDataV4 {
   readonly activeDays?: PropertyWithMetadata<number[]>
   readonly activationDate?: PropertyWithMetadata<number>
   readonly numberOfReActivations?: PropertyWithMetadata<number>
-  readonly segmentEmailLongTerm?: PropertyWithMetadata<string>
+  readonly segmentsCommunication?: PropertyWithMetadata<string>
   readonly userQuestions?: PropertyWithMetadata<Dictionary<string | undefined>>
 }
 
