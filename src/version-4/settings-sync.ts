@@ -53,7 +53,7 @@ export interface PayloadUserAppDataV4 {
   readonly activeDays?: PropertyWithMetadata<number[]>
   readonly activationDate?: PropertyWithMetadata<number>
   readonly numberOfReActivations?: PropertyWithMetadata<number>
-  readonly segmentCommunication?: PropertyWithMetadata<string>
+  readonly segmentsCommunication?: PropertyWithMetadata<string>
   readonly userQuestions?: PropertyWithMetadata<Dictionary<string | undefined>>
 }
 
