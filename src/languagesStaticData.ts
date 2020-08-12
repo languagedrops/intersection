@@ -543,7 +543,7 @@ export const languagesStaticData: Record<LanguageISO, Language> = {
     iso: LanguageISO.SR,
     name: LanguageName.Serbian,
     alphabet: 'abcdefghijklmnopqrstuvwxyz'.split(''),
-    hasRomanAid: false,
+    hasRomanAid: true,
     hasAlternativeTranslation: false,
     hasAlphabetTopic: false,
     availableAsLearning: true,
