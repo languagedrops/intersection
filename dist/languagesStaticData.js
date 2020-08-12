@@ -539,7 +539,7 @@ exports.languagesStaticData = {
         iso: language_1.LanguageISO.SR,
         name: language_1.LanguageName.Serbian,
         alphabet: 'abcdefghijklmnopqrstuvwxyz'.split(''),
-        hasRomanAid: false,
+        hasRomanAid: true,
         hasAlternativeTranslation: false,
         hasAlphabetTopic: false,
         availableAsLearning: true,
