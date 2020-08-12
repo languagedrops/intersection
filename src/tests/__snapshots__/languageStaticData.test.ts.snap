@@ -1773,7 +1773,7 @@ Object {
   "availableInVisualDictionary": false,
   "hasAlphabetTopic": false,
   "hasAlternativeTranslation": false,
-  "hasRomanAid": false,
+  "hasRomanAid": true,
   "isUiLocalized": false,
   "iso": "SR",
   "name": "Serbian",
