@@ -40,6 +40,12 @@ export declare enum AppType {
     lang_sm = "lang_sm",
     lang_el = "lang_el",
     lang_fi = "lang_fi",
+    lang_fa = "lang_fa",
+    lang_hr = "lang_hr",
+    lang_et = "lang_et",
+    lang_sr = "lang_sr",
+    lang_bs = "lang_bs",
+    lang_ain = "lang_ain",
     droplets = "droplets",
     droplets_demo_apple_store = "droplets_demo_apple_store",
     upopoy = "upopoy"
