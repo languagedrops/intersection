@@ -50,9 +50,9 @@ export enum PayloadIAPIdentifierV4 {
   iapPremiumYearly55 = 'iapPremiumYearly55',
   iapPremiumYearly50 = 'iapPremiumYearly50',
   iapPremium1year40 = 'iapPremium1year40', // non-recurring limited time
-  iapPremiumYearly40 = 'iapPremiumYearly40',
   iapPremiumYearly40Plus1 = 'iapPremiumYearly40Plus1',
   iapPremiumYearly40FirstYear15 = 'iapPremiumYearly40FirstYear15',
+  iapPremiumYearly40 = 'iapPremiumYearly40',
   iapPremiumYearly45 = 'iapPremiumYearly45',
   iapPremiumYearly40FreeTrial = 'iapPremiumYearly40FreeTrial',
   iapPremiumYearly35 = 'iapPremiumYearly35',
