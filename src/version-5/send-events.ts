@@ -3,6 +3,7 @@ import { AppPlatform } from '../appPlatform'
 
 export enum SendEventsTypes {
     CartAbandoned = 'CartAbandoned',
+    PurchaseGiftSubscription = 'PurchaseGiftSubscription',
 }
 
 export interface PayloadSendEventsCartAbandonedRequestV5 {
@@ -11,7 +12,14 @@ export interface PayloadSendEventsCartAbandonedRequestV5 {
     readonly platform: AppPlatform
 }
 
-export type PayloadSendEventsRequestV5 = PayloadSendEventsCartAbandonedRequestV5[]
+export interface PayloadSendPurchaseGiftSubscriptionRequestV5 {
+    readonly type: SendEventsTypes.PurchaseGiftSubscription
+    readonly email: string
+}
+
+type SendEventRequestItem = PayloadSendEventsCartAbandonedRequestV5 | PayloadSendPurchaseGiftSubscriptionRequestV5
+
+export type PayloadSendEventsRequestV5 = SendEventRequestItem[]
 
 export interface PayloadSendEventsResponseV5 {
     readonly success: boolean
