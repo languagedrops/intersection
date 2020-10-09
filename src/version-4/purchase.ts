@@ -62,6 +62,7 @@ export enum PayloadIAPIdentifierV4 {
   iapPremiumYearlyEducation = 'iapPremiumYearlyEducation',
 
   iapPremiumLifetime80 = 'iapPremiumLifetime80',
+  iapPremiumLifetime90 = 'iapPremiumLifetime90',
   iapPremiumLifetime55 = 'iapPremiumLifetime55',
   iapPremiumLifetime35 = 'iapPremiumLifetime35',
   iapPremiumLifetime160 = 'iapPremiumLifetime160',
