@@ -44,6 +44,7 @@ export enum LanguageISO {
     HR = 'HR',
     SR = 'SR',
     BS = 'BS',
+    SA = 'SA',
 }
 
 export namespace LanguageISO {
@@ -96,6 +97,7 @@ export enum LanguageName {
     Croatian = 'Croatian',
     Bosnian = 'Bosnian',
     Serbian = 'Serbian',
+    Sanskrit = 'Sanskrit',
 }
 
 export interface Language {
