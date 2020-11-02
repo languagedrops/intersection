@@ -563,4 +563,16 @@ export const languagesStaticData: Record<LanguageISO, Language> = {
     isUiLocalized: false,
     availableInVisualDictionary: false,
   },
+  [LanguageISO.SA]: {
+    iso: LanguageISO.SA,
+    name: LanguageName.Sanskrit,
+    alphabet: 'अ,आ,इ,ई,उ,ऊ,ऋ,ॠ,लृ,ए,ऐ,ओ,औ,अं,अः,क,ख,ग,घ,ङ,च,छ,ज,झ,ञ,ट,ठ,ड,ढ,ण,त,थ,द,ध,न,प,फ,ब,भ,म,य,र,ल,व,श,ष,स,ह'.split(','),
+    hasRomanAid: true,
+    hasAlternativeTranslation: false,
+    hasAlphabetTopic: true,
+    availableAsLearning: true,
+    availableAsNative: false,
+    isUiLocalized: false,
+    availableInVisualDictionary: false,
+  },
 }
