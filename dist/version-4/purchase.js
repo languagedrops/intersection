@@ -45,6 +45,7 @@ var PayloadIAPIdentifierV4;
     PayloadIAPIdentifierV4["iapPremiumYearly40Plus1"] = "iapPremiumYearly40Plus1";
     PayloadIAPIdentifierV4["iapPremiumYearly40FirstYear15"] = "iapPremiumYearly40FirstYear15";
     PayloadIAPIdentifierV4["iapPremiumYearly40FirstYear30"] = "iapPremiumYearly40FirstYear30";
+    PayloadIAPIdentifierV4["iapPremiumYearly40FirstYear30Plus1"] = "iapPremiumYearly40FirstYear30FirstPlus1";
     PayloadIAPIdentifierV4["iapPremiumYearly40"] = "iapPremiumYearly40";
     PayloadIAPIdentifierV4["iapPremiumYearly45"] = "iapPremiumYearly45";
     PayloadIAPIdentifierV4["iapPremiumYearly40FreeTrial"] = "iapPremiumYearly40FreeTrial";
