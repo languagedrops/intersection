@@ -27,6 +27,7 @@ export interface PayloadUserAppDataV4 {
   readonly screenTutorialCompleted?: PropertyWithMetadata<Dictionary<boolean>>
   readonly promoteScreensViewCounts?: PropertyWithMetadata<Dictionary<number>>
   readonly screenLastShown?: PropertyWithMetadata<Dictionary<number>>
+  readonly screenLastShownTimestamp?: PropertyWithMetadata<Dictionary<number>>
   readonly monetizationSegment?: PropertyWithMetadata<string>
   readonly segmentLongTermRetention?: PropertyWithMetadata<string>
   readonly segmentFeatureUsageSegment?: PropertyWithMetadata<string>
