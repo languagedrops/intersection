@@ -1,0 +1,38 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "noImplicitAny": true,
+        "noImplicitThis": true,
+        "strictNullChecks": true,
+        "noFallthroughCasesInSwitch": true,
+        "moduleResolution": "node",
+        "allowSyntheticDefaultImports": true,
+        "alwaysStrict": true,
+        "noEmitOnError": true,
+        "noUnusedParameters": true,
+        "noUnusedLocals": true,
+        "noImplicitReturns": true,
+        "forceConsistentCasingInFileNames": true,
+        "target": "es6",
+        "outDir": "dist",
+        "skipLibCheck": true,
+        "lib": [
+            "dom",
+            "dom.iterable",
+            "es2017",
+            "scripthost",
+            "es2017.object",
+            "es2015"
+        ],
+        "baseUrl": "./",
+        "paths": {
+            "types/*": ["../src/types/*"]
+        },
+    },
+    "exclude": [
+        "../node_modules"
+    ],
+    "files": [
+        "purchase-id-map-generate.ts"
+    ]
+}

@@ -1,3 +1,5 @@
+import { AppPlatform } from "./appPlatform"
+
 export enum AppType {
   int = 'int',
   local_hu = 'local_hu',
@@ -58,4 +60,46 @@ export namespace AppType {
   }
 
   export const all: AppType[] = Object.values(AppType).filter((v) => typeof v === 'string') as AppType[]
+
+  export const getIapSuffix = (appType: AppType, platform: AppPlatform): string => {
+    // add code for iOS
+    switch (platform) {
+      case AppPlatform.Android:
+        switch (appType) {
+          case AppType.lang_ko:
+          case AppType.int:
+          case AppType.local_hu:
+            return appType
+          case AppType.lang_ptbr:
+            return 'lang_pt2'
+          case AppType.lang_esmx:
+            return 'lang_es2'
+          case AppType.lang_enus:
+            return 'lang_en2'
+          case AppType.lang_zhyue:
+            return 'lang_zh2'
+          default:
+            return appType
+        }
+      case AppPlatform.iOS:
+        switch (appType) {
+          case AppType.lang_enus:
+            return 'lang_enus1'
+          case AppType.lang_ptbr:
+            return 'lang_pt'
+          case AppType.lang_pt:
+            return 'lang_ptpt'
+          case AppType.lang_ja:
+            return 'lang_jp'
+          case AppType.local_hu:
+            return 'hu'
+          default:
+            return appType
+        }
+      case AppPlatform.Web: return `${appType}_web`
+    }
+  }
+
+  const tier1AppTypes = new Set([AppType.int, AppType.lang_ko, AppType.lang_de, AppType.lang_ja])
+  export const isTier1App = (appType: AppType): boolean => tier1AppTypes.has(appType)
 }

@@ -8,7 +8,9 @@
     "build": "rm -rf dist && tsc",
     "test": "jest",
     "tslint": "tslint --project tsconfig.json --exclude '**/*.js'",
-    "preversion": "yarn build && git add -A dist && git commit -m \"chore(Project): generate JS files\""
+    "preversion": "yarn build && git add -A dist && git commit -m \"chore(Project): generate JS files\"",
+    "purchase-id-map-generate": "yarn compile-scripts && node ./scripts/dist/scripts/purchase-id-map-generate.js",
+    "compile-scripts": "rm -rf ./scripts/dist/ && tsc -p scripts/tsconfig.json"
   },
   "repository": {
     "type": "git",
