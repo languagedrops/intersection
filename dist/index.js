@@ -10,3 +10,4 @@ __export(require("./appPlatform"));
 __export(require("./appType"));
 __export(require("./language"));
 __export(require("./languagesStaticData"));
+__export(require("./productIdTopUpIdMap"));

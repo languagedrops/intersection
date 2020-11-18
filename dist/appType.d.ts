@@ -1,3 +1,4 @@
+import { AppPlatform } from "./appPlatform";
 export declare enum AppType {
     int = "int",
     local_hu = "local_hu",
@@ -53,4 +54,6 @@ export declare enum AppType {
 export declare namespace AppType {
     const transformAppType: (input: string) => AppType;
     const all: AppType[];
+    const getIapSuffix: (appType: AppType, platform: AppPlatform) => string;
+    const isTier1App: (appType: AppType) => boolean;
 }

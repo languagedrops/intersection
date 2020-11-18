@@ -1,5 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+const purchaseUtils_1 = require("./purchaseUtils");
+// Add new topup to the end of the list
 var PayloadIAPIdentifierV4;
 (function (PayloadIAPIdentifierV4) {
     PayloadIAPIdentifierV4["iapForever10Mins"] = "iapForever10Mins";
@@ -42,10 +44,6 @@ var PayloadIAPIdentifierV4;
     PayloadIAPIdentifierV4["iapPremiumYearly55"] = "iapPremiumYearly55";
     PayloadIAPIdentifierV4["iapPremiumYearly50"] = "iapPremiumYearly50";
     PayloadIAPIdentifierV4["iapPremium1year40"] = "iapPremium1year40";
-    PayloadIAPIdentifierV4["iapPremiumYearly40Plus1"] = "iapPremiumYearly40Plus1";
-    PayloadIAPIdentifierV4["iapPremiumYearly40FirstYear15"] = "iapPremiumYearly40FirstYear15";
-    PayloadIAPIdentifierV4["iapPremiumYearly40FirstYear30"] = "iapPremiumYearly40FirstYear30";
-    PayloadIAPIdentifierV4["iapPremiumYearly40FirstYear30Plus1"] = "iapPremiumYearly40FirstYear30Plus1";
     PayloadIAPIdentifierV4["iapPremiumYearly40"] = "iapPremiumYearly40";
     PayloadIAPIdentifierV4["iapPremiumYearly45"] = "iapPremiumYearly45";
     PayloadIAPIdentifierV4["iapPremiumYearly40FreeTrial"] = "iapPremiumYearly40FreeTrial";
@@ -61,6 +59,10 @@ var PayloadIAPIdentifierV4;
     PayloadIAPIdentifierV4["iapPremiumLifetime35"] = "iapPremiumLifetime35";
     PayloadIAPIdentifierV4["iapPremiumLifetime160"] = "iapPremiumLifetime160";
     PayloadIAPIdentifierV4["iapPremiumLifetime180"] = "iapPremiumLifetime180";
+    PayloadIAPIdentifierV4["iapPremiumYearly40Plus1"] = "iapPremiumYearly40Plus1";
+    PayloadIAPIdentifierV4["iapPremiumYearly40FirstYear15"] = "iapPremiumYearly40FirstYear15";
+    PayloadIAPIdentifierV4["iapPremiumYearly40FirstYear30"] = "iapPremiumYearly40FirstYear30";
+    PayloadIAPIdentifierV4["iapPremiumYearly40FirstYear30Plus1"] = "iapPremiumYearly40FirstYear30Plus1";
     // gift purchases
     PayloadIAPIdentifierV4["iapPremiumGift1Month10"] = "iapPremiumGift1Month10";
     PayloadIAPIdentifierV4["iapPremiumGift1Year35"] = "iapPremiumGift1Year35";
@@ -68,6 +70,8 @@ var PayloadIAPIdentifierV4;
 })(PayloadIAPIdentifierV4 = exports.PayloadIAPIdentifierV4 || (exports.PayloadIAPIdentifierV4 = {}));
 (function (PayloadIAPIdentifierV4) {
     PayloadIAPIdentifierV4.all = Object.values(PayloadIAPIdentifierV4).filter((v) => typeof v === 'string');
+    PayloadIAPIdentifierV4.getProductId = purchaseUtils_1.getProductId;
+    PayloadIAPIdentifierV4.getAlternativeProductIdsMobile = purchaseUtils_1.getAlternativeProductIdsMobile;
 })(PayloadIAPIdentifierV4 = exports.PayloadIAPIdentifierV4 || (exports.PayloadIAPIdentifierV4 = {}));
 var PayloadPurchaseProviderV4;
 (function (PayloadPurchaseProviderV4) {

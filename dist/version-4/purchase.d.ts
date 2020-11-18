@@ -40,10 +40,6 @@ export declare enum PayloadIAPIdentifierV4 {
     iapPremiumYearly55 = "iapPremiumYearly55",
     iapPremiumYearly50 = "iapPremiumYearly50",
     iapPremium1year40 = "iapPremium1year40",
-    iapPremiumYearly40Plus1 = "iapPremiumYearly40Plus1",
-    iapPremiumYearly40FirstYear15 = "iapPremiumYearly40FirstYear15",
-    iapPremiumYearly40FirstYear30 = "iapPremiumYearly40FirstYear30",
-    iapPremiumYearly40FirstYear30Plus1 = "iapPremiumYearly40FirstYear30Plus1",
     iapPremiumYearly40 = "iapPremiumYearly40",
     iapPremiumYearly45 = "iapPremiumYearly45",
     iapPremiumYearly40FreeTrial = "iapPremiumYearly40FreeTrial",
@@ -59,12 +55,18 @@ export declare enum PayloadIAPIdentifierV4 {
     iapPremiumLifetime35 = "iapPremiumLifetime35",
     iapPremiumLifetime160 = "iapPremiumLifetime160",
     iapPremiumLifetime180 = "iapPremiumLifetime180",
+    iapPremiumYearly40Plus1 = "iapPremiumYearly40Plus1",
+    iapPremiumYearly40FirstYear15 = "iapPremiumYearly40FirstYear15",
+    iapPremiumYearly40FirstYear30 = "iapPremiumYearly40FirstYear30",
+    iapPremiumYearly40FirstYear30Plus1 = "iapPremiumYearly40FirstYear30Plus1",
     iapPremiumGift1Month10 = "iapPremiumGift1Month10",
     iapPremiumGift1Year35 = "iapPremiumGift1Year35",
     iapPremiumGiftLifetime160 = "iapPremiumGiftLifetime160"
 }
 export declare namespace PayloadIAPIdentifierV4 {
     const all: PayloadIAPIdentifierV4[];
+    const getProductId: (identifier: PayloadIAPIdentifierV4, platform: import("..").AppPlatform, appType: import("..").AppType) => string;
+    const getAlternativeProductIdsMobile: (identifier: PayloadIAPIdentifierV4, platform: import("..").AppPlatform, appType: import("..").AppType) => string[];
 }
 export interface PayloadAndroidReceiptV4 {
     readonly data: string;

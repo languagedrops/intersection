@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+const appPlatform_1 = require("./appPlatform");
 var AppType;
 (function (AppType) {
     AppType["int"] = "int";
@@ -61,4 +62,44 @@ var AppType;
         return input;
     };
     AppType.all = Object.values(AppType).filter((v) => typeof v === 'string');
+    AppType.getIapSuffix = (appType, platform) => {
+        // add code for iOS
+        switch (platform) {
+            case appPlatform_1.AppPlatform.Android:
+                switch (appType) {
+                    case AppType.lang_ko:
+                    case AppType.int:
+                    case AppType.local_hu:
+                        return appType;
+                    case AppType.lang_ptbr:
+                        return 'lang_pt2';
+                    case AppType.lang_esmx:
+                        return 'lang_es2';
+                    case AppType.lang_enus:
+                        return 'lang_en2';
+                    case AppType.lang_zhyue:
+                        return 'lang_zh2';
+                    default:
+                        return appType;
+                }
+            case appPlatform_1.AppPlatform.iOS:
+                switch (appType) {
+                    case AppType.lang_enus:
+                        return 'lang_enus1';
+                    case AppType.lang_ptbr:
+                        return 'lang_pt';
+                    case AppType.lang_pt:
+                        return 'lang_ptpt';
+                    case AppType.lang_ja:
+                        return 'lang_jp';
+                    case AppType.local_hu:
+                        return 'hu';
+                    default:
+                        return appType;
+                }
+            case appPlatform_1.AppPlatform.Web: return `${appType}_web`;
+        }
+    };
+    const tier1AppTypes = new Set([AppType.int, AppType.lang_ko, AppType.lang_de, AppType.lang_ja]);
+    AppType.isTier1App = (appType) => tier1AppTypes.has(appType);
 })(AppType = exports.AppType || (exports.AppType = {}));
