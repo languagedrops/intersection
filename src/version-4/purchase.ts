@@ -1,5 +1,7 @@
 import { PayloadRequestBaseV4 } from './base'
+import { getProductId as getProductIdUtils, getAlternativeProductIdsMobile as getAlternativeProductIdsMobileUtils } from './purchaseUtils'
 
+// Add new topup to the end of the list
 export enum PayloadIAPIdentifierV4 {
   iapForever10Mins = 'iapForever10Mins',
   iapForever10MinsDiscounted = 'iapForever10MinsDiscounted',
@@ -50,10 +52,6 @@ export enum PayloadIAPIdentifierV4 {
   iapPremiumYearly55 = 'iapPremiumYearly55',
   iapPremiumYearly50 = 'iapPremiumYearly50',
   iapPremium1year40 = 'iapPremium1year40', // non-recurring limited time
-  iapPremiumYearly40Plus1 = 'iapPremiumYearly40Plus1',
-  iapPremiumYearly40FirstYear15 = 'iapPremiumYearly40FirstYear15',
-  iapPremiumYearly40FirstYear30 = 'iapPremiumYearly40FirstYear30',
-  iapPremiumYearly40FirstYear30Plus1 = 'iapPremiumYearly40FirstYear30Plus1',
   iapPremiumYearly40 = 'iapPremiumYearly40',
   iapPremiumYearly45 = 'iapPremiumYearly45',
   iapPremiumYearly40FreeTrial = 'iapPremiumYearly40FreeTrial',
@@ -71,6 +69,12 @@ export enum PayloadIAPIdentifierV4 {
   iapPremiumLifetime160 = 'iapPremiumLifetime160',
   iapPremiumLifetime180 = 'iapPremiumLifetime180',
 
+  iapPremiumYearly40Plus1 = 'iapPremiumYearly40Plus1',
+  iapPremiumYearly40FirstYear15 = 'iapPremiumYearly40FirstYear15',
+  iapPremiumYearly40FirstYear30 = 'iapPremiumYearly40FirstYear30',
+  iapPremiumYearly40FirstYear30Plus1 = 'iapPremiumYearly40FirstYear30Plus1',
+
+
   // gift purchases
   iapPremiumGift1Month10 = 'iapPremiumGift1Month10',
   iapPremiumGift1Year35 = 'iapPremiumGift1Year35',
@@ -79,6 +83,8 @@ export enum PayloadIAPIdentifierV4 {
 
 export namespace PayloadIAPIdentifierV4 {
   export const all: PayloadIAPIdentifierV4[] = Object.values(PayloadIAPIdentifierV4).filter((v) => typeof v === 'string') as PayloadIAPIdentifierV4[]
+  export const getProductId = getProductIdUtils
+  export const getAlternativeProductIdsMobile = getAlternativeProductIdsMobileUtils
 }
 
 export interface PayloadAndroidReceiptV4 {

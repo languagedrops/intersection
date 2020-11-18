@@ -6,9 +6,13 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "rm -rf dist && tsc",
+    "jest": "yarn node-full-memory ./node_modules/.bin/jest",
     "test": "jest",
     "tslint": "tslint --project tsconfig.json --exclude '**/*.js'",
-    "preversion": "yarn build && git add -A dist && git commit -m \"chore(Project): generate JS files\""
+    "preversion": "yarn purchase-id-map-generate && yarn test && yarn build && git add -A dist && git commit -m \"chore(Project): generate JS files\"",
+    "purchase-id-map-generate": "yarn compile-scripts && node ./scripts/dist/scripts/purchase-id-map-generate.js",
+    "compile-scripts": "rm -rf ./scripts/dist/ && tsc -p scripts/tsconfig.json",
+    "node-full-memory": "env NODE_OPTIONS=--max_old_space_size=8096 node --max-old-space-size=8096"
   },
   "repository": {
     "type": "git",
