@@ -1,4 +1,4 @@
-import { AppPlatform } from "./appPlatform"
+import { AppPlatform } from './appPlatform'
 
 export enum AppType {
   int = 'int',
