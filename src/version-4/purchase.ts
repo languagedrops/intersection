@@ -1,6 +1,7 @@
 import { PayloadRequestBaseV4 } from './base'
 import { getProductId as getProductIdUtils, getAlternativeProductIdsMobile as getAlternativeProductIdsMobileUtils } from './purchaseUtils'
 
+// Add new topup to the end of the list
 export enum PayloadIAPIdentifierV4 {
   iapForever10Mins = 'iapForever10Mins',
   iapForever10MinsDiscounted = 'iapForever10MinsDiscounted',

@@ -37,8 +37,9 @@ const sortedProductIdTopUpIdMap = extractKeysAndValues(productIdTopUpIdMap)
 let result = ''
 result += '/* tslint:disable */\n'
 result += 'import { PayloadIAPIdentifierV4 } from \'./version-4/purchase\'\n'
+result += 'import { Dictionary } from \'./dictionary\'\n'
 result += '/* Auto-generated, do not modify!!! */\n'
-result += 'export const productIdTopUpIdMap = {\n'
+result += 'export const productIdTopUpIdMap: Dictionary<PayloadIAPIdentifierV4> = {\n'
 
 Object.keys(sortedProductIdTopUpIdMap).forEach((productId) => {
   result += `  '${productId}': PayloadIAPIdentifierV4.${sortedProductIdTopUpIdMap[productId]},\n`

@@ -1,7 +1,8 @@
 /* tslint:disable */
 import { PayloadIAPIdentifierV4 } from './version-4/purchase'
+import { Dictionary } from './dictionary'
 /* Auto-generated, do not modify!!! */
-export const productIdTopUpIdMap = {
+export const productIdTopUpIdMap: Dictionary<PayloadIAPIdentifierV4> = {
   '527451': PayloadIAPIdentifierV4.iapPremiumMonthly15,
   '527452': PayloadIAPIdentifierV4.iapPremiumYearly70,
   '542281': PayloadIAPIdentifierV4.iapPremiumLifetime160,
