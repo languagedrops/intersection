@@ -57,6 +57,7 @@ export interface PayloadUserAppDataV4 {
   readonly numberOfReActivations?: PropertyWithMetadata<number>
   readonly segmentsCommunication?: PropertyWithMetadata<string>
   readonly userQuestions?: PropertyWithMetadata<Dictionary<string | undefined>>
+  readonly featureIntroductionsShown?: PropertyWithMetadata<Dictionary<number>>
 }
 
 export interface PayloadUserLanguageSettingsV4 {
