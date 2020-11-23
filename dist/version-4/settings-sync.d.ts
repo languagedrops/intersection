@@ -54,6 +54,7 @@ export interface PayloadUserAppDataV4 {
     readonly segmentsCommunication?: PropertyWithMetadata<string>;
     readonly userQuestions?: PropertyWithMetadata<Dictionary<string | undefined>>;
     readonly featureIntroductionsShown?: PropertyWithMetadata<Dictionary<number>>;
+    readonly sessionEndSurveysAnswered?: PropertyWithMetadata<Dictionary<number>>;
 }
 export interface PayloadUserLanguageSettingsV4 {
     readonly useAlternativeTranslation?: PropertyWithMetadata<Dictionary<boolean>>;
