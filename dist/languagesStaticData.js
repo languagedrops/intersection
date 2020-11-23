@@ -24,7 +24,7 @@ exports.getHumanReadableLanguageName = (languageIso) => {
         case language_1.LanguageISO.ENGB:
             return 'English (British)';
         case language_1.LanguageISO.EN:
-            return 'English (American)”';
+            return 'English (American)';
         default:
             return exports.languagesStaticData[languageIso].name;
     }
