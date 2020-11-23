@@ -45,9 +45,6 @@ export enum LanguageISO {
     SR = 'SR',
     BS = 'BS',
     SA = 'SA',
-    SW = 'SW',
-    YO = 'YO',
-    IG = 'IG',
 }
 
 export namespace LanguageISO {
@@ -101,9 +98,6 @@ export enum LanguageName {
     Bosnian = 'Bosnian',
     Serbian = 'Serbian',
     Sanskrit = 'Sanskrit',
-    Swahili = 'Swahili',
-    Yoruba = 'Yoruba',
-    Igbo = 'Igbo',
 }
 
 export interface Language {
