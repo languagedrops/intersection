@@ -22,7 +22,7 @@ export const getHumanReadableLanguageName = (languageIso: LanguageISO): string =
     case LanguageISO.ENGB:
       return 'English (British)'
     case LanguageISO.EN:
-      return 'English (American)”'
+      return 'English (American)'
     default:
       return languagesStaticData[languageIso].name
   }
