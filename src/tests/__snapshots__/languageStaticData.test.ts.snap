@@ -1011,6 +1011,21 @@ Object {
 }
 `;
 
+exports[`Language static data Language data for IG should match snapshot 1`] = `
+Object {
+  "alphabet": Array [],
+  "availableAsLearning": false,
+  "availableAsNative": false,
+  "availableInVisualDictionary": false,
+  "hasAlphabetTopic": false,
+  "hasAlternativeTranslation": false,
+  "hasRomanAid": false,
+  "isUiLocalized": false,
+  "iso": "IG",
+  "name": "Igbo",
+}
+`;
+
 exports[`Language static data Language data for IT should match snapshot 1`] = `
 Object {
   "alphabet": Array [
@@ -1893,6 +1908,21 @@ Object {
 }
 `;
 
+exports[`Language static data Language data for SW should match snapshot 1`] = `
+Object {
+  "alphabet": Array [],
+  "availableAsLearning": false,
+  "availableAsNative": false,
+  "availableInVisualDictionary": false,
+  "hasAlphabetTopic": false,
+  "hasAlternativeTranslation": false,
+  "hasRomanAid": false,
+  "isUiLocalized": false,
+  "iso": "SW",
+  "name": "Swahili",
+}
+`;
+
 exports[`Language static data Language data for TH should match snapshot 1`] = `
 Object {
   "alphabet": Array [
@@ -2083,6 +2113,21 @@ Object {
   "isUiLocalized": true,
   "iso": "VI",
   "name": "Vietnamese",
+}
+`;
+
+exports[`Language static data Language data for YO should match snapshot 1`] = `
+Object {
+  "alphabet": Array [],
+  "availableAsLearning": false,
+  "availableAsNative": false,
+  "availableInVisualDictionary": false,
+  "hasAlphabetTopic": false,
+  "hasAlternativeTranslation": false,
+  "hasRomanAid": false,
+  "isUiLocalized": false,
+  "iso": "YO",
+  "name": "Yoruba",
 }
 `;
 

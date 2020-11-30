@@ -214,6 +214,7 @@ const getProductIdMobile = (identifier: PayloadIAPIdentifierV4, platform: AppPla
       } else {
         return `forever_all_languages_discounted_55_${iapSuffix}`
       }
+    case PayloadIAPIdentifierV4.iapPremiumLifetime65Plus1Year:
     case PayloadIAPIdentifierV4.iapPremiumLifetime65:
       if (platform === AppPlatform.Android) {
         return `premium_lifetime_65_${iapSuffix}_v2`
@@ -361,6 +362,7 @@ export const getAlternativeProductIdsMobile = (identifier: PayloadIAPIdentifierV
     case PayloadIAPIdentifierV4.iapPremiumLifetime35:
     case PayloadIAPIdentifierV4.iapPremiumLifetime55:
     case PayloadIAPIdentifierV4.iapPremiumLifetime65:
+    case PayloadIAPIdentifierV4.iapPremiumLifetime65Plus1Year:
     case PayloadIAPIdentifierV4.iapPremiumLifetime80:
     case PayloadIAPIdentifierV4.iapPremiumLifetime90:
     case PayloadIAPIdentifierV4.iapPremiumLifetime160:
