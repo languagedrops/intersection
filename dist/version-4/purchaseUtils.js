@@ -29,6 +29,7 @@ const getProductIdWeb = (identifier) => {
         case purchase_1.PayloadIAPIdentifierV4.iapPremiumYearlyEducation: return '601126';
         case purchase_1.PayloadIAPIdentifierV4.iapPremiumLifetime55: return '636592';
         case purchase_1.PayloadIAPIdentifierV4.iapPremiumLifetime65: return '636657';
+        case purchase_1.PayloadIAPIdentifierV4.iapPremiumLifetime65Plus1Year: return '636657';
         case purchase_1.PayloadIAPIdentifierV4.iapPremiumLifetime80: return '629966';
         case purchase_1.PayloadIAPIdentifierV4.iapPremiumLifetime160: return '542281';
         case purchase_1.PayloadIAPIdentifierV4.iapPremiumLifetime180: return '590836';
