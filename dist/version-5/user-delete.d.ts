@@ -7,15 +7,21 @@ interface PayloadDeleteUserRequestV5Facebook extends PayloadDeleteUserRequestV5B
 }
 interface PayloadDeleteUserRequestV5Google extends PayloadDeleteUserRequestV5Base<PayloadLoginTypeV5.Google> {
 }
-interface PayloadDeleteUserRequestV5Apple extends PayloadDeleteUserRequestV5Base<PayloadLoginTypeV5.Apple> {
+interface PayloadDeleteUserRequestV5AppleMigrated extends PayloadDeleteUserRequestV5Base<PayloadLoginTypeV5.Apple> {
     readonly firebaseUid: string;
-    readonly wasMigrated: boolean;
+    readonly wasMigrated: true;
 }
-interface PayloadDeleteUserRequestV5Email extends PayloadDeleteUserRequestV5Base<PayloadLoginTypeV5.Email> {
+interface PayloadDeleteUserRequestV5AppleNotMigrated extends PayloadDeleteUserRequestV5Base<PayloadLoginTypeV5.Apple> {
+    readonly wasMigrated: false;
+}
+interface PayloadDeleteUserRequestV5EmailMigrated extends PayloadDeleteUserRequestV5Base<PayloadLoginTypeV5.Email> {
     readonly firebaseUid: string;
-    readonly wasMigrated: boolean;
+    readonly wasMigrated: true;
 }
-export declare type PayloadDeleteUserRequestV5 = PayloadDeleteUserRequestV5Facebook | PayloadDeleteUserRequestV5Google | PayloadDeleteUserRequestV5Apple | PayloadDeleteUserRequestV5Email;
+interface PayloadDeleteUserRequestV5EmailNotMigrated extends PayloadDeleteUserRequestV5Base<PayloadLoginTypeV5.Email> {
+    readonly wasMigrated: false;
+}
+export declare type PayloadDeleteUserRequestV5 = PayloadDeleteUserRequestV5Facebook | PayloadDeleteUserRequestV5Google | PayloadDeleteUserRequestV5AppleMigrated | PayloadDeleteUserRequestV5AppleNotMigrated | PayloadDeleteUserRequestV5EmailMigrated | PayloadDeleteUserRequestV5EmailNotMigrated;
 export interface PayloadDeleteUserResponseV5 {
     readonly success: boolean;
 }
