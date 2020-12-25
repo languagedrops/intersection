@@ -5,6 +5,6 @@ export interface PayloadFeatureSuggestionRequestV5 extends PayloadRequestBaseV5 
   readonly email?: string
 }
 
-export interface PayloadFeatureSuggestionRequestV5ResponseV5 {
+export interface PayloadFeatureSuggestionResponseV5 {
   readonly success: boolean
 }
