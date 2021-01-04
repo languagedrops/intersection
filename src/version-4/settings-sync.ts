@@ -59,7 +59,7 @@ export interface PayloadUserAppDataV4 {
   readonly userQuestions?: PropertyWithMetadata<Dictionary<string | undefined>>
   readonly featureIntroductionsShown?: PropertyWithMetadata<Dictionary<number>>
   readonly sessionEndSurveysAnswered?: PropertyWithMetadata<Dictionary<number>>
-  readonly consent: PropertyWithMetadata<Dictionary<boolean>>
+  readonly consent?: PropertyWithMetadata<Dictionary<boolean>>
 }
 
 export interface PayloadUserLanguageSettingsV4 {
