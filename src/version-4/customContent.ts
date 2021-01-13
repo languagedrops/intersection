@@ -140,4 +140,6 @@ export interface DeleteCustomCategoryContent {
 
 export type PayloadDeleteCustomContentRequestV4 = DeleteCustomCategoryContent | DeleteCustomTopicContent | DeleteCustomWordContent
 
-export type PayloadDeleteCustomContentResponseV4 = PayloadCustomContentSyncV4.Response
+export interface PayloadDeleteCustomContentResponseV4 {
+  readonly allContent: PayloadCustomContentResponseV4
+}
