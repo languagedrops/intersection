@@ -4,14 +4,14 @@ var CustomContentType;
 (function (CustomContentType) {
     CustomContentType["Word"] = "Word";
     CustomContentType["Topic"] = "Topic";
-    CustomContentType["Playlist"] = "Playlist";
+    CustomContentType["Category"] = "Category";
 })(CustomContentType = exports.CustomContentType || (exports.CustomContentType = {}));
-var PayloadCustomPlaylistTypeV4;
-(function (PayloadCustomPlaylistTypeV4) {
-    PayloadCustomPlaylistTypeV4["Favorite"] = "Favorite";
-    PayloadCustomPlaylistTypeV4["UserAdded"] = "UserAdded";
-    PayloadCustomPlaylistTypeV4["TrashBin"] = "TrashBin";
-})(PayloadCustomPlaylistTypeV4 = exports.PayloadCustomPlaylistTypeV4 || (exports.PayloadCustomPlaylistTypeV4 = {}));
+var PayloadCustomCategoryTypeV4;
+(function (PayloadCustomCategoryTypeV4) {
+    PayloadCustomCategoryTypeV4["Favorite"] = "Favorite";
+    PayloadCustomCategoryTypeV4["UserAdded"] = "UserAdded";
+    PayloadCustomCategoryTypeV4["TrashBin"] = "TrashBin";
+})(PayloadCustomCategoryTypeV4 = exports.PayloadCustomCategoryTypeV4 || (exports.PayloadCustomCategoryTypeV4 = {}));
 var PayloadCustomTopicTypeV4;
 (function (PayloadCustomTopicTypeV4) {
     PayloadCustomTopicTypeV4["Favorite"] = "Favorite";
