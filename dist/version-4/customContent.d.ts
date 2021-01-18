@@ -70,21 +70,21 @@ export interface PayloadCreateCustomContentResponseV4 {
     readonly allContent: PayloadCustomContentResponseV4;
     readonly newContent: CreateCustomCategoryResponseV4 | CreateCustomTopicResponseV4 | CreateCustomWordResponseV4;
 }
-interface PayloadCustomCategorySyncRequestV4 {
+export interface PayloadCustomCategorySyncRequestV4 {
     readonly customCategoryId: string;
     readonly type: PayloadCustomCategoryTypeV4;
     readonly lastModifiedDate: number;
     readonly name?: string;
     readonly topicIds?: string[];
 }
-interface PayloadCustomTopicSyncRequestV4 {
+export interface PayloadCustomTopicSyncRequestV4 {
     readonly customTopicId: string;
     readonly type: PayloadCustomTopicTypeV4;
     readonly lastModifiedDate: number;
     readonly name?: string;
     readonly wordIds?: string[];
 }
-interface PayloadCustomWordSyncRequestV4 {
+export interface PayloadCustomWordSyncRequestV4 {
     readonly customWordId: string;
     readonly lastModifiedDate: number;
     readonly nativeTranslation?: string;
