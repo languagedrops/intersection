@@ -52,21 +52,21 @@ interface BaseCreateCustomWordPayload {
   readonly foreignTranslationRoman?: string
 }
 
-interface CreateCustomCategoryRequestV4 extends BaseCreateCustomContentRequestV4<CustomContentType.Category>, BaseCreateCustomCategoryPayload {}
+export interface CreateCustomCategoryRequestV4 extends BaseCreateCustomContentRequestV4<CustomContentType.Category>, BaseCreateCustomCategoryPayload {}
 
-interface CreateCustomCategoryResponseV4 extends BaseCreateCustomContentResponseV4<CustomContentType.Category>, BaseCreateCustomCategoryPayload {
+export interface CreateCustomCategoryResponseV4 extends BaseCreateCustomContentResponseV4<CustomContentType.Category>, BaseCreateCustomCategoryPayload {
   readonly customCategoryId: string
 }
 
-interface CreateCustomTopicRequestV4 extends BaseCreateCustomContentRequestV4<CustomContentType.Topic>, BaseCreateCustomTopicPayload {}
+export interface CreateCustomTopicRequestV4 extends BaseCreateCustomContentRequestV4<CustomContentType.Topic>, BaseCreateCustomTopicPayload {}
 
-interface CreateCustomTopicResponseV4 extends BaseCreateCustomContentResponseV4<CustomContentType.Topic>, BaseCreateCustomTopicPayload {
+export interface CreateCustomTopicResponseV4 extends BaseCreateCustomContentResponseV4<CustomContentType.Topic>, BaseCreateCustomTopicPayload {
   readonly customTopicId: string
 }
 
-interface CreateCustomWordRequestV4 extends BaseCreateCustomContentRequestV4<CustomContentType.Word>, BaseCreateCustomWordPayload {}
+export interface CreateCustomWordRequestV4 extends BaseCreateCustomContentRequestV4<CustomContentType.Word>, BaseCreateCustomWordPayload {}
 
-interface CreateCustomWordResponseV4 extends BaseCreateCustomContentResponseV4<CustomContentType.Word>, BaseCreateCustomWordPayload {
+export interface CreateCustomWordResponseV4 extends BaseCreateCustomContentResponseV4<CustomContentType.Word>, BaseCreateCustomWordPayload {
   readonly customWordId: string
 }
 
