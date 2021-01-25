@@ -123,6 +123,11 @@ export interface PayloadCustomContentSyncResponseV4 {
   readonly allContent: PayloadCustomContentResponseV4
 }
 
+interface BaseDeleteCustomContentResponseV4 {
+  readonly foreignLanguage: LanguageISO
+  readonly nativeLanguage: LanguageISO
+}
+
 export interface DeleteCustomTopicContent {
   readonly customContentType: CustomContentType.Topic
   readonly customTopicId: string
@@ -138,7 +143,7 @@ export interface DeleteCustomCategoryContent {
   readonly customCategoryId: string
 }
 
-export type PayloadDeleteCustomContentRequestV4 = DeleteCustomCategoryContent | DeleteCustomTopicContent | DeleteCustomWordContent
+export type PayloadDeleteCustomContentRequestV4 = BaseDeleteCustomContentResponseV4 & (DeleteCustomCategoryContent | DeleteCustomTopicContent | DeleteCustomWordContent)
 
 export interface PayloadDeleteCustomContentResponseV4 {
   readonly allContent: PayloadCustomContentResponseV4
