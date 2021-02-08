@@ -49,7 +49,8 @@ export declare enum AppType {
     lang_ain = "lang_ain",
     droplets = "droplets",
     droplets_demo_apple_store = "droplets_demo_apple_store",
-    upopoy = "upopoy"
+    upopoy = "upopoy",
+    nugget = "nugget"
 }
 export declare namespace AppType {
     const transformAppType: (input: string) => AppType;
