@@ -51,7 +51,6 @@ export enum AppType {
   droplets = 'droplets',
   droplets_demo_apple_store = 'droplets_demo_apple_store',
   upopoy = 'upopoy',
-  nugget = 'nugget',
 }
 
 export namespace AppType {
