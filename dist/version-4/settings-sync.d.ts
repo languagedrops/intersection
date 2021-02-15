@@ -14,6 +14,16 @@ export interface ChallengesPayloadUserAppDataV4 {
     readonly challengeName: string;
     readonly state: string;
 }
+export interface AchievementDataPayloadUserAppDatav4 {
+    readonly level?: number;
+    readonly timeOfCelebration?: number;
+    readonly isCompleted: boolean;
+}
+export declare type AchievementsDataPayloadUserAppDatav4 = Dictionary<AchievementDataPayloadUserAppDatav4>;
+export interface AchievementsPayloadUserAppDatav4 {
+    readonly global: AchievementsDataPayloadUserAppDatav4;
+    readonly languageSpecific: Dictionary<AchievementsDataPayloadUserAppDatav4>;
+}
 export interface PayloadUserAppDataV4 {
     readonly numberOfTimeouts?: PropertyWithMetadata<number>;
     readonly persistedTime?: PropertyWithMetadata<number>;
@@ -56,6 +66,7 @@ export interface PayloadUserAppDataV4 {
     readonly featureIntroductionsShown?: PropertyWithMetadata<Dictionary<number>>;
     readonly sessionEndSurveysAnswered?: PropertyWithMetadata<Dictionary<number>>;
     readonly consent?: PropertyWithMetadata<Dictionary<boolean>>;
+    readonly achievements?: PropertyWithMetadata<AchievementsPayloadUserAppDatav4>;
 }
 export interface PayloadUserLanguageSettingsV4 {
     readonly useAlternativeTranslation?: PropertyWithMetadata<Dictionary<boolean>>;
