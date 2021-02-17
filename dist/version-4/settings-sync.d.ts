@@ -17,7 +17,7 @@ export interface ChallengesPayloadUserAppDataV4 {
 export interface AchievementDataPayloadUserAppDatav4 {
     readonly level?: number;
     readonly timeOfCelebration?: number;
-    readonly isCompleted: boolean;
+    readonly isCompleted?: boolean;
 }
 export declare type AchievementsDataPayloadUserAppDatav4 = Dictionary<AchievementDataPayloadUserAppDatav4>;
 export interface AchievementsPayloadUserAppDatav4 {
