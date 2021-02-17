@@ -13,6 +13,7 @@ interface PayloadUserDetailsBaseV5<T extends PayloadLoginTypeV5> extends Payload
 
 interface PayloadLoggedInUserDetailsBaseV5<T extends PayloadLoginTypeV5> extends PayloadUserDetailsBaseV5<T> {
     readonly email: string
+    readonly isSignUp?: boolean
 }
 
 export interface PayloadGoogleUserDetailsV5 extends PayloadLoggedInUserDetailsBaseV5<PayloadLoginTypeV5.Google> {
