@@ -24,12 +24,7 @@ export interface AchievementDataPayloadUserAppDatav4 {
   readonly isCompleted?: boolean
 }
 
-export type AchievementsDataPayloadUserAppDatav4 = Dictionary<AchievementDataPayloadUserAppDatav4>
-
-export interface AchievementsPayloadUserAppDatav4 {
-  readonly global: AchievementsDataPayloadUserAppDatav4
-  readonly languageSpecific: Dictionary<AchievementsDataPayloadUserAppDatav4>
-}
+export type AchievementsPayloadUserAppDatav4 = Dictionary<AchievementDataPayloadUserAppDatav4>
 
 export interface PayloadUserAppDataV4 {
   readonly numberOfTimeouts?: PropertyWithMetadata<number>
