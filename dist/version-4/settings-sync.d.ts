@@ -19,11 +19,7 @@ export interface AchievementDataPayloadUserAppDatav4 {
     readonly timeOfCelebration?: number;
     readonly isCompleted?: boolean;
 }
-export declare type AchievementsDataPayloadUserAppDatav4 = Dictionary<AchievementDataPayloadUserAppDatav4>;
-export interface AchievementsPayloadUserAppDatav4 {
-    readonly global: AchievementsDataPayloadUserAppDatav4;
-    readonly languageSpecific: Dictionary<AchievementsDataPayloadUserAppDatav4>;
-}
+export declare type AchievementsPayloadUserAppDatav4 = Dictionary<AchievementDataPayloadUserAppDatav4>;
 export interface PayloadUserAppDataV4 {
     readonly numberOfTimeouts?: PropertyWithMetadata<number>;
     readonly persistedTime?: PropertyWithMetadata<number>;
