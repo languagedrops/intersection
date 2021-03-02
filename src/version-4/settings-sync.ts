@@ -69,6 +69,7 @@ export interface PayloadUserAppDataV4 {
   readonly sessionEndSurveysAnswered?: PropertyWithMetadata<Dictionary<number>>
   readonly consent?: PropertyWithMetadata<Dictionary<boolean>>
   readonly achievements?: PropertyWithMetadata<AchievementsPayloadUserAppDatav4>
+  readonly sessionAccuracies?: PropertyWithMetadata<Dictionary<number>>
 }
 
 export interface PayloadUserLanguageSettingsV4 {
