@@ -53,6 +53,7 @@ var AppType;
     AppType["droplets"] = "droplets";
     AppType["droplets_demo_apple_store"] = "droplets_demo_apple_store";
     AppType["upopoy"] = "upopoy";
+    AppType["bite"] = "bite";
 })(AppType = exports.AppType || (exports.AppType = {}));
 (function (AppType) {
     AppType.transformAppType = (input) => {
