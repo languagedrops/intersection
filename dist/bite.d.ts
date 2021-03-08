@@ -17,6 +17,7 @@ export declare enum BiteReferrer {
 }
 export interface BiteProps {
     readonly id: string;
+    readonly creator: string;
     readonly words: number[];
     readonly suggestedLanguage: LanguageISO;
     readonly onlyOfferSuggestedLanguage: boolean;
