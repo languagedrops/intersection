@@ -24,7 +24,7 @@ export const productIdTopUpIdMap: Dictionary<PayloadIAPIdentifierV4> = {
   '636592': PayloadIAPIdentifierV4.iapPremiumLifetime55,
   '636657': PayloadIAPIdentifierV4.iapPremiumLifetime65,
   '650014': PayloadIAPIdentifierV4.iapPremiumYearlyKahootPlus,
-  '650015': PayloadIAPIdentifierV4.iapPremiumLifetimeKahoot,
+  '650015': PayloadIAPIdentifierV4.iapPremiumLifetimeKahootPlus,
   'Drops premium 1 year': PayloadIAPIdentifierV4.iapPremium1year70,
   'Drops premium 1 year - 40% discount': PayloadIAPIdentifierV4.iapPremium1year40,
   'Drops premium 3 months': PayloadIAPIdentifierV4.iapPremium3months30,

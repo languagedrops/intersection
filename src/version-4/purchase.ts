@@ -70,7 +70,7 @@ export enum PayloadIAPIdentifierV4 {
   iapPremiumLifetime35 = 'iapPremiumLifetime35',
   iapPremiumLifetime160 = 'iapPremiumLifetime160',
   iapPremiumLifetime180 = 'iapPremiumLifetime180',
-  iapPremiumLifetimeKahootPlus = 'iapPremiumLifetimeKahoot',
+  iapPremiumLifetimeKahootPlus = 'iapPremiumLifetimeKahootPlus',
 
   iapPremiumYearly40Plus1 = 'iapPremiumYearly40Plus1',
   iapPremiumYearly40FirstYear15 = 'iapPremiumYearly40FirstYear15',
