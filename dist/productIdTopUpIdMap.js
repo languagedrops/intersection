@@ -24,6 +24,8 @@ exports.productIdTopUpIdMap = {
     '636504': purchase_1.PayloadIAPIdentifierV4.iapPremiumYearly15,
     '636592': purchase_1.PayloadIAPIdentifierV4.iapPremiumLifetime55,
     '636657': purchase_1.PayloadIAPIdentifierV4.iapPremiumLifetime65,
+    '650014': purchase_1.PayloadIAPIdentifierV4.iapPremiumYearlyKahootPlus,
+    '650015': purchase_1.PayloadIAPIdentifierV4.iapPremiumLifetimeKahootPlus,
     'Drops premium 1 year': purchase_1.PayloadIAPIdentifierV4.iapPremium1year70,
     'Drops premium 1 year - 40% discount': purchase_1.PayloadIAPIdentifierV4.iapPremium1year40,
     'Drops premium 3 months': purchase_1.PayloadIAPIdentifierV4.iapPremium3months30,
