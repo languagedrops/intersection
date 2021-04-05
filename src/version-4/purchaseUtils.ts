@@ -27,6 +27,7 @@ const getProductIdWeb = (identifier: PayloadIAPIdentifierV4): string => {
     case PayloadIAPIdentifierV4.iapPremiumYearly70: return '527452'
     case PayloadIAPIdentifierV4.iapPremiumYearly70FreeTrial: return '591248'
     case PayloadIAPIdentifierV4.iapPremiumYearlyEducation: return '601126'
+    case PayloadIAPIdentifierV4.iapPremiumYearlyKahootPlus: return '650014'
     case PayloadIAPIdentifierV4.iapPremiumLifetime55: return '636592'
     case PayloadIAPIdentifierV4.iapPremiumLifetime65: return '636657'
     case PayloadIAPIdentifierV4.iapPremiumLifetime65Plus1Year: return '636657'
@@ -37,6 +38,7 @@ const getProductIdWeb = (identifier: PayloadIAPIdentifierV4): string => {
     case PayloadIAPIdentifierV4.iapPremiumGift1Month10: return '575273'
     case PayloadIAPIdentifierV4.iapPremiumGiftLifetime160: return '575271'
     case PayloadIAPIdentifierV4.iapPremiumLifetime90: return '633275'
+    case PayloadIAPIdentifierV4.iapPremiumLifetimeKahootPlus: return '650015'
 
     default: return ''
   }
@@ -266,8 +268,6 @@ const getProductIdMobile = (identifier: PayloadIAPIdentifierV4, platform: AppPla
       return `premium_yearly_25_${iapSuffix.replace('lang_', '')}_v2`
     case PayloadIAPIdentifierV4.iapPremiumYearly15:
       return `premium_yearly_15_${iapSuffix}_v2`
-    case PayloadIAPIdentifierV4.iapPremiumYearlyEducation:
-      return ''
     case PayloadIAPIdentifierV4.iapPremiumQuarterly30:
       return `premium_quarterly_30_${iapSuffix}_v3`
     case PayloadIAPIdentifierV4.iapPremiumMonthly10:
@@ -298,10 +298,13 @@ const getProductIdMobile = (identifier: PayloadIAPIdentifierV4, platform: AppPla
         return ``
       }
     case PayloadIAPIdentifierV4.iapPremiumYearly30:
+    case PayloadIAPIdentifierV4.iapPremiumYearlyEducation:
+    case PayloadIAPIdentifierV4.iapPremiumYearlyKahootPlus:
     case PayloadIAPIdentifierV4.iapPremiumGift1Year35:
     case PayloadIAPIdentifierV4.iapPremiumGift1Month10:
     case PayloadIAPIdentifierV4.iapPremiumGiftLifetime160:
     case PayloadIAPIdentifierV4.iapPremiumLifetime90:
+    case PayloadIAPIdentifierV4.iapPremiumLifetimeKahootPlus:
       return ''
   }
 }
@@ -378,6 +381,7 @@ export const getAlternativeProductIdsMobile = (identifier: PayloadIAPIdentifierV
     case PayloadIAPIdentifierV4.iapPremiumMonthly13:
     case PayloadIAPIdentifierV4.iapPremiumMonthly15:
     case PayloadIAPIdentifierV4.iapPremiumYearlyEducation:
+    case PayloadIAPIdentifierV4.iapPremiumYearlyKahootPlus:
     case PayloadIAPIdentifierV4.iapPremiumYearly40:
     case PayloadIAPIdentifierV4.iapPremiumYearly40FreeTrial:
     case PayloadIAPIdentifierV4.iapPremiumYearly70FreeTrial3Days:
@@ -393,6 +397,7 @@ export const getAlternativeProductIdsMobile = (identifier: PayloadIAPIdentifierV
     case PayloadIAPIdentifierV4.iapPremiumGift1Year35:
     case PayloadIAPIdentifierV4.iapPremiumGift1Month10:
     case PayloadIAPIdentifierV4.iapPremiumGiftLifetime160:
+    case PayloadIAPIdentifierV4.iapPremiumLifetimeKahootPlus:
       return []
     case PayloadIAPIdentifierV4.iapPremiumYearly70FreeTrial:
       return LanguageISO.all
