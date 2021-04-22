@@ -5,6 +5,7 @@ export enum PayloadLoginTypeV5 {
     Facebook = 'Facebook',
     Email = 'Email',
     Apple = 'Apple',
+    Wechat = 'Wechat',
   }
 
 interface PayloadUserDetailsBaseV5<T extends PayloadLoginTypeV5> extends PayloadRequestBaseV5 {
@@ -13,7 +14,6 @@ interface PayloadUserDetailsBaseV5<T extends PayloadLoginTypeV5> extends Payload
 
 interface PayloadLoggedInUserDetailsBaseV5<T extends PayloadLoginTypeV5> extends PayloadUserDetailsBaseV5<T> {
     readonly email: string
-    readonly isSignUp?: boolean
 }
 
 export interface PayloadGoogleUserDetailsV5 extends PayloadLoggedInUserDetailsBaseV5<PayloadLoginTypeV5.Google> {
@@ -52,7 +52,20 @@ export interface PayloadAppleUserDetailsResponseV5 extends PayloadLoggedInUserDe
     readonly email: string
 }
 
-export type PayloadUserDetailsRequestV5 = PayloadEmailUserDetailsV5 | PayloadGoogleUserDetailsV5 | PayloadFacebookUserDetailsV5 | PayloadAppleUserDetailsRequestV5
+export interface PayloadWechatUserDetailsRequestV5 extends PayloadUserDetailsBaseV5<PayloadLoginTypeV5.Wechat> {
+    readonly locale: string
+    readonly name: string
+    readonly email?: string
+    readonly wechatOpenId: string
+}
+
+export interface PayloadWechatUserDetailsResponseV5 extends PayloadLoggedInUserDetailsBaseV5<PayloadLoginTypeV5.Wechat> {
+    readonly locale: string
+    readonly name: string
+    readonly wechatOpenId?: string
+}
+
+export type PayloadUserDetailsRequestV5 = PayloadEmailUserDetailsV5 | PayloadGoogleUserDetailsV5 | PayloadFacebookUserDetailsV5 | PayloadAppleUserDetailsRequestV5 | PayloadWechatUserDetailsRequestV5
 export type PayloadUserDetailsResponseV5 = PayloadEmailUserDetailsV5 | PayloadGoogleUserDetailsV5 | PayloadFacebookUserDetailsV5 | PayloadAppleUserDetailsResponseV5
 
 export enum PayloadAppPlatformSendUserDetailsRequestV5 {
@@ -79,6 +92,11 @@ export interface PayloadUserEmailTimeResponseV5 {
     readonly lastCancellationEmailTime?: number
 }
 
+export interface PayloadUserResponseV5 {
+    readonly dropsUserId?: string
+    readonly isSignUp?: boolean
+}
+
 export type PayloadSendUserDetailsRequestV5 = PayloadUserDetailsRequestV5 & PayloadUserDetailsRestRequestV5
 
-export type PayloadUpdateUserResponseV5 = PayloadUserDetailsResponseV5 & PayloadUserEmailTimeResponseV5
+export type PayloadUpdateUserResponseV5 = PayloadUserDetailsResponseV5 & PayloadUserEmailTimeResponseV5 & PayloadUserResponseV5
