@@ -6,6 +6,7 @@ var PayloadLoginTypeV5;
     PayloadLoginTypeV5["Facebook"] = "Facebook";
     PayloadLoginTypeV5["Email"] = "Email";
     PayloadLoginTypeV5["Apple"] = "Apple";
+    PayloadLoginTypeV5["Wechat"] = "Wechat";
 })(PayloadLoginTypeV5 = exports.PayloadLoginTypeV5 || (exports.PayloadLoginTypeV5 = {}));
 var PayloadAppPlatformSendUserDetailsRequestV5;
 (function (PayloadAppPlatformSendUserDetailsRequestV5) {

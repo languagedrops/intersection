@@ -3,14 +3,14 @@ export declare enum PayloadLoginTypeV4 {
     Google = "Google",
     Facebook = "Facebook",
     Email = "Email",
-    Apple = "Apple"
+    Apple = "Apple",
+    Wechat = "Wechat"
 }
 interface PayloadUserDetailsBaseV4<T extends PayloadLoginTypeV4> extends PayloadRequestBaseV4 {
     readonly type: T;
 }
 interface PayloadLoggedInUserDetailsBaseV4<T extends PayloadLoginTypeV4> extends PayloadUserDetailsBaseV4<T> {
     readonly email: string;
-    readonly isSignUp?: boolean;
 }
 export interface PayloadGoogleUserDetailsV4 extends PayloadLoggedInUserDetailsBaseV4<PayloadLoginTypeV4.Google> {
     readonly id: string;
@@ -36,7 +36,12 @@ export interface PayloadAppleUserDetailsV4 extends PayloadLoggedInUserDetailsBas
     readonly name: string;
     readonly appleUserId?: string;
 }
-export declare type PayloadUserDetailsV4 = PayloadEmailUserDetailsV4 | PayloadGoogleUserDetailsV4 | PayloadFacebookUserDetailsV4 | PayloadAppleUserDetailsV4;
+export interface PayloadWechatUserDetailsV4 extends PayloadUserDetailsBaseV4<PayloadLoginTypeV4.Wechat> {
+    readonly locale: string;
+    readonly name: string;
+    readonly wechatOpenId: string;
+}
+export declare type PayloadUserDetailsV4 = PayloadEmailUserDetailsV4 | PayloadGoogleUserDetailsV4 | PayloadFacebookUserDetailsV4 | PayloadAppleUserDetailsV4 | PayloadWechatUserDetailsV4;
 export declare enum PayloadAppPlatformSendUserDetailsRequestV4 {
     iOS = "iOS",
     Android = "Android"
@@ -67,6 +72,7 @@ export interface PayloadUserEmailTimeResponseV4 {
 }
 export interface PayloadUserResponseV4 {
     readonly dropsUserId?: string;
+    readonly isSignUp?: boolean;
 }
 export declare type PayloadSendUserDetailsRequestV4 = PayloadUserDetailsV4 & PayloadUserDetailsRestRequestV4;
 export declare type PayloadUpdateUserResponseV4 = PayloadUserDetailsV4 & PayloadUserEmailTimeResponseV4 & PayloadUserResponseV4;
