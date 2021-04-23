@@ -1,7 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var PayloadGrantTypes;
-(function (PayloadGrantTypes) {
-    PayloadGrantTypes["WechatAuthCode"] = "WechatAuthCode";
-    PayloadGrantTypes["WechatRefreshToken"] = "WechatRefreshToken";
-})(PayloadGrantTypes = exports.PayloadGrantTypes || (exports.PayloadGrantTypes = {}));
+var OpenIdGrantType;
+(function (OpenIdGrantType) {
+    OpenIdGrantType["WechatAuthCode"] = "WechatAuthCode";
+    OpenIdGrantType["WechatRefreshToken"] = "WechatRefreshToken";
+})(OpenIdGrantType = exports.OpenIdGrantType || (exports.OpenIdGrantType = {}));
+var OpenIdResponseType;
+(function (OpenIdResponseType) {
+    OpenIdResponseType["Wechat"] = "Wechat";
+})(OpenIdResponseType = exports.OpenIdResponseType || (exports.OpenIdResponseType = {}));

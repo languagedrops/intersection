@@ -45,14 +45,14 @@ export interface PayloadAppleUserDetailsResponseV5 extends PayloadLoggedInUserDe
 }
 export interface PayloadWechatUserDetailsRequestV5 extends PayloadUserDetailsBaseV5<PayloadLoginTypeV5.Wechat> {
     readonly locale: string;
-    readonly name: string;
+    readonly name?: string;
     readonly email?: string;
     readonly wechatOpenId: string;
 }
 export interface PayloadWechatUserDetailsResponseV5 extends PayloadLoggedInUserDetailsBaseV5<PayloadLoginTypeV5.Wechat> {
     readonly locale: string;
-    readonly name: string;
-    readonly wechatOpenId?: string;
+    readonly name?: string;
+    readonly wechatOpenId: string;
 }
 export declare type PayloadUserDetailsRequestV5 = PayloadEmailUserDetailsV5 | PayloadGoogleUserDetailsV5 | PayloadFacebookUserDetailsV5 | PayloadAppleUserDetailsRequestV5 | PayloadWechatUserDetailsRequestV5;
 export declare type PayloadUserDetailsResponseV5 = PayloadEmailUserDetailsV5 | PayloadGoogleUserDetailsV5 | PayloadFacebookUserDetailsV5 | PayloadAppleUserDetailsResponseV5;
