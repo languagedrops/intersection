@@ -1,22 +1,31 @@
-export enum PayloadGrantTypes {
+export enum OpenIdGrantType {
   WechatAuthCode = 'WechatAuthCode',
   WechatRefreshToken = 'WechatRefreshToken',
 }
 
-interface PayloadOpenIdTokenV5<T extends PayloadGrantTypes> {
+interface PayloadOpenIdRequestBaseV5<T extends OpenIdGrantType> {
   readonly type: T
 }
 
-interface PayloadWechatAuthCodeRequestV5 extends PayloadOpenIdTokenV5<PayloadGrantTypes.WechatAuthCode> {
+interface PayloadWechatAuthCodeRequestV5 extends PayloadOpenIdRequestBaseV5<OpenIdGrantType.WechatAuthCode> {
   readonly code: string
 }
 
-interface PayloadWechatRefreshTokenRequestV5 extends PayloadOpenIdTokenV5<PayloadGrantTypes.WechatRefreshToken> {
+interface PayloadWechatRefreshTokenRequestV5 extends PayloadOpenIdRequestBaseV5<OpenIdGrantType.WechatRefreshToken> {
   readonly refreshToken: string
 }
 
-interface PayloadOpenIdWechatResponseV5 {
+export enum OpenIdResponseType {
+  Wechat = 'Wechat',
+}
+
+interface PayloadOpenIdResponseBaseV5<T extends OpenIdResponseType> {
+  readonly type: T
+}
+
+interface PayloadOpenIdWechatResponseV5 extends PayloadOpenIdResponseBaseV5<OpenIdResponseType.Wechat> {
   readonly wechatOpenId: string
+  readonly name?: string
   readonly refreshToken: string
   readonly idToken: string // JWT token
 }
