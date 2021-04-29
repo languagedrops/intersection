@@ -26,6 +26,11 @@ export interface AchievementDataPayloadUserAppDatav4 {
 
 export type AchievementsPayloadUserAppDatav4 = Dictionary<AchievementDataPayloadUserAppDatav4>
 
+export interface IllustrationUpdateVersionsPayloadV4 {
+  readonly softUpdatedVersion?: number
+  readonly hardUpdatedVersion?: number
+}
+
 export interface PayloadUserAppDataV4 {
   readonly numberOfTimeouts?: PropertyWithMetadata<number>
   readonly persistedTime?: PropertyWithMetadata<number>
@@ -70,6 +75,7 @@ export interface PayloadUserAppDataV4 {
   readonly consent?: PropertyWithMetadata<Dictionary<boolean>>
   readonly achievements?: PropertyWithMetadata<AchievementsPayloadUserAppDatav4>
   readonly sessionAccuracies?: PropertyWithMetadata<Dictionary<number>>
+  readonly acknowledgedIllustrationUpdates?: PropertyWithMetadata<Dictionary<IllustrationUpdateVersionsPayloadV4>>
 }
 
 export interface PayloadUserLanguageSettingsV4 {
