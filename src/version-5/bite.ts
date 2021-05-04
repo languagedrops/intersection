@@ -10,7 +10,7 @@ export interface PayloadGetBiteRequestV5 {
     readonly type: BiteRequestTypes.get
 }
 
-export interface PayloadCreateBiteRequestV5 {
+interface PayloadBiteBase {
     readonly creator: string
     readonly words: string[]
     readonly suggestedLanguage?: LanguageISO
@@ -18,18 +18,14 @@ export interface PayloadCreateBiteRequestV5 {
     readonly disabled?: boolean
     readonly theme?: string,
     readonly backgroundImage?: string
+}
+
+export interface PayloadCreateBiteRequestV5 extends PayloadBiteBase {
     readonly type: BiteRequestTypes.create
 }
 
 export type PayloadBiteRequestV5 = PayloadCreateBiteRequestV5 | PayloadGetBiteRequestV5
 
-export interface PayloadBiteResponseV5 {
+export interface PayloadBiteResponseV5 extends PayloadBiteBase {
     readonly id: string
-    readonly creator: string
-    readonly words: string[]
-    readonly suggestedLanguage?: LanguageISO
-    readonly onlyOfferSuggestedLanguage?: boolean
-    readonly disabled?: boolean
-    readonly theme?: string,
-    readonly backgroundImage?: string
 }
