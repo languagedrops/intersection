@@ -11,6 +11,7 @@ export interface PayloadGetBiteRequestV5 {
 }
 
 interface PayloadBiteBase {
+    readonly id: string
     readonly creator: string
     readonly words: string[]
     readonly suggestedLanguage?: LanguageISO
@@ -26,6 +27,4 @@ export interface PayloadCreateBiteRequestV5 extends PayloadBiteBase {
 
 export type PayloadBiteRequestV5 = PayloadCreateBiteRequestV5 | PayloadGetBiteRequestV5
 
-export interface PayloadBiteResponseV5 extends PayloadBiteBase {
-    readonly id: string
-}
+export type PayloadBiteResponseV5 = PayloadBiteBase
