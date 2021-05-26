@@ -1,4 +1,5 @@
 import { LanguageISO } from '../language';
+import { PayloadRequestBaseV4 } from './base';
 export declare enum CustomContentType {
     Word = "Word",
     Topic = "Topic",
@@ -14,7 +15,7 @@ export declare enum PayloadCustomTopicTypeV4 {
     UserAdded = "UserAdded",
     TrashBin = "TrashBin"
 }
-interface BaseCustomContentPayloadV4<T extends CustomContentType> {
+interface BaseCustomContentPayloadV4<T extends CustomContentType> extends PayloadRequestBaseV4 {
     readonly customContentType: T;
 }
 interface BaseCreateCustomContentRequestV4<T extends CustomContentType> extends BaseCustomContentPayloadV4<T> {
