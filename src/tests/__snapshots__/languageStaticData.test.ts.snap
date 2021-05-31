@@ -1014,7 +1014,7 @@ Object {
 exports[`Language static data Language data for IG should match snapshot 1`] = `
 Object {
   "alphabet": Array [],
-  "availableAsLearning": false,
+  "availableAsLearning": true,
   "availableAsNative": false,
   "availableInVisualDictionary": false,
   "hasAlphabetTopic": false,
@@ -1911,7 +1911,7 @@ Object {
 exports[`Language static data Language data for SW should match snapshot 1`] = `
 Object {
   "alphabet": Array [],
-  "availableAsLearning": false,
+  "availableAsLearning": true,
   "availableAsNative": false,
   "availableInVisualDictionary": false,
   "hasAlphabetTopic": false,
@@ -2119,7 +2119,7 @@ Object {
 exports[`Language static data Language data for YO should match snapshot 1`] = `
 Object {
   "alphabet": Array [],
-  "availableAsLearning": false,
+  "availableAsLearning": true,
   "availableAsNative": false,
   "availableInVisualDictionary": false,
   "hasAlphabetTopic": false,
