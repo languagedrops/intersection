@@ -9,10 +9,12 @@ interface PayloadOpenIdRequestBaseV5<T extends OpenIdGrantType> {
 
 interface PayloadWechatAuthCodeRequestV5 extends PayloadOpenIdRequestBaseV5<OpenIdGrantType.WechatAuthCode> {
   readonly code: string
+  readonly appId: string
 }
 
 interface PayloadWechatRefreshTokenRequestV5 extends PayloadOpenIdRequestBaseV5<OpenIdGrantType.WechatRefreshToken> {
   readonly refreshToken: string
+  readonly appId: string
 }
 
 export enum OpenIdResponseType {
