@@ -26,7 +26,7 @@ interface PayloadOpenIdResponseBaseV5<T extends OpenIdResponseType> {
 }
 
 interface PayloadOpenIdWechatResponseV5 extends PayloadOpenIdResponseBaseV5<OpenIdResponseType.Wechat> {
-  readonly wechatOpenId: string
+  readonly wechatId: string
   readonly name?: string
   readonly refreshToken: string
   readonly idToken: string // JWT token

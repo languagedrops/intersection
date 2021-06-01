@@ -47,7 +47,7 @@ export interface PayloadAppleUserDetailsV4 extends PayloadLoggedInUserDetailsBas
 export interface PayloadWechatUserDetailsV4 extends PayloadLoggedInUserDetailsBaseV4<PayloadLoginTypeV4.Wechat> {
     readonly locale: string
     readonly name?: string
-    readonly wechatOpenId: string
+    readonly wechatId: string
 }
 
 export type PayloadUserDetailsV4 = PayloadEmailUserDetailsV4 | PayloadGoogleUserDetailsV4 | PayloadFacebookUserDetailsV4 | PayloadAppleUserDetailsV4 | PayloadWechatUserDetailsV4
