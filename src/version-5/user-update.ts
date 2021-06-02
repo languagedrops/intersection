@@ -56,13 +56,13 @@ export interface PayloadWechatUserDetailsRequestV5 extends PayloadUserDetailsBas
     readonly locale: string
     readonly name?: string
     readonly email?: string
-    readonly wechatOpenId: string
+    readonly wechatId: string
 }
 
 export interface PayloadWechatUserDetailsResponseV5 extends PayloadLoggedInUserDetailsBaseV5<PayloadLoginTypeV5.Wechat> {
     readonly locale: string
     readonly name?: string
-    readonly wechatOpenId: string
+    readonly wechatId: string
 }
 
 export type PayloadUserDetailsRequestV5 = PayloadEmailUserDetailsV5 | PayloadGoogleUserDetailsV5 | PayloadFacebookUserDetailsV5 | PayloadAppleUserDetailsRequestV5 | PayloadWechatUserDetailsRequestV5
