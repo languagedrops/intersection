@@ -4,4 +4,4 @@ var PayloadDynamicLinksRequestType;
 (function (PayloadDynamicLinksRequestType) {
     PayloadDynamicLinksRequestType["create"] = "sync";
     PayloadDynamicLinksRequestType["refresh"] = "refresh";
-})(PayloadDynamicLinksRequestType || (PayloadDynamicLinksRequestType = {}));
+})(PayloadDynamicLinksRequestType = exports.PayloadDynamicLinksRequestType || (exports.PayloadDynamicLinksRequestType = {}));
