@@ -2,6 +2,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var PayloadDynamicLinksRequestType;
 (function (PayloadDynamicLinksRequestType) {
-    PayloadDynamicLinksRequestType["create"] = "sync";
+    PayloadDynamicLinksRequestType["sync"] = "sync";
     PayloadDynamicLinksRequestType["refresh"] = "refresh";
 })(PayloadDynamicLinksRequestType = exports.PayloadDynamicLinksRequestType || (exports.PayloadDynamicLinksRequestType = {}));
