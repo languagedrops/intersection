@@ -1,7 +1,7 @@
 import { PayloadRequestBaseV5 } from './base'
 
 enum PayloadDynamicLinksRequestType {
-    create = 'create',
+    create = 'sync',
     refresh = 'refresh',
 }
 
