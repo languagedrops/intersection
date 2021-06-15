@@ -69,6 +69,7 @@ export interface PayloadUserAppDataV4 {
     readonly achievements?: PropertyWithMetadata<AchievementsPayloadUserAppDatav4>;
     readonly sessionAccuracies?: PropertyWithMetadata<Dictionary<number>>;
     readonly acknowledgedIllustrationUpdates?: PropertyWithMetadata<Dictionary<IllustrationUpdateVersionsPayloadV4>>;
+    readonly inviterLink?: PropertyWithMetadata<string>;
 }
 export interface PayloadUserLanguageSettingsV4 {
     readonly useAlternativeTranslation?: PropertyWithMetadata<Dictionary<boolean>>;
