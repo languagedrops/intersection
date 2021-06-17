@@ -272,6 +272,8 @@ const getProductIdMobile = (identifier, platform, appType) => {
             return `premium_yearly_40_freetrial_${iapSuffix}_v3`;
         case purchase_1.PayloadIAPIdentifierV4.iapPremiumYearly35:
             return `premium_yearly_35_${iapSuffix}_v2`;
+        case purchase_1.PayloadIAPIdentifierV4.iapPremiumYearly30:
+            return `premium_yearly_30_${iapSuffix}`;
         case purchase_1.PayloadIAPIdentifierV4.iapPremiumYearly25:
             return `premium_yearly_25_${iapSuffix.replace('lang_', '')}_v2`;
         case purchase_1.PayloadIAPIdentifierV4.iapPremiumYearly15:
@@ -307,7 +309,6 @@ const getProductIdMobile = (identifier, platform, appType) => {
             else {
                 return ``;
             }
-        case purchase_1.PayloadIAPIdentifierV4.iapPremiumYearly30:
         case purchase_1.PayloadIAPIdentifierV4.iapPremiumYearlyEducation:
         case purchase_1.PayloadIAPIdentifierV4.iapPremiumYearlyKahootPlus:
         case purchase_1.PayloadIAPIdentifierV4.iapPremiumGift1Year35:
