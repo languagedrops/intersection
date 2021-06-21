@@ -270,6 +270,8 @@ const getProductIdMobile = (identifier: PayloadIAPIdentifierV4, platform: AppPla
       return `premium_yearly_25_${iapSuffix.replace('lang_', '')}_v2`
     case PayloadIAPIdentifierV4.iapPremiumYearly15:
       return `premium_yearly_15_${iapSuffix}_v2`
+    case PayloadIAPIdentifierV4.iapPremiumYearly10:
+      return `premium_yearly_10_${iapSuffix}_v2`
     case PayloadIAPIdentifierV4.iapPremiumQuarterly30:
       return `premium_quarterly_30_${iapSuffix}_v3`
     case PayloadIAPIdentifierV4.iapPremiumMonthly10:
@@ -377,6 +379,7 @@ export const getAlternativeProductIdsMobile = (identifier: PayloadIAPIdentifierV
     case PayloadIAPIdentifierV4.iapPremiumYearly30:
     case PayloadIAPIdentifierV4.iapPremiumYearly25:
     case PayloadIAPIdentifierV4.iapPremiumYearly15:
+    case PayloadIAPIdentifierV4.iapPremiumYearly10:
     case PayloadIAPIdentifierV4.iapPremiumMonthly3:
     case PayloadIAPIdentifierV4.iapPremiumMonthly10:
     case PayloadIAPIdentifierV4.iapPremiumMonthly13:

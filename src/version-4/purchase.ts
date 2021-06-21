@@ -59,6 +59,7 @@ export enum PayloadIAPIdentifierV4 {
   iapPremiumYearly30 = 'iapPremiumYearly30',
   iapPremiumYearly25 = 'iapPremiumYearly25',
   iapPremiumYearly15 = 'iapPremiumYearly15',
+  iapPremiumYearly10 = 'iapPremiumYearly10',
   iapPremiumYearlyEducation = 'iapPremiumYearlyEducation',
   iapPremiumYearlyKahootPlus = 'iapPremiumYearlyKahootPlus',
 
