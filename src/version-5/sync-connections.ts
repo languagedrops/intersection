@@ -23,7 +23,7 @@ interface PayloadConnectionBaseV5<T extends PayloadConnectionRequestType> extend
     readonly type: T
 }
 
-export interface PayloadConnectionsGetRequestV5 extends PayloadConnectionBaseV5<PayloadConnectionRequestType.Get> {
+export interface PayloadConnectionsGetRequestV5 extends PayloadConnectionBaseV5<PayloadConnectionRequestType.get> {
     readonly lastGetDate: number
 }
 
