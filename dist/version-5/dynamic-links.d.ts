@@ -1,9 +1,7 @@
 import { PayloadRequestBaseV5 } from './base';
 export declare enum PayloadDynamicLinksRequestType {
     sync = "sync",
-    refresh = "refresh",
-    syncLongLink = "syncLongLink",
-    refreshLongLink = "refreshLongLink"
+    refresh = "refresh"
 }
 export interface PayloadDynamicLinksRequestV5 extends PayloadRequestBaseV5 {
     readonly type: PayloadDynamicLinksRequestType;
