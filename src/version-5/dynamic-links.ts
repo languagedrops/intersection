@@ -3,6 +3,8 @@ import { PayloadRequestBaseV5 } from './base'
 export enum PayloadDynamicLinksRequestType {
     sync = 'sync',
     refresh = 'refresh',
+    syncLongLink = 'syncLongLink',
+    refreshLongLink = 'refreshLongLink',
 }
 
 export interface PayloadDynamicLinksRequestV5 extends PayloadRequestBaseV5 {
