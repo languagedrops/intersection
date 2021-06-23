@@ -35,7 +35,7 @@ export interface PayloadConnectionsRemoveRequestV5 extends PayloadConnectionBase
     readonly connectionUserId: string
 }
 
-export type PayloadGetConnectionsRequestV5 = PayloadConnectionsInitiateRequestV5 | PayloadConnectionsGetRequestV5 | PayloadConnectionsRemoveRequestV5
+export type PayloadSyncConnectionsRequestV5 = PayloadConnectionsInitiateRequestV5 | PayloadConnectionsGetRequestV5 | PayloadConnectionsRemoveRequestV5
 
 export interface PayloadConnectionsGetResponseV5 extends PayloadConnectionBaseV5<PayloadConnectionRequestType.get> {
     readonly connections: PayloadConnectionResponseV5[]
@@ -49,4 +49,4 @@ export interface PayloadConnectionsRemoveResponseV5 extends PayloadConnectionBas
     readonly connection: PayloadConnectionResponseV5
 }
 
-export type PayloadGetConnectionsResponseV5 = PayloadConnectionsGetResponseV5 | PayloadConnectionsInitiateResponseV5 | PayloadConnectionsRemoveResponseV5
+export type PayloadSyncConnectionsResponseV5 = PayloadConnectionsGetResponseV5 | PayloadConnectionsInitiateResponseV5 | PayloadConnectionsRemoveResponseV5
