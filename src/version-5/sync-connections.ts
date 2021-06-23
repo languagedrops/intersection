@@ -23,8 +23,8 @@ interface PayloadConnectionBaseV5<T extends PayloadConnectionRequestType> extend
     readonly type: T
 }
 
-export interface PayloadConnectionsSyncRequestV5 extends PayloadConnectionBaseV5<PayloadConnectionRequestType.sync> {
-    readonly lastSyncDate: number
+export interface PayloadConnectionsGetRequestV5 extends PayloadConnectionBaseV5<PayloadConnectionRequestType.Get> {
+    readonly lastGetDate: number
 }
 
 export interface PayloadConnectionsInitiateRequestV5 extends PayloadConnectionBaseV5<PayloadConnectionRequestType.initiateConnection> {
@@ -35,18 +35,18 @@ export interface PayloadConnectionsRemoveRequestV5 extends PayloadConnectionBase
     readonly connectionUserId: string
 }
 
-export type PayloadSyncConnectionsRequestV5 = PayloadConnectionsInitiateRequestV5 | PayloadConnectionsSyncRequestV5 | PayloadConnectionsRemoveRequestV5
+export type PayloadGetConnectionsRequestV5 = PayloadConnectionsInitiateRequestV5 | PayloadConnectionsGetRequestV5 | PayloadConnectionsRemoveRequestV5
 
-export interface PayloadConnectionsSyncResponseV5 {
+export interface PayloadConnectionsGetResponseV5 extends PayloadConnectionBaseV5<PayloadConnectionRequestType.get> {
     readonly connections: PayloadConnectionResponseV5[]
 }
 
-export interface PayloadConnectionsInitiateResponseV5 {
+export interface PayloadConnectionsInitiateResponseV5 extends PayloadConnectionBaseV5<PayloadConnectionRequestType.initiateConnection> {
     readonly connection: PayloadConnectionResponseV5
 }
 
-export interface PayloadConnectionsRemoveResponseV5 {
+export interface PayloadConnectionsRemoveResponseV5 extends PayloadConnectionBaseV5<PayloadConnectionRequestType.removeConnection> {
     readonly connection: PayloadConnectionResponseV5
 }
 
-export type PayloadSyncConnectionsResponseV5 = PayloadConnectionsSyncResponseV5 | PayloadConnectionsInitiateResponseV5 | PayloadConnectionsRemoveResponseV5
+export type PayloadGetConnectionsResponseV5 = PayloadConnectionsGetResponseV5 | PayloadConnectionsInitiateResponseV5 | PayloadConnectionsRemoveResponseV5
