@@ -1,5 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+var PayloadConnectionStatus;
+(function (PayloadConnectionStatus) {
+    PayloadConnectionStatus["connected"] = "connected";
+    PayloadConnectionStatus["disconnected"] = "disconnected";
+})(PayloadConnectionStatus = exports.PayloadConnectionStatus || (exports.PayloadConnectionStatus = {}));
 var PayloadConnectionRequestType;
 (function (PayloadConnectionRequestType) {
     PayloadConnectionRequestType["sync"] = "sync";
