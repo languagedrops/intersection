@@ -37,6 +37,16 @@ export interface PayloadConnectionsRemoveRequestV5 extends PayloadConnectionBase
 
 export type PayloadSyncConnectionsRequestV5 = PayloadConnectionsInitiateRequestV5 | PayloadConnectionsSyncRequestV5 | PayloadConnectionsRemoveRequestV5
 
-export interface PayloadSyncConnectionsResponseV5 {
+export interface PayloadConnectionsSyncResponseV5 {
     readonly connections: PayloadConnectionResponseV5[]
 }
+
+export interface PayloadConnectionsInitiateResponseV5 {
+    readonly connection: PayloadConnectionResponseV5
+}
+
+export interface PayloadConnectionsRemoveResponseV5 {
+    readonly connection: PayloadConnectionResponseV5
+}
+
+export type PayloadSyncConnectionsResponseV5 = PayloadConnectionsSyncResponseV5 | PayloadConnectionsInitiateResponseV5 | PayloadConnectionsRemoveResponseV5
