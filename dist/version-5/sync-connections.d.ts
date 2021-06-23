@@ -2,10 +2,16 @@ import { PayloadRequestBaseV5 } from './base';
 interface PayloadConnectionRequestV5 {
     readonly connectionUserId: string;
 }
-interface PayloadConnectionResponseV5 {
+export declare enum PayloadConnectionStatus {
+    connected = "connected",
+    disconnected = "disconnected"
+}
+export interface PayloadConnectionResponseV5 {
     readonly connectionUserId: string;
     readonly name: string;
     readonly profilePicLink: string;
+    readonly status: PayloadConnectionStatus;
+    readonly lastModified: Date;
 }
 export declare enum PayloadConnectionRequestType {
     sync = "sync",
@@ -28,6 +34,6 @@ export interface PayloadConnectionsRemoveRequestV5 extends PayloadConnectionBase
 export declare type PayloadSyncConnectionsRequestV5 = PayloadConnectionsInitiateRequestV5 | PayloadConnectionsSyncRequestV5 | PayloadConnectionsRemoveRequestV5;
 export interface PayloadSyncConnectionsResponseV5 {
     readonly connections: PayloadConnectionResponseV5[];
-    readonly lastSyncDate: number;
+    readonly lastSyncDate: Date;
 }
 export {};

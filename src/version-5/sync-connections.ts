@@ -4,10 +4,17 @@ interface PayloadConnectionRequestV5 {
     readonly connectionUserId: string
 }
 
-interface PayloadConnectionResponseV5 {
+export enum PayloadConnectionStatus {
+    connected = 'connected',
+    disconnected = 'disconnected',
+  }
+
+export interface PayloadConnectionResponseV5 {
     readonly connectionUserId: string
     readonly name: string
     readonly profilePicLink: string
+    readonly status: PayloadConnectionStatus
+    readonly lastModified: Date
 }
 
 export enum PayloadConnectionRequestType {
@@ -37,5 +44,4 @@ export type PayloadSyncConnectionsRequestV5 = PayloadConnectionsInitiateRequestV
 
 export interface PayloadSyncConnectionsResponseV5 {
     readonly connections: PayloadConnectionResponseV5[]
-    readonly lastSyncDate: number
 }
