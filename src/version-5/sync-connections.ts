@@ -10,7 +10,7 @@ export interface PayloadConnectionResponseV5 {
     readonly name: string
     readonly profilePicLink: string
     readonly status: PayloadConnectionStatus
-    readonly lastModified: Date
+    readonly lastModified: number
 }
 
 export enum PayloadConnectionRequestType {
