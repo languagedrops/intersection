@@ -42,11 +42,11 @@ export interface PayloadConnectionsGetResponseV5 extends PayloadConnectionBaseV5
 }
 
 export interface PayloadConnectionsInitiateResponseV5 extends PayloadConnectionBaseV5<PayloadConnectionRequestType.initiateConnection> {
-    readonly connection: PayloadConnectionResponseV5
+    readonly connection?: PayloadConnectionResponseV5
 }
 
 export interface PayloadConnectionsRemoveResponseV5 extends PayloadConnectionBaseV5<PayloadConnectionRequestType.removeConnection> {
-    readonly connection: PayloadConnectionResponseV5
+    readonly connection?: PayloadConnectionResponseV5
 }
 
 export type PayloadSyncConnectionsResponseV5 = PayloadConnectionsGetResponseV5 | PayloadConnectionsInitiateResponseV5 | PayloadConnectionsRemoveResponseV5
