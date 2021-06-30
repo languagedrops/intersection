@@ -1,4 +1,4 @@
-import { sortedByProperty } from 'majime'
+import { sortedByProperty } from '@drops-developers/majime'
 
 export enum LanguageISO {
     HU = 'HU',
