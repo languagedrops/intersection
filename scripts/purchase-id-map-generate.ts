@@ -1,8 +1,8 @@
 import { AppPlatform } from '../src/appPlatform'
 import { AppType } from '../src/appType'
-import { PayloadIAPIdentifierV4 } from '../src/version-4/purchase'
+import { PayloadIAPIdentifierV4 } from '../src/version-4/purchaseUtils'
 import * as fs from 'fs'
-import { extractKeysAndValues } from 'majime'
+import { extractKeysAndValues } from '@drops-developers/majime'
 
 // tslint:disable-next-line:readonly-keyword
 const productIdTopUpIdMap: { [productId: string]: PayloadIAPIdentifierV4 } = {}
