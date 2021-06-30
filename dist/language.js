@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const majime_1 = require("majime");
+exports.LanguageName = exports.LanguageISO = void 0;
+const majime_1 = require("@drops-developers/majime");
 var LanguageISO;
 (function (LanguageISO) {
     LanguageISO["HU"] = "HU";

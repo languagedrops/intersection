@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.OpenIdResponseType = exports.OpenIdGrantType = void 0;
 var OpenIdGrantType;
 (function (OpenIdGrantType) {
     OpenIdGrantType["WechatAuthCode"] = "WechatAuthCode";

@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.PayloadConnectionsErrorStatus = exports.PayloadConnectionRequestType = exports.PayloadConnectionStatus = void 0;
 var PayloadConnectionStatus;
 (function (PayloadConnectionStatus) {
     PayloadConnectionStatus["connected"] = "connected";

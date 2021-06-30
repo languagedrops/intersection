@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.languagesStaticData = exports.visualDictionaryLanguageISOs = exports.deployedLanguageISOs = exports.getIsDeployedLanguage = exports.getHumanReadableLanguageName = void 0;
 const language_1 = require("./language");
 const GraphemeSplitter = require("grapheme-splitter");
 const splitter = new GraphemeSplitter();
@@ -9,7 +10,7 @@ const splitGraphemes = (value) => {
     }
     return splitter.splitGraphemes(value);
 };
-exports.getHumanReadableLanguageName = (languageIso) => {
+const getHumanReadableLanguageName = (languageIso) => {
     switch (languageIso) {
         case language_1.LanguageISO.ZHYUE:
             return 'Cantonese';
@@ -29,17 +30,21 @@ exports.getHumanReadableLanguageName = (languageIso) => {
             return exports.languagesStaticData[languageIso].name;
     }
 };
-exports.getIsDeployedLanguage = (languageISO) => {
+exports.getHumanReadableLanguageName = getHumanReadableLanguageName;
+const getIsDeployedLanguage = (languageISO) => {
     return (exports.languagesStaticData[languageISO].availableAsLearning ||
         exports.languagesStaticData[languageISO].availableAsNative ||
         exports.languagesStaticData[languageISO].availableInVisualDictionary);
 };
-exports.deployedLanguageISOs = () => {
+exports.getIsDeployedLanguage = getIsDeployedLanguage;
+const deployedLanguageISOs = () => {
     return language_1.LanguageISO.all.filter((languageISO) => exports.getIsDeployedLanguage(languageISO));
 };
-exports.visualDictionaryLanguageISOs = () => {
+exports.deployedLanguageISOs = deployedLanguageISOs;
+const visualDictionaryLanguageISOs = () => {
     return language_1.LanguageISO.allAlphabetized.filter((languageIso) => exports.languagesStaticData[languageIso].availableInVisualDictionary);
 };
+exports.visualDictionaryLanguageISOs = visualDictionaryLanguageISOs;
 exports.languagesStaticData = {
     [language_1.LanguageISO.KO]: {
         iso: language_1.LanguageISO.KO,

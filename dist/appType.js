@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.AppType = void 0;
 const appPlatform_1 = require("./appPlatform");
 var AppType;
 (function (AppType) {

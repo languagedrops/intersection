@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.NetworkEnvironment = void 0;
 var NetworkEnvironment;
 (function (NetworkEnvironment) {
     NetworkEnvironment["dev"] = "dev";
