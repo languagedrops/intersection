@@ -5,5 +5,5 @@ export * from './user-update';
 export * from './send-events';
 export * from './user-delete';
 export * from './send-feature-suggestion';
-export * from './sync-connections';
+export * from './social-connections';
 export * from './open-id-connect';

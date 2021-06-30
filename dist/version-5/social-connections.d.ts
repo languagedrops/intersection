@@ -31,11 +31,23 @@ export declare type PayloadSyncConnectionsRequestV5 = PayloadConnectionsInitiate
 export interface PayloadConnectionsGetResponseV5 extends PayloadConnectionBaseV5<PayloadConnectionRequestType.get> {
     readonly connections: PayloadConnectionResponseV5[];
 }
-export interface PayloadConnectionsInitiateResponseV5 extends PayloadConnectionBaseV5<PayloadConnectionRequestType.initiateConnection> {
+export interface PayloadConnectionsInitiateSuccessResponseV5 extends PayloadConnectionBaseV5<PayloadConnectionRequestType.initiateConnection> {
     readonly connection: PayloadConnectionResponseV5;
 }
-export interface PayloadConnectionsRemoveResponseV5 extends PayloadConnectionBaseV5<PayloadConnectionRequestType.removeConnection> {
+export interface PayloadConnectionsRemoveSuccessResponseV5 extends PayloadConnectionBaseV5<PayloadConnectionRequestType.removeConnection> {
     readonly connection: PayloadConnectionResponseV5;
 }
+export declare enum PayloadConnectionsErrorStatus {
+    userNotFound = "userNotFound",
+    linkNotFound = "linkNotFound"
+}
+export interface PayloadInitiateConnectionErrorResponseV5 extends PayloadConnectionBaseV5<PayloadConnectionRequestType.initiateConnection> {
+    readonly errorStatus: PayloadConnectionsErrorStatus;
+}
+export interface PayloadRemoveConnectionErrorResponseV5 extends PayloadConnectionBaseV5<PayloadConnectionRequestType.removeConnection> {
+    readonly errorStatus: PayloadConnectionsErrorStatus;
+}
+export declare type PayloadConnectionsRemoveResponseV5 = PayloadConnectionsRemoveSuccessResponseV5 | PayloadRemoveConnectionErrorResponseV5;
+export declare type PayloadConnectionsInitiateResponseV5 = PayloadConnectionsInitiateSuccessResponseV5 | PayloadInitiateConnectionErrorResponseV5;
 export declare type PayloadSyncConnectionsResponseV5 = PayloadConnectionsGetResponseV5 | PayloadConnectionsInitiateResponseV5 | PayloadConnectionsRemoveResponseV5;
 export {};

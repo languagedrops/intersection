@@ -11,3 +11,8 @@ var PayloadConnectionRequestType;
     PayloadConnectionRequestType["initiateConnection"] = "initiateConnection";
     PayloadConnectionRequestType["removeConnection"] = "removeConnection";
 })(PayloadConnectionRequestType = exports.PayloadConnectionRequestType || (exports.PayloadConnectionRequestType = {}));
+var PayloadConnectionsErrorStatus;
+(function (PayloadConnectionsErrorStatus) {
+    PayloadConnectionsErrorStatus["userNotFound"] = "userNotFound";
+    PayloadConnectionsErrorStatus["linkNotFound"] = "linkNotFound";
+})(PayloadConnectionsErrorStatus = exports.PayloadConnectionsErrorStatus || (exports.PayloadConnectionsErrorStatus = {}));
