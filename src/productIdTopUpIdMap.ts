@@ -1,5 +1,5 @@
 /* tslint:disable */
-import { PayloadIAPIdentifierV4 } from './version-4/purchase'
+import { PayloadIAPIdentifierV4 } from './version-4/purchaseUtils'
 import { Dictionary } from './dictionary'
 /* Auto-generated, do not modify!!! */
 export const productIdTopUpIdMap: Dictionary<PayloadIAPIdentifierV4> = {

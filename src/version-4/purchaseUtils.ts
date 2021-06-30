@@ -1,10 +1,92 @@
-import { PayloadIAPIdentifierV4 } from './purchase'
 import { AppPlatform } from '../appPlatform'
 import { AppType } from '../appType'
 import { LanguageISO } from '../language'
 
+// Add new topup to the end of the list
+export enum PayloadIAPIdentifierV4 {
+  iapForever10Mins = 'iapForever10Mins',
+  iapForever10MinsDiscounted = 'iapForever10MinsDiscounted',
+  iapForever10MinsDiscounted40 = 'iapForever10MinsDiscounted40',
+  iapForever10MinsDiscounted45 = 'iapForever10MinsDiscounted45',
+  iapForever10MinsDiscounted50 = 'iapForever10MinsDiscounted50',
+  iapForever10MinsDiscounted80 = 'iapForever10MinsDiscounted80',
 
-export const getProductId = (identifier: PayloadIAPIdentifierV4, platform: AppPlatform, appType: AppType): string => {
+  iapForever99Mins = 'iapForever99Mins',
+  iapForever99MinsDiscounted = 'iapForever99MinsDiscounted',
+  iapForever99MinsDiscounted40 = 'iapForever99MinsDiscounted40',
+  iapForever99MinsDiscounted45 = 'iapForever99MinsDiscounted45',
+  iapForever99MinsDiscounted50 = 'iapForever99MinsDiscounted50',
+  iapForever99MinsDiscounted80 = 'iapForever99MinsDiscounted80',
+
+  iapForeverAllLanguages = 'iapForeverAllLanguages',
+  iapForeverAllLanguagesDiscounted = 'iapForeverAllLanguagesDiscounted',
+  iapForeverAllLanguagesDiscounted40 = 'iapForeverAllLanguagesDiscounted40',
+  iapForeverAllLanguagesDiscounted45 = 'iapForeverAllLanguagesDiscounted45',
+  iapForeverAllLanguagesDiscounted50 = 'iapForeverAllLanguagesDiscounted50',
+  iapForeverAllLanguagesDiscounted80 = 'iapForeverAllLanguagesDiscounted80',
+
+  iap10MinsMonthly = 'iap10MinsMonthly',
+  iap10MinsYearly = 'iap10MinsYearly',
+
+  iapUnlimitedMonthly = 'iapUnlimitedMonthly',
+  iapUnlimitedYearly = 'iapUnlimitedYearly',
+
+  iapAllLanguagesMonthly = 'iapAllLanguagesMonthly',
+  iapAllLanguagesMonthlyFreeTrial = 'iapAllLanguagesMonthlyFreeTrial',
+  iapAllLanguagesYearly = 'iapAllLanguagesYearly',
+
+  iapUnlimitedMonthlyFreeTrial = 'iapUnlimitedMonthlyFreeTrial',
+
+  iapPremiumMonthly3 = 'iapPremiumMonthly3',
+  iapPremiumMonthly10 = 'iapPremiumMonthly10',
+  iapPremiumMonthly13 = 'iapPremiumMonthly13',
+  iapPremiumMonthly15 = 'iapPremiumMonthly15',
+
+  iapPremium3months30 = 'iapPremium3months30', // non-recurring limited time
+  iapPremiumQuarterly30 = 'iapPremiumQuarterly30',
+
+  iapPremium1year70 = 'iapPremium1year70', // non-recurring limited time
+  iapPremiumYearly70 = 'iapPremiumYearly70',
+  iapPremiumYearly70FreeTrial = 'iapPremiumYearly70FreeTrial',
+  iapPremiumYearly70FreeTrial3Days = 'iapPremiumYearly70FreeTrial3Days',
+  iapPremiumYearly70FreeTrial14Days = 'iapPremiumYearly70FreeTrial14Days',
+  iapPremiumYearly55 = 'iapPremiumYearly55',
+  iapPremiumYearly50 = 'iapPremiumYearly50',
+  iapPremium1year40 = 'iapPremium1year40', // non-recurring limited time
+  iapPremiumYearly40 = 'iapPremiumYearly40',
+  iapPremiumYearly45 = 'iapPremiumYearly45',
+  iapPremiumYearly40FreeTrial = 'iapPremiumYearly40FreeTrial',
+  iapPremiumYearly35 = 'iapPremiumYearly35',
+  iapPremiumYearly30 = 'iapPremiumYearly30',
+  iapPremiumYearly25 = 'iapPremiumYearly25',
+  iapPremiumYearly15 = 'iapPremiumYearly15',
+  iapPremiumYearlyEducation = 'iapPremiumYearlyEducation',
+  iapPremiumYearlyKahootPlus = 'iapPremiumYearlyKahootPlus',
+
+  iapPremiumLifetime80 = 'iapPremiumLifetime80',
+  iapPremiumLifetime90 = 'iapPremiumLifetime90',
+  iapPremiumLifetime55 = 'iapPremiumLifetime55',
+  iapPremiumLifetime65 = 'iapPremiumLifetime65',
+  iapPremiumLifetime65Plus1Year = 'iapPremiumLifetime65Plus1Year',
+  iapPremiumLifetime35 = 'iapPremiumLifetime35',
+  iapPremiumLifetime160 = 'iapPremiumLifetime160',
+  iapPremiumLifetime180 = 'iapPremiumLifetime180',
+  iapPremiumLifetimeKahootPlus = 'iapPremiumLifetimeKahootPlus',
+
+  iapPremiumYearly40Plus1 = 'iapPremiumYearly40Plus1',
+  iapPremiumYearly40FirstYear15 = 'iapPremiumYearly40FirstYear15',
+  iapPremiumYearly40FirstYear30 = 'iapPremiumYearly40FirstYear30',
+  iapPremiumYearly40FirstYear30Plus1 = 'iapPremiumYearly40FirstYear30Plus1',
+
+
+  // gift purchases
+  iapPremiumGift1Month10 = 'iapPremiumGift1Month10',
+  iapPremiumGift1Year35 = 'iapPremiumGift1Year35',
+  iapPremiumGiftLifetime160 = 'iapPremiumGiftLifetime160',
+}
+
+
+export const getProductIdUtils = (identifier: PayloadIAPIdentifierV4, platform: AppPlatform, appType: AppType): string => {
   if (platform === AppPlatform.Web) {
     return getProductIdWeb(identifier)
   } else {
@@ -310,7 +392,7 @@ const getProductIdMobile = (identifier: PayloadIAPIdentifierV4, platform: AppPla
   }
 }
 
-export const getAlternativeProductIdsMobile = (identifier: PayloadIAPIdentifierV4, platform: AppPlatform, appType: AppType): string[] => {
+export const getAlternativeProductIdsMobileUtils = (identifier: PayloadIAPIdentifierV4, platform: AppPlatform, appType: AppType): string[] => {
   const iapSuffix = AppType.getIapSuffix(appType, platform)
   switch (identifier) {
     case PayloadIAPIdentifierV4.iapForever10MinsDiscounted40:
@@ -408,4 +490,10 @@ export const getAlternativeProductIdsMobile = (identifier: PayloadIAPIdentifierV
     case PayloadIAPIdentifierV4.iapPremium3months30:
       return []
   }
+}
+
+export namespace PayloadIAPIdentifierV4 {
+  export const all: PayloadIAPIdentifierV4[] = Object.values(PayloadIAPIdentifierV4).filter((v) => typeof v === 'string') as PayloadIAPIdentifierV4[]
+  export const getProductId = getProductIdUtils
+  export const getAlternativeProductIdsMobile = getAlternativeProductIdsMobileUtils
 }
