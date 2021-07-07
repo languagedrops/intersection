@@ -18,4 +18,5 @@ __exportStar(require("./send-events"), exports);
 __exportStar(require("./user-delete"), exports);
 __exportStar(require("./send-feature-suggestion"), exports);
 __exportStar(require("./social-connections"), exports);
+__exportStar(require("./upload-profile-image"), exports);
 __exportStar(require("./open-id-connect"), exports);
