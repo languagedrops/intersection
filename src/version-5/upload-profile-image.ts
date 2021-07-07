@@ -1,6 +1,6 @@
 
 export interface PayloadUploadProfileImageRequestV5 {
-    readonly image: string
+    readonly base64EncodedImageString: string
 }
 
 export interface PayloadUploadProfileImageResponseV5 {
