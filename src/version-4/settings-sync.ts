@@ -1,4 +1,6 @@
-import { Dictionary } from '../dictionary'
+import { AppType } from '../appType'
+import { Dictionary, KeyedDictionary } from '../dictionary'
+import { LanguageISO } from '../language'
 import { PayloadRequestBaseV4 } from './base'
 
 export interface PropertyWithMetadata<T> {
@@ -84,7 +86,7 @@ export interface PayloadUserLanguageSettingsV4 {
   readonly romanicAid?: PropertyWithMetadata<Dictionary<string>>
   readonly characterDrawing?: PropertyWithMetadata<Dictionary<boolean>>
   readonly deviceLanguage?: PropertyWithMetadata<string>
-  readonly learningLanguages?: PropertyWithMetadata<Dictionary<string>>
+  readonly learningLanguages?: PropertyWithMetadata<KeyedDictionary<AppType, LanguageISO[]>>
   readonly voiceOver?: PropertyWithMetadata<Dictionary<string>>
 }
 
